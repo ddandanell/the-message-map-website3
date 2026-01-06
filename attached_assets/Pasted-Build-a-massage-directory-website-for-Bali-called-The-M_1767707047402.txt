@@ -1,0 +1,66 @@
+Build a massage directory website for Bali called "The Massage Map" with the following specifications:
+
+DESIGN:
+- Modern, clean design with colors: primary teal (#0D9488), warm sand accent (#F59E0B), coral highlights (#FB7185)
+- Typography: Inter font family throughout
+- Rounded corners (8px cards, 16px images), soft shadows
+- Mobile-first responsive design
+- Use Lucide React icons
+
+PAGES TO BUILD:
+1. Homepage with:
+   - Sticky header (logo, search bar, navigation menu)
+   - Hero section: "Find Your Perfect Massage in Bali" with area + type search dropdowns
+   - Quick filter chips: "Open Now", "Budget", "Deep Tissue", "Couples", "Home Service", "Luxury Spa"
+   - Popular Areas grid (6 cards): Canggu, Seminyak, Ubud, Uluwatu, Sanur, Nusa Dua - each showing area name, photo placeholder, "from X IDR", number of places
+   - Top Massage Types (6 icon cards): Balinese, Deep Tissue, Couples, Reflexology, Hot Stone, Aromatherapy
+   - Featured Places carousel (3 cards with image, name, area, price, verified badge)
+   - How We Rate section
+   - Footer with 4 columns: Popular areas, Massage types, Guides, About/Contact
+
+2. Area page (template for /bali/canggu):
+   - Breadcrumb navigation
+   - Area hero with photo and stats
+   - Left sidebar with filters: price slider, massage types checkboxes, "open now" toggle, rating filter
+   - Results grid (2 columns): each card showing image, name, area, price "from X IDR", rating, tags, "View Details" + "WhatsApp" buttons
+   - Make sidebar collapse to drawer on mobile
+
+3. Place detail page (template for /bali/canggu/taksu-spa):
+   - Image gallery carousel at top (5 placeholder images)
+   - Two-column layout: 
+     LEFT: Name, area, rating, "open now" badge, contact info (WhatsApp clickable), hours table, treatments price table (massage types with 60/90 min options), description, "good for" tags
+     RIGHT (sticky): Booking card with "from X IDR", big "Chat on WhatsApp" button, "Get Directions" button, trust signals (verified badge, hygiene score, ambience, pressure style), "Similar Places" cards
+   - Embed Google Maps
+   - Mobile: stack columns, sticky bottom CTA
+
+4. Category page (template for /bali/deep-tissue):
+   - Similar to area page but category-focused
+   - Explanation section about the massage type
+   - Results grid
+
+DATA STRUCTURE:
+Create a demo dataset with:
+- 6 areas: Canggu, Seminyak, Ubud, Uluwatu, Sanur, Nusa Dua
+- 15 sample places per area (90 total) with these fields:
+  {id, name, slug, area, address, whatsapp, website, hours, price_tier, price_examples: [{type, duration, price}], tags, verified, verified_date, photos: [urls], description, editor_rating, hygiene_score, ambience, pressure_style}
+
+FUNCTIONALITY:
+- Search by area + massage type (dropdowns with real filtering)
+- Filter sidebar that updates results in real-time
+- "Open now" logic based on current Bali time (WITA timezone)
+- Price range filter (0-500k IDR slider)
+- Sorting: Best rated, Lowest price, Closest
+- Responsive navigation (hamburger menu on mobile)
+- WhatsApp deep links (wa.me/[number])
+- All internal linking working (home → areas → places)
+
+TECHNICAL:
+- Use React with Next.js or Vite
+- Tailwind CSS for styling
+- Client-side routing
+- Mock data in JSON format
+- Mobile-responsive (breakpoints: 640px, 1024px)
+- Lazy load images
+- Smooth scrolling and transitions
+
+Create a fully functional prototype with realistic demo data that looks production-ready. Focus on clean code structure, reusable components, and polished UI/UX.
