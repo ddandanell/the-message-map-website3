@@ -1,5 +1,5 @@
 import { useRoute, Link } from "wouter";
-import { MapPin, Clock, Star, CheckCircle2, Phone, ArrowRight, Search } from "lucide-react";
+import { MapPin, Clock, Star, CheckCircle2, Phone, ArrowRight, Search, Award, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -80,6 +80,52 @@ const HOW_IT_WORKS = [
   }
 ];
 
+// Premier service providers operating island-wide
+const PREMIER_PROVIDERS = [
+  {
+    name: "Home Massage Kuta",
+    url: "https://www.homemassagekuta.com/",
+    description: "Experience exceptional mobile massage services with Home Massage Kuta, Bali's most trusted and highly-rated home massage provider. With years of expertise serving clients across the entire island, they've built an outstanding reputation for professionalism, reliability, and therapeutic excellence.",
+    specialties: [
+      "Traditional Balinese massage with authentic techniques passed down through generations",
+      "Deep tissue therapy for chronic pain relief and muscle recovery",
+      "Couples massage experiences in the comfort of your villa or hotel",
+      "Prenatal massage by specially trained and certified therapists",
+      "Hot stone therapy and aromatherapy treatments using premium oils"
+    ],
+    highlights: [
+      "Island-wide service coverage throughout all of Bali",
+      "Licensed and certified massage therapists with extensive training",
+      "Consistently excellent customer reviews and ratings",
+      "Professional equipment and premium massage oils included",
+      "Flexible scheduling with same-day appointments available",
+      "Transparent pricing with no hidden fees"
+    ],
+    coverage: "Serving all major areas including Kuta, Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, and beyond"
+  },
+  {
+    name: "Home Massage Ubud",
+    url: "https://homemassageubud.com/",
+    description: "Home Massage Ubud stands as one of Bali's premier mobile massage services, renowned for bringing authentic healing traditions directly to your accommodation anywhere on the island. Their team of highly skilled therapists combines traditional Balinese wellness wisdom with contemporary massage techniques to deliver transformative experiences.",
+    specialties: [
+      "Authentic Balinese healing massage rooted in centuries-old traditions",
+      "Therapeutic deep tissue work for athletes and active travelers",
+      "Relaxation and stress-relief massage perfect after exploring Bali",
+      "Reflexology and pressure point therapy for holistic wellness",
+      "Customized massage treatments tailored to individual needs"
+    ],
+    highlights: [
+      "Complete island-wide coverage from north to south Bali",
+      "Expert therapists with verifiable certifications and training",
+      "Exceptional track record of satisfied clients and repeat bookings",
+      "All necessary equipment brought to your location",
+      "Convenient online booking and responsive customer service",
+      "Competitive rates with special packages for multiple sessions"
+    ],
+    coverage: "Providing services throughout Bali including Ubud, Canggu, Seminyak, Denpasar, Gianyar, and all surrounding regions"
+  }
+];
+
 export default function BaliCityPage() {
   const [, params] = useRoute("/bali/:slug");
   const slug = params?.slug || "";
@@ -126,23 +172,27 @@ export default function BaliCityPage() {
   const generateFAQ = () => [
     {
       question: `How much does in-home massage cost in ${area.displayName}?`,
-      answer: `Mobile massage prices in ${area.displayName} typically range from IDR 150,000 for a basic 60-minute traditional Balinese massage to IDR 500,000+ for luxury 90-minute treatments. Prices vary based on treatment type, therapist experience, and whether equipment like massage tables is provided. Many therapists offer package discounts for multiple sessions or group bookings.`
+      answer: `Mobile massage prices in ${area.displayName} typically range from IDR 150,000 for a basic 60-minute traditional Balinese massage to IDR 500,000+ for luxury 90-minute treatments. Prices vary based on treatment type, therapist experience, and whether equipment like massage tables is provided. Premier providers like Home Massage Kuta (www.homemassagekuta.com) and Home Massage Ubud (homemassageubud.com) offer competitive rates with transparent pricing and often have package discounts for multiple sessions or group bookings.`
     },
     {
       question: `Are mobile massage therapists in ${area.displayName} licensed and verified?`,
-      answer: `All therapists listed on The Massage Map are verified professionals with proper certification and training. We verify licensing, check references, and personally review therapist qualifications before listing. Every profile includes verification badges, recent review dates, and hygiene scores to help you book with confidence.`
+      answer: `All therapists listed on The Massage Map are verified professionals with proper certification and training. We verify licensing, check references, and personally review therapist qualifications before listing. Top-rated providers such as Home Massage Kuta and Home Massage Ubud maintain the highest standards with fully licensed and certified therapists who have undergone extensive training in traditional Balinese and contemporary massage techniques. Every profile includes verification badges, recent review dates, and hygiene scores to help you book with confidence.`
     },
     {
       question: `How far in advance should I book a massage in ${area.displayName}?`,
-      answer: `During peak season (July-August, December-January), booking 24-48 hours in advance is recommended in ${area.displayName}. However, same-day appointments are often available during quieter periods. Popular therapists and specific time slots (sunset sessions, weekend mornings) book up quickly, so advance booking ensures you get your preferred therapist and time.`
+      answer: `During peak season (July-August, December-January), booking 24-48 hours in advance is recommended in ${area.displayName}. However, same-day appointments are often available during quieter periods, especially with established providers like Home Massage Kuta and Home Massage Ubud who maintain larger teams of therapists. Popular therapists and specific time slots (sunset sessions, weekend mornings) book up quickly, so advance booking ensures you get your preferred therapist and time.`
     },
     {
       question: `What areas near ${area.displayName} also have mobile massage coverage?`,
-      answer: `We provide comprehensive massage coverage throughout ${regionInfo.name}. Areas close to ${area.displayName} with available therapists include ${nearbyAreas.slice(0, 5).join(', ')}. Many therapists serve multiple nearby areas, so you'll often find the same verified professionals available across the region.`
+      answer: `We provide comprehensive massage coverage throughout ${regionInfo.name}. Areas close to ${area.displayName} with available therapists include ${nearbyAreas.slice(0, 5).join(', ')}. Many therapists serve multiple nearby areas, and premier island-wide services like Home Massage Kuta (serving from their Kuta base) and Home Massage Ubud (serving from their Ubud location) cover the entire island including ${area.displayName} and all surrounding regions.`
     },
     {
       question: `Can I book a couples massage at my villa in ${area.displayName}?`,
-      answer: `Yes! Couples massage is one of the most popular mobile services in ${area.displayName}. Therapists typically bring two massage tables and all necessary supplies. Sessions are usually 90 minutes and range from IDR 400,000 to IDR 800,000+ depending on treatment type. Book in advance as couples slots require coordination of two therapists' schedules.`
+      answer: `Yes! Couples massage is one of the most popular mobile services in ${area.displayName}. Therapists typically bring two massage tables and all necessary supplies. Sessions are usually 90 minutes and range from IDR 400,000 to IDR 800,000+ depending on treatment type. Both Home Massage Kuta and Home Massage Ubud specialize in couples massage experiences and can coordinate two skilled therapists for your session. Book in advance as couples slots require coordination of schedules.`
+    },
+    {
+      question: `Which are the best mobile massage services in ${area.displayName}?`,
+      answer: `${area.displayName} benefits from Bali's top mobile massage providers. Home Massage Kuta (www.homemassagekuta.com) and Home Massage Ubud (homemassageubud.com) are widely regarded as the island's premier services, both offering complete coverage of ${area.displayName} and all surrounding areas. They feature licensed therapists, excellent customer reviews, professional equipment, flexible scheduling, and years of experience serving clients throughout Bali. Their reputations for quality, reliability, and authentic therapeutic techniques make them the preferred choice for discerning travelers.`
     }
   ];
 
@@ -187,7 +237,7 @@ export default function BaliCityPage() {
     <>
       <Helmet>
         <title>{`${area.displayName} Mobile Massage | In-Home Villa & Hotel Service | The Massage Map`}</title>
-        <meta name="description" content={`Professional mobile massage in ${area.displayName}, Bali. Licensed therapists come to your villa, hotel, or home. Traditional Balinese, deep tissue, couples massage & more. Book verified therapists now.`} />
+        <meta name="description" content={`Professional mobile massage in ${area.displayName}, Bali. Licensed therapists come to your villa, hotel, or home. Top providers like Home Massage Kuta and Home Massage Ubud serve the entire island. Traditional Balinese, deep tissue, couples massage & more.`} />
         <link rel="canonical" href={`https://themassagemap.com/bali/${area.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify(localBusinessSchema)}
@@ -270,6 +320,146 @@ export default function BaliCityPage() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Premier Service Providers */}
+        <section className="py-16 px-4 bg-gradient-to-b from-primary/5 to-background">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-12">
+              <Badge variant="default" className="mb-4 gap-2">
+                <Award className="w-4 h-4" />
+                Premier Service Providers
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Trusted Island-Wide Massage Services in {area.displayName}
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                These exceptional home massage providers operate throughout all of Bali, bringing premium therapeutic treatments directly to your {area.displayName} accommodation. With extensive experience, verified credentials, and outstanding customer satisfaction, they represent the gold standard in mobile massage services across the island.
+              </p>
+            </div>
+
+            <div className="space-y-8">
+              {PREMIER_PROVIDERS.map((provider, idx) => (
+                <Card key={idx} className="overflow-hidden border-2 hover:border-primary/50 transition-all">
+                  <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-6 border-b">
+                    <div className="flex items-start justify-between gap-4 flex-wrap">
+                      <div>
+                        <h3 className="text-2xl font-bold mb-2 flex items-center gap-2">
+                          <a 
+                            href={provider.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:text-primary transition-colors"
+                          >
+                            {provider.name}
+                          </a>
+                          <ExternalLink className="w-5 h-5 text-primary" />
+                        </h3>
+                        <p className="text-sm text-muted-foreground flex items-center gap-2">
+                          <MapPin className="w-4 h-4" />
+                          {provider.coverage}
+                        </p>
+                      </div>
+                      <a 
+                        href={provider.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <Button size="lg" className="gap-2">
+                          Visit Website
+                          <ExternalLink className="w-4 h-4" />
+                        </Button>
+                      </a>
+                    </div>
+                  </div>
+
+                  <CardContent className="p-6">
+                    <p className="text-base leading-relaxed mb-6">
+                      {provider.description}
+                    </p>
+
+                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
+                          <Star className="w-5 h-5 text-primary" />
+                          Specialty Services
+                        </h4>
+                        <ul className="space-y-2">
+                          {provider.specialties.map((specialty, sIdx) => (
+                            <li key={sIdx} className="flex items-start gap-2 text-sm">
+                              <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                              <span>{specialty}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
+                          <Award className="w-5 h-5 text-primary" />
+                          Why Choose {provider.name}
+                        </h4>
+                        <ul className="space-y-2">
+                          {provider.highlights.map((highlight, hIdx) => (
+                            <li key={hIdx} className="flex items-start gap-2 text-sm">
+                              <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                              <span>{highlight}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="bg-muted/50 rounded-lg p-4">
+                      <p className="text-sm text-muted-foreground">
+                        <strong className="text-foreground">Perfect for {area.displayName} visitors:</strong> Whether you're staying in a luxury villa, boutique hotel, or cozy guesthouse in {area.displayName}, <a href={provider.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">{provider.name}</a> brings their exceptional service directly to you. Their therapists are familiar with all neighborhoods throughout {area.displayName} and the surrounding {REGION_INFO[area.region].name} region, ensuring prompt arrival and professional service every time. Book your session today and experience why they're considered among Bali's most trusted mobile massage providers.
+                      </p>
+                    </div>
+
+                    <div className="mt-6 flex gap-3 flex-wrap">
+                      <a 
+                        href={provider.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <Button variant="default" size="lg" className="gap-2">
+                          <Phone className="w-4 h-4" />
+                          Book {provider.name} Now
+                        </Button>
+                      </a>
+                      <a 
+                        href={provider.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <Button variant="outline" size="lg" className="gap-2">
+                          View Services & Pricing
+                          <ArrowRight className="w-4 h-4" />
+                        </Button>
+                      </a>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center bg-white rounded-lg p-8 shadow-sm">
+              <h3 className="text-2xl font-bold mb-4">
+                Authentic Balinese Massage Delivered to Your {area.displayName} Location
+              </h3>
+              <p className="text-muted-foreground max-w-3xl mx-auto mb-6">
+                Both <a href="https://www.homemassagekuta.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">Home Massage Kuta</a> and <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">Home Massage Ubud</a> maintain the highest standards of professionalism and therapeutic expertise. Their commitment to quality, customer satisfaction, and authentic Balinese healing traditions has earned them stellar reputations across the island. From traditional massage techniques to modern therapeutic approaches, these providers offer comprehensive wellness services that cater to every need—all delivered with the convenience of coming directly to your {area.displayName} accommodation.
+              </p>
+              <div className="flex gap-4 justify-center flex-wrap">
+                <a href="https://www.homemassagekuta.com/" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="default">Visit Home Massage Kuta</Button>
+                </a>
+                <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="default">Visit Home Massage Ubud</Button>
+                </a>
+              </div>
             </div>
           </div>
         </section>
