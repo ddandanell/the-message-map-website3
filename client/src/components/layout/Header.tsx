@@ -3,6 +3,7 @@ import { Search, MapPin, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import logoImage from '@assets/generated_images/minimalist_lotus_spa_logo.png';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +28,8 @@ export function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
-          <a className="flex items-center gap-2 font-bold text-2xl tracking-tight hover:opacity-90 transition-opacity">
+          <a className="flex items-center gap-3 font-bold text-2xl tracking-tight hover:opacity-90 transition-opacity">
+            <img src={logoImage} alt="The Massage Map Logo" className="w-8 h-8 object-contain" />
             <span className={cn("text-primary", !isScrolled && !mobileMenuOpen && "text-white")}>The Massage Map</span>
           </a>
         </Link>
