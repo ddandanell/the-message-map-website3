@@ -23,11 +23,13 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-foreground">Popular Areas</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/bali/canggu"><a className="hover:text-primary hover:underline transition-colors">Canggu Spas</a></Link></li>
-              <li><Link href="/bali/seminyak"><a className="hover:text-primary hover:underline transition-colors">Seminyak Spas</a></Link></li>
-              <li><Link href="/bali/ubud"><a className="hover:text-primary hover:underline transition-colors">Ubud Wellness</a></Link></li>
-              <li><Link href="/bali/uluwatu"><a className="hover:text-primary hover:underline transition-colors">Uluwatu Massage</a></Link></li>
-              <li><Link href="/bali/sanur"><a className="hover:text-primary hover:underline transition-colors">Sanur Relaxation</a></Link></li>
+              <li><Link href="/bali"><a className="hover:text-primary hover:underline transition-colors font-medium">All Bali Areas</a></Link></li>
+              <li><Link href="/bali/canggu"><a className="hover:text-primary hover:underline transition-colors">Canggu</a></Link></li>
+              <li><Link href="/bali/seminyak"><a className="hover:text-primary hover:underline transition-colors">Seminyak</a></Link></li>
+              <li><Link href="/bali/ubud"><a className="hover:text-primary hover:underline transition-colors">Ubud</a></Link></li>
+              <li><Link href="/bali/uluwatu"><a className="hover:text-primary hover:underline transition-colors">Uluwatu</a></Link></li>
+              <li><Link href="/bali/sanur"><a className="hover:text-primary hover:underline transition-colors">Sanur</a></Link></li>
+              <li><Link href="/bali/nusa-dua"><a className="hover:text-primary hover:underline transition-colors">Nusa Dua</a></Link></li>
             </ul>
           </div>
 

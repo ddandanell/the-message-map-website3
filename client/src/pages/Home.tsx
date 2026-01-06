@@ -121,7 +121,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold mb-2">Browse by Experience</h2>
               <p className="text-muted-foreground">Find the therapy that suits your needs</p>
             </div>
-            <a href="#" className="text-primary font-medium hover:underline hidden md:flex items-center gap-1">
+            <a href="/massage-types" className="text-primary font-medium hover:underline hidden md:flex items-center gap-1">
               View all types <ChevronRight className="w-4 h-4" />
             </a>
           </div>
