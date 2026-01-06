@@ -8,10 +8,17 @@ import Home from "@/pages/Home";
 import BaliExplorer from "@/pages/BaliExplorer";
 import PlaceDetail from "@/pages/PlaceDetail";
 
+import ListBusiness from "@/pages/ListBusiness";
+import HowWeRate from "@/pages/HowWeRate";
+import About from "@/pages/About";
+
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/list-business" component={ListBusiness} />
+      <Route path="/how-we-rate" component={HowWeRate} />
+      <Route path="/about" component={About} />
       <Route path="/bali/:slug" component={BaliExplorer} />
       <Route path="/bali/:area/:slug" component={PlaceDetail} />
       <Route component={NotFound} />
