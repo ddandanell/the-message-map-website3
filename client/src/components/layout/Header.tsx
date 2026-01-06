@@ -56,7 +56,7 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="/areas"><a className={cn("font-medium hover:text-primary transition-colors", !isScrolled && !needsSolidHeader && "text-white hover:text-white/80")}>Areas</a></Link>
+          <Link href="/bali"><a className={cn("font-medium hover:text-primary transition-colors", !isScrolled && !needsSolidHeader && "text-white hover:text-white/80")}>Bali Areas</a></Link>
           <Link href="/massage-types"><a className={cn("font-medium hover:text-primary transition-colors", !isScrolled && !needsSolidHeader && "text-white hover:text-white/80")}>Massage Types</a></Link>
           <Link href="/guides"><a className={cn("font-medium hover:text-primary transition-colors", !isScrolled && !needsSolidHeader && "text-white hover:text-white/80")}>Guides</a></Link>
           <Link href="/list-business"><a>
@@ -82,7 +82,7 @@ export function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-border shadow-lg p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
-          <Link href="/areas"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-foreground hover:text-primary">Areas</a></Link>
+          <Link href="/bali"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-foreground hover:text-primary">Bali Areas</a></Link>
           <Link href="/massage-types"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-foreground hover:text-primary">Massage Types</a></Link>
           <Link href="/guides"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-foreground hover:text-primary">Guides</a></Link>
           <Link href="/list-business"><a onClick={() => setMobileMenuOpen(false)}>
