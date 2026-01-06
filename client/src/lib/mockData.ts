@@ -30,6 +30,13 @@ export interface Place {
   pressure_style: string;
   lat?: number;
   lng?: number;
+  
+  // New Fields
+  last_verified: string;
+  editor_note: string;
+  home_service: boolean;
+  female_therapist: boolean;
+  couples_massage: boolean;
 }
 
 export interface Area {
@@ -75,6 +82,8 @@ const generatePlaces = (): Place[] => {
   
   AREAS.forEach(area => {
     placeNames.forEach((name, index) => {
+      const isCouples = index % 2 === 0;
+      
       places.push({
         id: `${area.slug}-${index}`,
         name: `${name} ${area.name}`,
@@ -89,15 +98,22 @@ const generatePlaces = (): Place[] => {
           { type: 'Balinese Massage', duration: '60 min', price: 150000 + (index * 20000) },
           { type: 'Deep Tissue', duration: '90 min', price: 250000 + (index * 30000) },
         ],
-        tags: ['Balinese', 'Deep Tissue', index % 2 === 0 ? 'Couples' : 'Reflexology', index % 3 === 0 ? 'Luxury Spa' : 'Budget'],
+        tags: ['Balinese', 'Deep Tissue', isCouples ? 'Couples' : 'Reflexology', index % 3 === 0 ? 'Luxury Spa' : 'Budget'],
         verified: index % 3 !== 0,
         verified_date: '2025-10-15',
         photos: [heroImage, spaInterior, detailImage, spaInterior, heroImage], // Rotating images
         description: `Experience the ultimate relaxation at ${name} ${area.name}. Our skilled therapists use traditional techniques to soothe your body and mind. Located in the heart of ${area.name}, we offer a tranquil escape from the bustle.`,
         editor_rating: 4.0 + (Math.random() * 1), // Random rating 4.0 - 5.0
-        hygiene_score: 9.5,
-        ambience: 'Tranquil & Modern',
-        pressure_style: 'Medium to Strong',
+        hygiene_score: 9.0 + (Math.random() * 1),
+        ambience: index % 3 === 0 ? 'Luxury' : (index % 2 === 0 ? 'Modern' : 'Traditional'),
+        pressure_style: index % 2 === 0 ? 'Medium to Strong' : 'Soft to Medium',
+        
+        // New Data
+        last_verified: `2025-${10 + Math.floor(Math.random() * 2)}-${10 + Math.floor(Math.random() * 15)}`,
+        editor_note: "Our team loves the attention to detail here. The ginger tea served after treatment is a standout touch.",
+        home_service: index % 4 === 0,
+        female_therapist: true,
+        couples_massage: isCouples
       });
     });
   });
