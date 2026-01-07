@@ -41,7 +41,7 @@ export default function Home() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -49,25 +49,25 @@ export default function Home() {
             alt="Bali Spa Background" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-background" />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background" />
         </div>
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="animate-in slide-in-from-bottom-10 fade-in duration-700">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight drop-shadow-lg">
+          <div className="animate-in slide-in-from-bottom-8 fade-in duration-700">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight drop-shadow-2xl">
               Find Your <span className="text-secondary italic">Perfect</span> <br/> Massage in Bali
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light">
+            <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light drop-shadow-lg">
               Discover verified spas, hidden gems, and authentic healers across the island. Book directly with confidence.
             </p>
 
             {/* Search Box */}
-            <div className="bg-white p-3 rounded-2xl shadow-2xl max-w-3xl mx-auto flex flex-col md:flex-row gap-3">
+            <div className="bg-white p-3 rounded-2xl shadow-2xl max-w-3xl mx-auto flex flex-col md:flex-row gap-3 animate-in slide-in-from-bottom-10 fade-in duration-700 delay-200">
               <div className="flex-1">
                 <Select value={selectedArea} onValueChange={setSelectedArea}>
-                  <SelectTrigger className="h-12 border-0 bg-slate-50 focus:ring-0 text-base">
+                  <SelectTrigger className="h-12 border-0 bg-slate-50 focus:ring-2 focus:ring-primary text-base transition-all duration-200 hover:bg-slate-100">
                     <div className="flex items-center gap-2 text-muted-foreground">
                       <MapPin className="w-5 h-5 text-primary" />
                       <SelectValue placeholder="Where in Bali?" />
@@ -83,7 +83,7 @@ export default function Home() {
               <div className="w-[1px] bg-slate-200 hidden md:block" />
               <div className="flex-1">
                  <Select value={selectedType} onValueChange={setSelectedType}>
-                  <SelectTrigger className="h-12 border-0 bg-slate-50 focus:ring-0 text-base">
+                  <SelectTrigger className="h-12 border-0 bg-slate-50 focus:ring-2 focus:ring-primary text-base transition-all duration-200 hover:bg-slate-100">
                     <div className="flex items-center gap-2 text-muted-foreground">
                       <Sparkles className="w-5 h-5 text-primary" />
                       <SelectValue placeholder="Massage Type" />
@@ -96,15 +96,22 @@ export default function Home() {
                   </SelectContent>
                 </Select>
               </div>
-              <Button size="lg" className="h-12 px-8 text-base font-semibold" onClick={handleSearch}>
+              <Button 
+                size="lg" 
+                className="h-12 px-8 text-base font-semibold transition-all duration-200 hover:scale-105 hover:shadow-xl" 
+                onClick={handleSearch}
+              >
                 Search
               </Button>
             </div>
 
             {/* Quick Chips */}
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <div className="mt-8 flex flex-wrap justify-center gap-3 animate-in fade-in duration-700 delay-300">
               {['Open Now', 'Budget Friendly', 'Luxury', 'Couples', 'Home Service'].map(chip => (
-                <button key={chip} className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm backdrop-blur-sm border border-white/20 transition-all">
+                <button 
+                  key={chip} 
+                  className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm backdrop-blur-sm border border-white/20 transition-all duration-200 hover:scale-105 hover:border-white/40"
+                >
                   {chip}
                 </button>
               ))}
@@ -130,11 +137,14 @@ export default function Home() {
             {CATEGORIES.map(cat => {
               const Icon = IconMap[cat.icon as keyof typeof IconMap] || Sparkles;
               return (
-                <div key={cat.id} className="cursor-pointer group flex flex-col items-center p-6 bg-white border border-border rounded-xl hover:shadow-lg hover:border-primary/30 transition-all text-center">
-                  <div className="w-12 h-12 rounded-full bg-primary/5 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                <div 
+                  key={cat.id} 
+                  className="cursor-pointer group flex flex-col items-center p-6 bg-white border border-border rounded-xl hover:shadow-xl hover:border-primary/30 hover:-translate-y-1 transition-all duration-200 text-center"
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary/5 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-200">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">{cat.name}</h3>
+                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-200">{cat.name}</h3>
                 </div>
               )
             })}

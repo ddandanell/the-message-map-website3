@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import guideImage from '@assets/generated_images/guide:_best_massage_in_canggu.png';
 import spaInterior from '@assets/generated_images/professional_massage_therapy_room.png';
 import detailImage from '@assets/generated_images/spa_oils_and_flowers_detail.png';
-import heroImage from '@assets/generated_images/luxury_tropical_spa_in_bali.png';
+import { HERO_IMAGES } from "@/lib/constants";
 
 interface Guide {
   id: string;
@@ -51,7 +51,7 @@ const GUIDES: Guide[] = [
     category: 'Area Guide',
     readTime: '6 min',
     publishDate: '2025-12-28',
-    image: heroImage,
+    image: HERO_IMAGES.LUXURY_SPA,
     excerpt: 'You don\'t need to spend a fortune for a great massage. Here are our favorite affordable spots in Ubud that don\'t compromise on quality.'
   },
   {
@@ -122,20 +122,33 @@ export default function Guides() {
       <Header />
 
       {/* Hero Section */}
-      <div className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-gradient-to-br from-amber-900 via-orange-900 to-amber-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-4">
-            <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
-              <BookOpen className="w-8 h-8 text-white" />
+      <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={HERO_IMAGES.LUXURY_SPA} 
+            alt="Wellness Guides Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 py-32 text-center">
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <div className="flex justify-center mb-6">
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-white/20">
+                <BookOpen className="w-8 h-8 text-white" />
+              </div>
             </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-lg">
+              Wellness Guides
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+              Expert advice, area rankings, and insider tips to help you make the most of Bali's incredible spa scene.
+            </p>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-            Wellness Guides
-          </h1>
-          <p className="text-xl text-amber-100 max-w-2xl mx-auto leading-relaxed">
-            Expert advice, area rankings, and insider tips to help you make the most of Bali's incredible spa scene.
-          </p>
         </div>
       </div>
 
