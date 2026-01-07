@@ -528,6 +528,116 @@ export const massageTypes: MassageTypeData[] = [
     ctaText: "Find compassionate, specially-trained therapists offering gentle massage care for elderly and medically complex individuals throughout Bali. Discover providers who understand the unique needs of vulnerable populations.",
     
     competitors: []
+  },
+  
+  // Connective Tissue Massage
+  {
+    id: "connective-tissue-massage",
+    slug: "connective-tissue-massage",
+    name: "Connective Tissue Massage",
+    metaTitle: "Connective Tissue Massage in Bali: Benefits, Techniques & Best Spas 2026",
+    metaDescription: "Systematic approach to fascial restrictions using slow, specific strokes affecting autonomic nervous system, internal organs, and chronic pain patterns thr",
+    heroTitle: "Connective Tissue Massage: Systematic approach to fascial restrictions using slow",
+    heroSubtitle: "Systematic approach to fascial restrictions using slow, specific strokes affecting autonomic nervous system, internal organs, and chronic pain patterns throughout body.",
+    category: "Therapeutic & Deep Tissue",
+    
+    introduction: `<p>Connective Tissue Massage represents a distinctive therapeutic approach within the broader massage therapy landscape. Systematic approach to fascial restrictions using slow, specific strokes affecting autonomic nervous system, internal organs, and chronic pain patterns throughout body.</p>
+
+<p>This specialized modality has developed through years of refinement, combining traditional bodywork principles with contemporary understanding of human physiology and wellness. The technique addresses specific therapeutic needs while promoting overall health and vitality.</p>
+
+<p>Within Bali's rich wellness ecosystem, Connective Tissue Massage has established itself as a valued treatment option. The island's holistic health culture provides an ideal environment for this modality to thrive, attracting both practitioners skilled in the technique and clients seeking its unique therapeutic benefits.</p>
+
+<p>This comprehensive guide explores Connective Tissue Massage in detail—examining the techniques employed, therapeutic benefits offered, ideal candidates for treatment, and practical considerations to help you determine if this modality aligns with your personal wellness objectives.</p>`,
+    
+    benefitsList: [
+      "Provides targeted therapeutic intervention for specific concerns",
+      "Promotes relaxation and reduces physical and mental stress",
+      "Enhances circulation and supports tissue health and regeneration",
+      "Supports the body's innate healing and recovery mechanisms",
+      "Improves overall sense of wellbeing and vitality",
+      "May offer relief from chronic pain and discomfort",
+      "Complements and enhances other wellness modalities",
+      "Strengthens mind-body awareness and connection"
+    ],
+    
+    techniquesDescription: `<p>Connective Tissue Massage utilizes a carefully developed set of techniques designed to achieve specific therapeutic goals:</p>
+
+<h3>Core Methodology</h3>
+<p>The foundational approach is built upon comprehensive understanding of anatomy, physiology, and biomechanics. Practitioners employ precise hand placements, appropriate pressure levels, and systematic sequencing to optimize therapeutic outcomes while ensuring client safety and comfort.</p>
+
+<h3>Application Methods</h3>
+<p>Treatment sessions incorporate specialized techniques unique to this modality. These may include specific manipulation patterns, pressure variations, rhythmic movements, or complementary elements that enhance the primary therapeutic work and support treatment objectives.</p>
+
+<h3>Whole-Body Integration</h3>
+<p>The approach recognizes and works with the body's interconnected systems—musculoskeletal, circulatory, lymphatic, nervous, and energetic. This holistic perspective supports comprehensive healing rather than merely addressing isolated symptoms or conditions.</p>`,
+    
+    bestSuitedFor: [
+      "Individuals seeking specialized therapeutic benefits for particular concerns",
+      "Those with specific conditions that this modality effectively addresses",
+      "People interested in exploring holistic and integrative wellness options",
+      "Anyone seeking complementary or alternative healing approaches",
+      "Individuals referred to this treatment by healthcare practitioners",
+      "Those looking for alternatives to conventional therapeutic methods",
+      "Wellness enthusiasts committed to exploring diverse healing modalities",
+      "People dedicated to proactive health management and self-care practices"
+    ],
+    
+    duration: "60-90 minutes (treatment duration customized to individual needs and goals)",
+    priceRange: "$30-$85 USD / 300,000-850,000 IDR in Bali | $85-$210 USD internationally",
+    
+    whatToExpect: `<p>Your Connective Tissue Massage session begins with comprehensive consultation. The practitioner will assess your specific needs, review relevant health history, and discuss your treatment goals and expectations. This initial conversation establishes clear communication and ensures the treatment approach aligns with your needs.</p>
+
+<p>The treatment space is designed to facilitate healing and relaxation—proper lighting, comfortable temperature, and professional setup. Depending on the modality's requirements, you may remain clothed or undress to your comfort level, with appropriate professional draping maintained throughout.</p>
+
+<p>During the session, the practitioner applies the characteristic techniques of Connective Tissue Massage. You'll experience various sensations as the therapeutic work progresses. Open communication about comfort levels ensures you receive maximum benefit while maintaining appropriate professional boundaries.</p>
+
+<p>Sessions typically conclude with integration time and gentle reorientation. The practitioner may provide self-care recommendations, hydration suggestions, and guidance for optimizing results between treatments.</p>
+
+<p>Post-treatment, prioritize hydration and allow adequate time for your body to process the therapeutic work. Benefits often continue developing over subsequent days as tissues respond and integrate the therapeutic interventions received.</p>`,
+    
+    comparisonTitle: "How Connective Tissue Massage Differs from Other Massage Types",
+    comparisonText: "Connective Tissue Massage distinguishes itself through specialized techniques and focused therapeutic applications. Unlike Swedish massage's broad relaxation focus, this modality targets specific concerns with precision methodology. While sharing some principles with related approaches, Connective Tissue Massage maintains unique identity through characteristic techniques, theoretical foundations, and therapeutic applications that differentiate it from both Western and Eastern massage traditions.",
+    
+    contraindications: "Consult healthcare providers before receiving Connective Tissue Massage if you have serious medical conditions, are pregnant, or have recent injuries. Inform practitioners about all health concerns, current medications, and sensitivities. Certain conditions may require medical clearance or treatment modifications. Avoid treatment on areas with acute inflammation, open wounds, or active infections. When uncertain, seek professional medical guidance before proceeding with treatment.",
+    
+    faqs: [
+      {
+        question: "What exactly is Connective Tissue Massage?",
+        answer: "Systematic approach to fascial restrictions using slow, specific strokes affecting autonomic nervous system, internal organs, and chronic pain patterns throughout body. This specialized modality has evolved to address specific wellness needs through carefully developed therapeutic techniques."
+      },
+      {
+        question: "How long does a typical Connective Tissue Massage session last?",
+        answer: "Sessions typically range from 60-90 minutes, though duration can be customized based on individual needs and therapeutic goals. Some practitioners offer shorter introductory sessions or extended treatments for comprehensive work."
+      },
+      {
+        question: "Who benefits most from Connective Tissue Massage?",
+        answer: "Connective Tissue Massage particularly benefits those seeking the specific therapeutic effects this modality provides. Consult with qualified practitioners to determine if this treatment aligns with your wellness goals, health status, and personal preferences."
+      },
+      {
+        question: "What side effects should I expect?",
+        answer: "Most people experience no significant adverse effects. Some may feel temporary mild soreness, increased thirst, or gentle fatigue as the body processes therapeutic changes. These effects typically resolve within 24-48 hours and indicate treatment is working effectively."
+      },
+      {
+        question: "How often should I receive Connective Tissue Massage?",
+        answer: "For wellness maintenance, monthly sessions provide excellent benefits. Those addressing specific concerns may benefit from more frequent initial treatments—weekly or bi-weekly—before transitioning to maintenance schedules. Your practitioner can recommend optimal frequency based on individual needs."
+      },
+      {
+        question: "Can Connective Tissue Massage combine with other treatments?",
+        answer: "Yes, Connective Tissue Massage typically integrates well with other massage modalities and wellness practices. Discuss your comprehensive wellness goals with practitioners to develop integrated treatment plans that address your needs holistically."
+      },
+      {
+        question: "What self-care should I practice after treatment?",
+        answer: "Drink plenty of water to support detoxification processes. Rest adequately if tired, as significant healing occurs during rest. Avoid strenuous activity immediately post-treatment. Observe your body's response over following days and communicate concerns to your practitioner."
+      },
+      {
+        question: "Do I need special preparation?",
+        answer: "Arrive well-hydrated and avoid heavy meals before treatment. Wear comfortable clothing. Avoid applying lotions or oils if skin access is required. Communicate honestly about your health status and treatment expectations during intake consultation."
+      }
+    ],
+    
+    ctaText: "Discover qualified practitioners offering Connective Tissue Massage throughout Bali. Browse our directory of professional wellness centers, compare services, read verified reviews, and book your specialized treatment session today.",
+    
+    competitors: []
   }
 ];
 
