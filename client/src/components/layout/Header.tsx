@@ -29,6 +29,7 @@ export function Header() {
   ];
 
   const needsSolidHeader = solidHeaderPages.some(path => location.startsWith(path));
+  const isHeaderSolid = isScrolled || mobileMenuOpen || needsSolidHeader;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +43,7 @@ export function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
-        isScrolled || mobileMenuOpen || needsSolidHeader 
+        isHeaderSolid 
           ? "bg-white/95 backdrop-blur-sm shadow-sm border-border" 
           : "bg-black/40 backdrop-blur-md border-white/20"
       )}
@@ -54,7 +55,7 @@ export function Header() {
             <img src={logoImage} alt="Massage Bali Logo" className="w-8 h-8 object-contain" />
             <span className={cn(
               "transition-colors",
-              isScrolled || mobileMenuOpen || needsSolidHeader ? "text-primary" : "text-white"
+              isHeaderSolid ? "text-primary" : "text-white"
             )}>Massage Bali</span>
           </a>
         </Link>
@@ -63,24 +64,24 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-8">
           <Link href="/bali"><a className={cn(
             "font-medium transition-colors",
-            isScrolled || needsSolidHeader 
+            isHeaderSolid 
               ? "text-foreground hover:text-primary" 
               : "text-white hover:text-white/80 drop-shadow-sm"
           )}>Bali Areas</a></Link>
           <Link href="/massage-types"><a className={cn(
             "font-medium transition-colors",
-            isScrolled || needsSolidHeader 
+            isHeaderSolid 
               ? "text-foreground hover:text-primary" 
               : "text-white hover:text-white/80 drop-shadow-sm"
           )}>Massage Types</a></Link>
           <Link href="/guides"><a className={cn(
             "font-medium transition-colors",
-            isScrolled || needsSolidHeader 
+            isHeaderSolid 
               ? "text-foreground hover:text-primary" 
               : "text-white hover:text-white/80 drop-shadow-sm"
           )}>Guides</a></Link>
           <Link href="/list-business"><a>
-            <Button variant={isScrolled || needsSolidHeader ? "default" : "secondary"} size="sm" className="font-semibold shadow-md">
+            <Button variant={isHeaderSolid ? "default" : "secondary"} size="sm" className="font-semibold shadow-md">
               Add Place
             </Button>
           </a></Link>
@@ -93,9 +94,9 @@ export function Header() {
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? (
-            <X className={cn("w-6 h-6", isScrolled || mobileMenuOpen || needsSolidHeader ? "text-foreground" : "text-white drop-shadow-sm")} />
+            <X className={cn("w-6 h-6", isHeaderSolid ? "text-foreground" : "text-white drop-shadow-sm")} />
           ) : (
-            <Menu className={cn("w-6 h-6", isScrolled || needsSolidHeader ? "text-foreground" : "text-white drop-shadow-sm")} />
+            <Menu className={cn("w-6 h-6", isHeaderSolid ? "text-foreground" : "text-white drop-shadow-sm")} />
           )}
         </button>
       </div>
