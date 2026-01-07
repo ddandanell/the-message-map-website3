@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { CATEGORIES } from "@/lib/mockData";
 import { Activity, Flower2, Heart, Flame, Footprints, Droplets, Sparkles, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import spaInterior from '@assets/generated_images/professional_massage_therapy_room.png';
 
 // Map icons to Lucide components
 const IconMap = {
@@ -107,15 +108,28 @@ export default function MassageTypes() {
       <Header />
 
       {/* Hero Section */}
-      <div className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-            Find Your Perfect Massage
-          </h1>
-          <p className="text-xl text-purple-100 max-w-2xl mx-auto leading-relaxed">
-            Whether you need deep healing or gentle relaxation, explore different massage modalities and find the treatment that's right for you.
-          </p>
+      <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={spaInterior} 
+            alt="Massage Types Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 py-32 text-center">
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-lg">
+              Find Your Perfect Massage
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+              Whether you need deep healing or gentle relaxation, explore different massage modalities and find the treatment that's right for you.
+            </p>
+          </div>
         </div>
       </div>
 

@@ -6,6 +6,9 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BALI_AREAS, getAllRegions, getAreasByRegion, REGION_INFO, type Region } from "@/data/baliAreas";
 import { Helmet } from "react-helmet";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import heroImage from '@assets/generated_images/luxury_tropical_spa_in_bali.png';
 
 export default function BaliIndex() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -34,44 +37,60 @@ export default function BaliIndex() {
         <link rel="canonical" href="https://themassagemap.com/bali/" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
-        {/* Hero Section */}
-        <section className="pt-32 pb-16 px-4">
-          <div className="container mx-auto max-w-4xl text-center">
-            <Badge variant="secondary" className="mb-4">
-              100+ Areas Covered
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Massage Services Across All of Bali
-            </h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Whether you're staying in a villa in Seminyak, a hotel in Ubud, or beachfront in Canggu,
-              find verified massage therapists who come to you. Professional in-home massage services
-              available island-wide.
-            </p>
+      <div className="min-h-screen flex flex-col">
+        <Header />
 
-            {/* Search */}
-            <div className="relative max-w-md mx-auto">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
-              <Input
-                type="text"
-                placeholder="Search areas (e.g., Ubud, Canggu...)"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 py-6 text-lg"
-              />
-            </div>
+        {/* Hero Section with Background */}
+        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src={heroImage} 
+              alt="Bali Spa Background" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background" />
+          </div>
 
-            {searchTerm && (
-              <p className="mt-4 text-sm text-muted-foreground">
-                Found {filteredAreas.length} area{filteredAreas.length !== 1 ? 's' : ''}
+          {/* Content */}
+          <div className="relative z-10 container mx-auto px-4 py-32 text-center">
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+              <Badge variant="secondary" className="mb-4 shadow-lg">
+                100+ Areas Covered
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-lg">
+                Massage Services Across All of Bali
+              </h1>
+              <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light drop-shadow-md">
+                Whether you're staying in a villa in Seminyak, a hotel in Ubud, or beachfront in Canggu,
+                find verified massage therapists who come to you. Professional in-home massage services
+                available island-wide.
               </p>
-            )}
+
+              {/* Search */}
+              <div className="relative max-w-md mx-auto">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
+                <Input
+                  type="text"
+                  placeholder="Search areas (e.g., Ubud, Canggu...)"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="pl-12 py-6 text-lg shadow-2xl border-2 focus:border-primary"
+                />
+              </div>
+
+              {searchTerm && (
+                <p className="mt-4 text-sm text-white/80 drop-shadow">
+                  Found {filteredAreas.length} area{filteredAreas.length !== 1 ? 's' : ''}
+                </p>
+              )}
+            </div>
           </div>
         </section>
 
         {/* Regions & Areas */}
-        <section className="pb-20 px-4">
+        <section className="py-20 px-4 bg-background">
           <div className="container mx-auto max-w-6xl">
             {groupedByRegion.map(({ region, info, areas }) => (
               <div key={region} className="mb-12">
@@ -84,13 +103,13 @@ export default function BaliIndex() {
                   {areas.map(area => (
                     <Link key={area.id} href={`/bali/${area.slug}`}>
                       <a>
-                        <Card className="p-4 hover:shadow-lg transition-all hover:border-primary group cursor-pointer">
+                        <Card className="p-4 hover:shadow-lg transition-all duration-200 hover:border-primary hover:-translate-y-1 group cursor-pointer">
                           <div className="flex items-start gap-3">
-                            <div className="mt-1 p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                            <div className="mt-1 p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-all duration-200">
                               <MapPin className="w-5 h-5 text-primary" />
                             </div>
                             <div className="flex-1">
-                              <h3 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors">
+                              <h3 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors duration-200">
                                 {area.displayName}
                               </h3>
                               <p className="text-sm text-muted-foreground line-clamp-2">
@@ -131,12 +150,14 @@ export default function BaliIndex() {
               we may still have therapists available nearby.
             </p>
             <Link href="/contact">
-              <a className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+              <a className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 hover:scale-105 hover:shadow-lg transition-all duration-200">
                 Contact Us for Your Area
               </a>
             </Link>
           </div>
         </section>
+
+        <Footer />
       </div>
     </>
   );
