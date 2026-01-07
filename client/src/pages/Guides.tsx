@@ -81,7 +81,7 @@ const GUIDES: Guide[] = [
     category: 'Travel Tips',
     readTime: '5 min',
     publishDate: '2025-12-10',
-    image: heroImage,
+    image: spaInterior,
     excerpt: 'Navigate local customs, tipping culture, and expectations to ensure a smooth and respectful spa experience in Bali.'
   },
   {
