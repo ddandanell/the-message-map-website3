@@ -1018,6 +1018,405 @@ export const massageTypes: MassageTypeData[] = [
         description: "UK-based corporate massage service emphasizing mental health and stress reduction benefits. Marketing aligns with British workplace wellness initiatives and mental health awareness. Provides chair massage plus mindfulness sessions and stress management workshops. Pricing £50-£70 per therapist per hour. Appeals to companies addressing workplace mental health strategically. Practitioners trained in trauma-informed care and psychological first aid. Creates safe, supportive environment particularly valued in high-stress industries."
       }
     ]
+  },
+
+  // 8. Cupping Therapy
+  {
+    id: "cupping-therapy",
+    slug: "cupping-therapy",
+    name: "Cupping Therapy",
+    metaTitle: "Cupping Therapy: Ancient Healing Technique | Benefits & What to Expect",
+    metaDescription: "Discover cupping therapy's suction cup method for increasing blood flow, reducing inflammation, and releasing muscle tension. Learn benefits, types, and safety. $40-$80 per session.",
+    heroTitle: "Cupping Therapy: Traditional Suction Healing",
+    heroSubtitle: "Experience ancient therapy using suction cups on skin to increase blood flow, activate lymphatic drainage, release fascial restrictions, and reduce inflammation and pain.",
+    category: "Therapeutic & Structural",
+    
+    introduction: `<p>Cupping therapy is an ancient healing practice dating back thousands of years across multiple cultures—Chinese, Middle Eastern, and Egyptian traditions all developed forms of cupping. This therapeutic technique involves placing cups on the skin and creating suction, either through heat (fire cupping) or mechanical pumps (modern cupping), to draw blood to the surface, release fascial restrictions, and promote healing.</p>
+
+<p>The distinctive circular marks left by cupping gained mainstream attention when Olympic athletes and celebrities publicly displayed them, sparking curiosity about this traditional modality. While the marks may look dramatic, they're not bruises—they represent blood being drawn to the surface, indicating areas of stagnation, restriction, or poor circulation that benefit from treatment.</p>
+
+<p>Traditional Chinese Medicine views cupping as a method to move qi and blood, dispel cold and dampness, and open the meridians. Western physiological understanding recognizes cupping increases local circulation dramatically, activates lymphatic drainage, releases myofascial restrictions, and reduces inflammation. Both perspectives acknowledge cupping's therapeutic power for pain, tension, respiratory conditions, and overall vitality.</p>
+
+<p>Modern cupping includes variations: stationary cupping (cups remain in place), moving cupping (lubricated cups glide across skin), wet cupping (controlled bloodletting after cupping), and fire cupping (traditional method using flame). Each technique serves different therapeutic purposes within comprehensive treatment protocols.</p>`,
+    
+    benefitsList: [
+      "Dramatically increases local blood flow and circulation",
+      "Releases deep fascial restrictions and adhesions",
+      "Reduces muscle tension and chronic pain effectively",
+      "Activates lymphatic drainage and detoxification",
+      "Decreases inflammation in treated areas",
+      "Improves athletic recovery and performance",
+      "Addresses respiratory conditions and congestion",
+      "Relieves headaches and migraines",
+      "Promotes skin health through increased circulation"
+    ],
+    
+    techniquesDescription: `<p>Cupping therapy employs several techniques for different therapeutic effects:</p>
+
+<h3>Dry/Stationary Cupping</h3>
+<p>The most common modern approach places cups on specific points and leaves them stationary for 5-15 minutes. The suction draws skin and superficial muscle tissue into the cup, creating negative pressure that increases circulation, releases fascial restrictions, and can break up adhesions. The intensity is adjustable—stronger suction creates darker marks and deeper effects.</p>
+
+<h3>Moving/Gliding Cupping</h3>
+<p>After applying massage oil, cups are placed and then glided across muscle groups in long, flowing strokes. This technique combines cupping's negative pressure with massage-like movements, releasing larger areas of fascial restriction. Moving cupping feels less intense than stationary but covers more territory and integrates well with massage. The marks tend to be lighter and more diffuse.</p>
+
+<h3>Fire Cupping</h3>
+<p>Traditional method briefly introduces flame into glass cups to create vacuum before quickly placing on skin. As air cools, suction strengthens. Fire cupping provides strongest suction and most traditional experience. Modern practitioners often prefer pump-based cups for safety and adjustable pressure, but fire cupping remains preferred in traditional practices for its therapeutic intensity.</p>
+
+<h3>Wet Cupping (Hijama)</h3>
+<p>Ancient technique involving small controlled skin incisions before cupping to draw small amounts of blood. This bloodletting approach is believed to remove toxins and stagnant blood. Wet cupping requires specialized training and sterile technique. More common in Middle Eastern traditions than Chinese medicine. Not practiced by all cupping therapists and not legal everywhere.</p>
+
+<h3>Facial Cupping</h3>
+<p>Uses very small cups with gentle suction on face to increase circulation, reduce puffiness, promote collagen production, and enhance lymphatic drainage. Cups are typically moved continuously rather than left stationary to avoid marking. Growing popular as natural anti-aging treatment.</p>`,
+    
+    bestSuitedFor: [
+      "Athletes seeking enhanced recovery and performance",
+      "Individuals with chronic muscle pain and tension",
+      "Those experiencing fascia restrictions and reduced mobility",
+      "People with respiratory conditions or chest congestion",
+      "Anyone seeking detoxification and lymphatic support",
+      "Individuals with headaches or migraines",
+      "Those comfortable with temporary visible marks",
+      "People wanting alternative to deep tissue massage pressure"
+    ],
+    
+    duration: "30-60 minutes (cupping often combined with acupuncture or massage)",
+    priceRange: "$40-$80 USD per session | 400,000-800,000 IDR in Bali",
+    
+    whatToExpect: `<p>Your cupping session begins with consultation about your conditions, goals, and comfort level. The practitioner examines areas requiring treatment and explains what to expect, including the marks that will result. If you're concerned about visible marks, discuss timing—marks typically last 3-10 days depending on tissue condition and suction intensity.</p>
+
+<p>You'll lie on a massage table with areas to be cupped exposed. For back cupping (most common), you lie face down. The practitioner prepares cups—either heating glass cups with flame or using plastic/silicon cups with mechanical pumps. When placed on skin, you'll feel immediate suction pulling skin upward into the cup. The sensation is unusual but rarely painful—more like firm pulling or pressure.</p>
+
+<p>For stationary cupping, cups remain in place 5-15 minutes. You may feel warmth, tingling, or pulsing as blood flows to the area. The initial strong pulling sensation typically fades as tissue releases. For moving cupping, the practitioner applies oil and glides cups across treatment areas in massage-like movements.</p>
+
+<p>When cups are removed, circular marks are immediately visible where skin was drawn into cups. These range from light pink to deep purple depending on tissue condition—darker marks indicate more stagnation, restriction, or poor circulation. The marks aren't painful, though areas may feel tender to touch initially.</p>
+
+<p>After treatment, many people feel relaxed, loose, and pain-free in treated areas. Some experience mild soreness like post-workout sensation. The increased circulation continues benefits for hours or days after session. Drink plenty of water to support toxin elimination. The marks gradually fade over 3-10 days as the body reabsorbs the blood brought to surface.</p>`,
+    
+    comparisonTitle: "Cupping vs. Deep Tissue Massage and Acupuncture",
+    comparisonText: "Cupping differs from deep tissue massage in its mechanism—massage uses positive pressure pushing into tissue, while cupping uses negative pressure pulling tissue outward. Many people find cupping releases restrictions massage can't access. Cupping leaves distinctive marks while massage doesn't. Compared to acupuncture, cupping addresses broader areas rather than specific points, though both stem from Traditional Chinese Medicine. Cupping and acupuncture complement each other beautifully—many practitioners combine them in single sessions. Unlike acupuncture's needles, cupping uses suction, appealing to those uncomfortable with needles. The sensation differs greatly—acupuncture is precise and subtle, cupping is broad and pulling. Both effectively address pain and circulation but through different mechanisms.",
+    
+    contraindications: "Avoid cupping on areas with open wounds, burns, ulcers, or active skin infections. Pregnancy requires avoiding abdomen, lower back, and certain points. Blood clotting disorders, active bleeding, or anticoagulant medications may contraindicate cupping—consult physicians. Very fragile skin, severe varicose veins, or recent fractures in treatment areas need avoidance. Active fever or acute infections require postponement. Those prone to keloid scarring should proceed cautiously. Don't cup over moles, scars, or areas with decreased sensation. Inform practitioners about all medications and health conditions for safe treatment.",
+    
+    faqs: [
+      {
+        question: "Why do cupping marks look like bruises?",
+        answer: "Cupping marks resemble bruises but form differently. Bruises result from impact damaging blood vessels, causing uncontrolled bleeding into tissue. Cupping creates controlled negative pressure drawing blood to the surface intentionally. The darker the marks, the more stagnation, restriction, or poor circulation existed in that area—cupping reveals underlying issues. As the body reabsorbs this blood, healing accelerates in treated areas. The marks aren't painful and fade naturally over 3-10 days. Regular cupping typically produces lighter marks over time as circulation improves and restrictions release."
+      },
+      {
+        question: "Does cupping hurt?",
+        answer: "Cupping sensations vary but typically aren't painful. Initially, you feel strong suction pulling skin upward—unusual but not painful for most people. The pulling sensation usually decreases as tissue releases. Some areas with significant restriction may feel more intense. Moving cupping tends to feel gentler than stationary. Facial cupping uses light suction and feels pleasant. After cups are removed, treated areas may feel tender like post-workout soreness. This tenderness resolves within hours to a day. Communicate with your practitioner—suction strength is adjustable. If cupping feels painful rather than intense but tolerable, pressure should be reduced."
+      },
+      {
+        question: "How long do cupping marks last and can I hide them?",
+        answer: "Cupping marks typically last 3-10 days, varying by individual circulation, tissue condition, and suction intensity. Darker marks indicate more stagnation and take longer to fade. You can't scrub them away—they fade as your body reabsorbs blood. Makeup can conceal lighter marks but darker ones are difficult to hide completely. If visible marks concern you, schedule cupping when you can cover treated areas or avoid social/professional situations where exposure matters. Some practitioners use lighter suction creating minimal marking, though therapeutic effects may be reduced. The marks are increasingly recognized and less stigmatized thanks to athlete visibility."
+      },
+      {
+        question: "Is there scientific evidence supporting cupping?",
+        answer: "Research on cupping is growing though not as extensive as some therapies. Studies show benefits for chronic neck and back pain, migraine frequency reduction, and inflammatory conditions. The mechanisms aren't fully understood from Western perspective—theories include increased blood flow, fascial release, nervous system effects, and inflammation modulation. While rigorous clinical trials are still limited, thousands of years of traditional use and many people's positive experiences suggest therapeutic value. The treatment's safety, minimal side effects, and low cost make it reasonable to try even while scientific understanding evolves. More research is definitely needed and is ongoing."
+      },
+      {
+        question: "Can I exercise after cupping?",
+        answer: "Most practitioners recommend avoiding vigorous exercise for 24-48 hours after cupping to allow the body to heal and integrate treatment benefits. Light walking is fine, but intense workouts, heavy lifting, or high-impact activities should wait. The treated tissues are in healing mode—the increased blood brought to the surface is repairing and regenerating. Strenuous activity redirects blood flow away from healing. Also avoid extreme heat or cold exposure, alcohol, and heavy meals immediately post-treatment. After the initial rest period, many athletes find their performance enhanced as restrictions release and circulation improves. Plan cupping treatments on rest days when possible."
+      },
+      {
+        question: "How often should I get cupping therapy?",
+        answer: "Treatment frequency depends on your condition and goals. For acute pain or specific issues, weekly sessions initially provide intensive therapeutic input. As conditions improve, spacing to bi-weekly or monthly maintains benefits. Athletic recovery might involve cupping after intense training or competitions. Chronic conditions benefit from regular weekly or bi-weekly treatment until substantial improvement, then monthly maintenance. Allow marks to fade before repeating treatment on same areas—usually one week minimum. Your practitioner adjusts frequency based on your response and needs. Many people combine cupping with acupuncture or massage rather than using it exclusively."
+      },
+      {
+        question: "What's the difference between fire cupping and pump cupping?",
+        answer: "Fire cupping is the traditional method using flame briefly introduced into glass cups to create vacuum. As air cools, suction strengthens. This provides strongest suction and most authentic traditional experience. Pump cupping uses plastic or silicone cups with mechanical pumps creating adjustable negative pressure. Pumps allow precise suction control and avoid fire safety concerns. Therapeutically, both methods are effective—the key is the negative pressure, not how it's created. Fire cupping devotees prefer the traditional approach and believe fire adds energetic quality. Modern practitioners often prefer pumps for safety, adjustability, and ease. Try both if curious—choose based on your comfort and practitioner expertise."
+      },
+      {
+        question: "Can cupping help with cellulite?",
+        answer: "Cupping is increasingly marketed for cellulite reduction with some supporting evidence. The negative pressure increases circulation, may help break up fatty deposits, improve lymphatic drainage, and enhance skin appearance. Specialized anti-cellulite cupping protocols use moving cups with massage techniques targeting affected areas. Results vary significantly between individuals—some see noticeable improvement, others minimal change. Cupping works best as part of comprehensive approach including proper nutrition, hydration, exercise, and dry brushing. Expect multiple sessions and realistic expectations—cupping won't eliminate cellulite entirely but may reduce its appearance. Focus on overall circulation and health benefits rather than cosmetic results alone."
+      }
+    ],
+    
+    ctaText: "Experience the ancient healing power of cupping therapy. Find qualified practitioners trained in Traditional Chinese Medicine and modern cupping techniques.",
+    
+    competitors: [
+      {
+        name: "Traditional Chinese Medicine Center (Various)",
+        description: "Integrates cupping within comprehensive TCM practice alongside acupuncture and herbal medicine. Marketing emphasizes traditional diagnostic approach and authentic technique. Often combines cupping with acupuncture in single sessions for synergistic effects. Pricing $50-$90 reflects specialist training and holistic approach. Appeals to those seeking traditional healing within cultural context. Practitioners explain treatment in TCM terms—moving qi, dispersing cold, opening meridians."
+      },
+      {
+        name: "The NOW Massage (USA)",
+        description: "Modern wellness brand incorporating cupping into integrative massage sessions. Marketing targets wellness-conscious millennials familiar with cupping through celebrity influence. Emphasizes athletic recovery, pain relief, and fascia release. Contemporary spa environment bridges traditional technique with modern aesthetics. Premium pricing $80-$120 per session. Offers cupping add-ons to massage or as standalone treatment. Strong social media presence normalizing cupping marks as wellness badge."
+      },
+      {
+        name: "Reboot Float Spa (Multiple Locations)",
+        description: "Integrates cupping within comprehensive recovery and wellness menu including float therapy, cryotherapy, and compression therapy. Marketing targets athletes and active individuals seeking performance optimization. Positions cupping as recovery tool for training. Premium pricing reflects upscale facilities and integrated services. Appeals to data-driven athletes looking for competitive edge through recovery modalities."
+      },
+      {
+        name: "Bali Usada Traditional Healing",
+        description: "Offers traditional Indonesian cupping (bekam) alongside Balinese healing practices. Marketing emphasizes cultural authenticity and traditional healers trained through family lineage. Targets both locals seeking traditional medicine and wellness tourists wanting authentic experiences. Affordable pricing 300,000-600,000 IDR makes treatment accessible. Simple, traditional setting focuses on therapeutic effectiveness rather than luxury amenities. Often combines with herbal medicine and spiritual healing practices."
+      },
+      {
+        name: "Pure + Simple (Canada)",
+        description: "Natural health spa offering cupping within holistic wellness philosophy. Marketing emphasizes non-toxic, natural approaches to health and beauty. Offers both therapeutic cupping for pain and facial cupping for skin health. Pricing CAD $60-$100. Appeals to health-conscious consumers seeking alternatives to conventional treatments. Clean, minimal aesthetic and educational approach help demystify cupping. Strong focus on detoxification and lymphatic benefits."
+      }
+    ]
+  },
+
+  // Note: Continuing with remaining types in next section...
+  // 9. Bamboo Massage
+  {
+    id: "bamboo-massage",
+    slug: "bamboo-massage",
+    name: "Bamboo Massage",
+    metaTitle: "Bamboo Massage: Heated Bamboo Stick Therapy | Benefits & Techniques",
+    metaDescription: "Experience bamboo massage using heated bamboo sticks as massage tools to knead muscles deeply, promote circulation, and provide unique relaxation. $60-$100 per session.",
+    heroTitle: "Bamboo Massage: Natural Tool, Deep Relief",
+    heroSubtitle: "Discover therapeutic massage using heated bamboo sticks of varying sizes as tools to knead muscles deeply, improve circulation, and create uniquely satisfying relaxation.",
+    category: "Specialty & Innovative",
+    
+    introduction: `<p>Bamboo massage combines ancient healing wisdom with innovative technique, using heated bamboo sticks of various lengths and diameters as massage implements. This creative modality delivers deep tissue work's therapeutic benefits while reducing strain on practitioners' hands, allowing sustained pressure that would otherwise fatigue human hands and fingers.</p>
+
+<p>The smooth bamboo rolls across muscles providing deep kneading, while the heat penetrates tissue promoting relaxation and circulation. Different sized sticks address various body areas—large diameter bamboo for broad back muscles, medium sizes for legs and arms, small sticks for focused work on specific knots or trigger points. The warm, smooth surface gliding across your body creates uniquely pleasurable sensations.</p>
+
+<p>Beyond practical advantages, bamboo carries symbolic and energetic significance in Asian cultures—representing flexibility, strength, and natural harmony. The practice emerged from Asian traditions where bamboo's abundance and properties made it natural therapeutic tool. Modern bamboo massage refines these traditional approaches with contemporary anatomical understanding.</p>`,
+    
+    benefitsList: [
+      "Delivers deep tissue work effectively with less practitioner fatigue",
+      "Heated bamboo warms muscles facilitating deeper release",
+      "Improves circulation through rolling and kneading action",
+      "Releases trigger points and adhesions efficiently",
+      "Creates unique sensory experience combining heat and pressure",
+      "Bamboo's smooth surface glides pleasantly across skin",
+      "Eco-friendly natural tool aligned with sustainable values",
+      "Addresses large muscle groups with broad, efficient strokes"
+    ],
+    
+    techniquesDescription: `<p>Bamboo massage employs specialized rolling, kneading, and percussion techniques using heated bamboo as primary tool.</p>`,
+    
+    bestSuitedFor: [
+      "Those seeking deep tissue benefits with different sensation",
+      "People who enjoy heat therapy combined with massage",
+      "Athletes needing deep muscle work and recovery",
+      "Individuals with large areas of muscle tension",
+      "Those curious about innovative massage techniques",
+      "People who prefer tools to direct hand pressure",
+      "Anyone wanting eco-friendly, natural treatment approaches"
+    ],
+    
+    duration: "60-90 minutes",
+    priceRange: "$60-$100 USD per session | 600,000-1,000,000 IDR in Bali",
+    
+    whatToExpect: `<p>Bamboo massage sessions typically begin like traditional massage with consultation and assessment. You'll lie on a massage table as warmed bamboo sticks of various sizes are applied with massage oil. The practitioner rolls, presses, and kneads using the bamboo, adjusting stick size and technique for different body areas. The heated bamboo creates pleasant warmth penetrating muscles while the rolling, kneading action releases deep tension.</p>`,
+    
+    comparisonTitle: "Bamboo vs. Traditional Deep Tissue Massage",
+    comparisonText: "Bamboo massage delivers similar deep tissue benefits to hands-on deep tissue work but with different sensations and tools. The bamboo allows sustained deep pressure without practitioner fatigue, potentially providing more consistent intensity. The heat adds therapeutic dimension traditional deep tissue may lack. The rolling action differs from hands' kneading. Some prefer bamboo's novel approach, others prefer traditional human touch. Both effectively address deep muscle tension.",
+    
+    contraindications: "Similar to other massage—avoid during acute injury, infection, or severe inflammation. Heat sensitivity requires cooler bamboo. Recent surgery, blood clotting disorders, and severe varicose veins need medical clearance. Pregnancy requires prenatal-trained practitioners.",
+    
+    faqs: [
+      {
+        question: "Does bamboo massage hurt?",
+        answer: "Like deep tissue massage, bamboo massage applies firm pressure that may cause some discomfort in areas of chronic tension. However, the broad surface of bamboo often distributes pressure more comfortably than fingers or elbows. The heat helps muscles relax, reducing discomfort. Communicate with your therapist about pressure preferences—bamboo massage is adjustable from moderate to deep."
+      },
+      {
+        question: "Is bamboo massage eco-friendly?",
+        answer: "Bamboo is highly sustainable—it's the fastest-growing plant on earth, regenerates without replanting, requires minimal water and no pesticides. Quality bamboo massage sticks last years with proper care. For environmentally-conscious clients, bamboo massage aligns with sustainable wellness values. Ensure your practitioner sources responsibly-harvested bamboo."
+      }
+    ],
+    
+    ctaText: "Try innovative bamboo massage combining traditional healing wisdom with modern technique. Experience deep relief through natural heated bamboo tools.",
+    
+    competitors: []
+  },
+
+  // 10. Watsu (Water Shiatsu)
+  {
+    id: "watsu",
+    slug: "watsu",
+    name: "Watsu (Water Shiatsu)",
+    metaTitle: "Watsu Therapy: Water Shiatsu Massage | Aquatic Bodywork Benefits",
+    metaDescription: "Discover Watsu—gentle aquatic bodywork combining shiatsu, stretching, and floating in warm water for profound relaxation and pain relief. $80-$150 per session.",
+    heroTitle: "Watsu: Healing Through Water",
+    heroSubtitle: "Experience transformative aquatic bodywork performed in warm water pool, combining shiatsu pressure points with gentle stretching and floating for profound relaxation.",
+    category: "Specialty & Innovative",
+    
+    introduction: `<p>Watsu (water + shiatsu) is a unique form of aquatic bodywork developed by Harold Dull in the 1980s at Harbin Hot Springs, California. This innovative therapy combines Zen Shiatsu principles with gentle stretching and flowing movements performed in chest-deep warm water (typically 95-98°F/35-37°C). The practitioner supports and moves the recipient through graceful sequences that would be impossible on land.</p>
+
+<p>Water's buoyancy eliminates gravity's compression on joints and spine, allowing unprecedented freedom of movement and release. The warmth relaxes muscles profoundly while the gentle rocking and flowing movements create deeply meditative states. Many describe Watsu as returning to womb-like safety—supported, warm, and free-floating.</p>
+
+<p>Watsu addresses body, mind, and spirit through movement, breath, and nurturing support. The practice requires specialized training—practitioners must master not just bodywork techniques but also water safety, body mechanics in water, and ability to move fluidly while supporting another person's full body weight.</p>`,
+    
+    benefitsList: [
+      "Provides profound relaxation impossible to achieve on land",
+      "Releases spine and joint compression through buoyancy",
+      "Reduces chronic pain, especially back and neck issues",
+      "Deeply calms nervous system and reduces stress",
+      "Increases flexibility and range of motion safely",
+      "Creates meditative, sometimes transcendent states",
+      "Beneficial for fibromyalgia, arthritis, and mobility issues",
+      "Provides safe movement therapy for injuries or limitations"
+    ],
+    
+    techniquesDescription: `<p>Watsu employs gentle stretching, shiatsu pressure points, and fluid dance-like movements all performed while you float in warm water supported by the practitioner.</p>`,
+    
+    bestSuitedFor: [
+      "Those with chronic pain, especially spinal issues",
+      "People with limited mobility or movement restrictions",
+      "Individuals experiencing high stress or anxiety",
+      "Those with fibromyalgia or arthritis",
+      "Anyone comfortable in water seeking deep relaxation",
+      "People interested in meditative, transformative experiences",
+      "Individuals unable to tolerate pressure of table massage"
+    ],
+    
+    duration: "60-90 minutes",
+    priceRange: "$80-$150 USD per session (higher due to specialized training and pool requirements)",
+    
+    whatToExpect: `<p>Watsu sessions occur in warm pool (95-98°F). You wear swimsuit and may use nose clip. The practitioner supports your body—head cradled in their arms—while you float on your back. They move you through flowing sequences of stretches, rotations, and pressure point work. The experience is profoundly relaxing, often inducing trance-like states. Many people report feeling completely safe, held, and free.</p>`,
+    
+    comparisonTitle: "Watsu vs. Traditional Massage",
+    comparisonText: "Watsu differs fundamentally from table massage through water's involvement. Buoyancy eliminates gravity's compression allowing movements impossible on land. The warmth and support create unique psychological safety. Watsu feels less like 'receiving technique' and more like 'being danced.' It's gentler yet more expansive than most massage. Those with mobility issues often access ranges of motion in water they can't achieve on land. The meditative quality tends to be more profound.",
+    
+    contraindications: "Avoid Watsu during ear infections, open wounds, severe incontinence, or acute infections. Those with severe heart or lung conditions need medical clearance. Some people find water submersion triggering—discuss concerns beforehand. Fear of water obviously contraindicates treatment. Pregnancy is generally safe with trained prenatal Watsu practitioners.",
+    
+    faqs: [
+      {
+        question: "Do I need to know how to swim?",
+        answer: "No swimming ability required. The practitioner fully supports you throughout the session—you float passively on your back with head above water, completely supported. Many non-swimmers enjoy Watsu. If you're uncomfortable in water, discuss concerns with your practitioner. Some providers offer shorter intro sessions for water-nervous clients."
+      },
+      {
+        question: "Will my head go underwater?",
+        answer: "No, standard Watsu keeps your face above water throughout. Your head is cradled in the practitioner's arms, and they maintain your airway clear. Some advanced forms include brief gentle submersions, but only with explicit consent and training. Standard Watsu is completely above-water except your ears may be submerged—you can use ear plugs or nose clip if desired."
+      }
+    ],
+    
+    ctaText: "Experience the profound healing of Watsu aquatic bodywork. Find certified practitioners offering this transformative water therapy.",
+    
+    competitors: []
+  },
+
+  // 11. Tui Na
+  {
+    id: "tui-na",
+    slug: "tui-na",
+    name: "Tui Na",
+    metaTitle: "Tui Na Chinese Massage: Therapeutic Bodywork | TCM Benefits",
+    metaDescription: "Discover Tui Na—Chinese therapeutic massage using rhythmic compression along meridians to treat pain, restore energy flow, and address specific health conditions. $50-$90.",
+    heroTitle: "Tui Na: Chinese Therapeutic Massage",
+    heroSubtitle: "Experience Traditional Chinese Medicine's hands-on therapy using rhythmic compression, acupoint stimulation, and stretching to treat specific conditions and restore energy balance.",
+    category: "Traditional & Cultural",
+    
+    introduction: `<p>Tui Na (pronounced "twee nah," meaning "push grasp") is Chinese medical massage—a sophisticated manual therapy system within Traditional Chinese Medicine alongside acupuncture and herbal medicine. Unlike relaxation massage, Tui Na is prescribed treatment for specific conditions diagnosed through TCM assessment. Practitioners use hands, fingers, elbows, and sometimes feet to apply techniques along meridians and acupoints.</p>
+
+<p>Tui Na addresses the same energetic imbalances as acupuncture but through manual manipulation rather than needles. Different hand techniques correspond to different therapeutic effects—some tonify deficiency, others disperse excess, some specifically address pain while others focus on internal organ function. The practice requires extensive TCM training including diagnosis, meridian theory, and energetic assessment.</p>`,
+    
+    benefitsList: [
+      "Treats specific diagnosed conditions, not just relaxation",
+      "Restores harmonious qi flow through meridian work",
+      "Effectively addresses musculoskeletal pain",
+      "Supports internal organ function through energetic balancing",
+      "Combines well with acupuncture and herbal medicine",
+      "Provides vigorous therapeutic work",
+      "Addresses both acute and chronic health issues",
+      "Suitable for all ages including children and elderly"
+    ],
+    
+    techniquesDescription: `<p>Tui Na employs numerous specific hand techniques classified by their energetic effects—pushing, grasping, rolling, kneading, percussion, and point pressure methods each serve different therapeutic purposes within TCM framework.</p>`,
+    
+    bestSuitedFor: [
+      "Those seeking treatment for specific health conditions",
+      "People interested in Traditional Chinese Medicine",
+      "Individuals with musculoskeletal pain or injuries",
+      "Those wanting more vigorous, therapeutic bodywork",
+      "People who prefer diagnosis-driven treatment",
+      "Anyone seeking alternatives to acupuncture needles",
+      "Individuals with chronic health imbalances"
+    ],
+    
+    duration: "45-90 minutes depending on condition complexity",
+    priceRange: "$50-$90 USD per session | 500,000-900,000 IDR",
+    
+    whatToExpect: `<p>Tui Na begins with TCM diagnostic assessment—tongue examination, pulse taking, and detailed symptom inquiry. Based on diagnosis, the practitioner prescribes specific techniques and point combinations. Treatment is typically performed clothed on padded table or floor mat. The work is vigorous—stronger and more physical than Swedish massage. Expect firm pushing, grasping, and joint mobilization. Some techniques may be uncomfortable but shouldn't be unbearable.</p>`,
+    
+    comparisonTitle: "Tui Na vs. Acupressure and Swedish Massage",
+    comparisonText: "Tui Na is more vigorous and condition-specific than acupressure, using broader techniques beyond point pressure. Compared to Swedish massage's relaxation focus, Tui Na specifically treats diagnosed TCM patterns. The techniques are often more intense, focused on therapeutic outcomes rather than pleasant sensation. Tui Na requires more extensive training—practitioners must understand TCM diagnosis and treatment principles, not just massage techniques.",
+    
+    contraindications: "Similar to acupressure—avoid during acute infections, fever, or on areas with fractures, wounds, or severe varicose veins. Pregnancy requires prenatal-trained practitioners avoiding certain points and areas. Cancer, osteoporosis, and bleeding disorders need medical clearance. Always disclose health conditions for safe treatment.",
+    
+    faqs: [
+      {
+        question: "Is Tui Na the same as Chinese massage?",
+        answer: "Tui Na is the authentic Chinese medical massage system, though many places offer 'Chinese massage' without proper TCM training. True Tui Na practitioners diagnose according to TCM principles and prescribe specific techniques for your pattern, not generic routines. They understand meridian theory, point functions, and energetic assessment. 'Chinese massage' at some spas may just mean firm massage using some Asian techniques without diagnostic sophistication that defines Tui Na."
+      },
+      {
+        question: "Does Tui Na hurt?",
+        answer: "Tui Na is typically more vigorous and intense than relaxation massage. Some techniques—especially those dispersing stagnation or releasing adhesions—may cause discomfort. However, Tui Na should never be unbearably painful. The intensity varies by individual tolerance and condition. Practitioners skilled in pediatric Tui Na work extremely gently with children. Communicate about pressure—effective Tui Na needn't be agonizing."
+      }
+    ],
+    
+    ctaText: "Experience authentic Tui Na Chinese medical massage. Find practitioners trained in Traditional Chinese Medicine diagnosis and therapeutic techniques.",
+    
+    competitors: []
+  },
+
+  // 12. Neuromuscular Therapy
+  {
+    id: "neuromuscular-therapy",
+    slug: "neuromuscular-therapy",
+    name: "Neuromuscular Therapy",
+    metaTitle: "Neuromuscular Therapy (NMT): Trigger Point Treatment | Pain Relief",
+    metaDescription: "Discover Neuromuscular Therapy's specialized approach to trigger points, nerve compression, and biomechanical dysfunction for effective pain elimination. $80-$140 per session.",
+    heroTitle: "Neuromuscular Therapy: Precision Pain Relief",
+    heroSubtitle: "Experience highly specialized treatment addressing trigger points, nerve compression, postural distortion, and biomechanical dysfunction to eliminate pain and restore function.",
+    category: "Therapeutic & Structural",
+    
+    introduction: `<p>Neuromuscular Therapy (NMT) is sophisticated manual therapy system specifically designed to assess and treat soft tissue pain and dysfunction. Unlike general massage, NMT requires extensive specialized training in anatomy, physiology, kinesiology, and biomechanics. Practitioners identify and address five primary factors causing musculoskeletal pain: trigger points, nerve compression/entrapment, postural distortion, biomechanical dysfunction, and ischemia (reduced blood flow).</p>
+
+<p>NMT is problem-solving bodywork—practitioners detective work to find root causes of pain, which often exist distant from symptom location. Shoulder pain might stem from thoracic spine dysfunction; headaches from trigger points in neck and jaw; low back pain from pelvic imbalance and weak core muscles. This analytical approach distinguishes NMT from symptom-chasing treatments.</p>`,
+    
+    benefitsList: [
+      "Effectively eliminates chronic pain at its source",
+      "Addresses trigger points causing referred pain",
+      "Releases nerve compressions and entrapments",
+      "Corrects postural imbalances and movement patterns",
+      "Restores normal biomechanical function",
+      "Provides lasting results rather than temporary relief",
+      "Prevents recurring injuries through functional corrections",
+      "Integrates assessment and treatment systematically"
+    ],
+    
+    techniquesDescription: `<p>NMT employs precise static pressure on trigger points, myofascial release, positional release, muscle energy techniques, and movement assessment integrated with biomechanical understanding to address pain's root causes.</p>`,
+    
+    bestSuitedFor: [
+      "Individuals with chronic pain unresolved by other treatments",
+      "Those with specific musculoskeletal issues or injuries",
+      "People experiencing referred pain patterns",
+      "Anyone with postural or biomechanical dysfunctions",
+      "Individuals seeking analytical, problem-solving approach",
+      "Those wanting lasting solutions, not temporary relief",
+      "People with nerve compression or entrapment syndromes"
+    ],
+    
+    duration: "60-90 minutes (thorough assessment requires time)",
+    priceRange: "$80-$140 USD per session (higher due to specialized training)",
+    
+    whatToExpect: `<p>NMT sessions begin with comprehensive assessment—postural analysis, movement observation, palpation, and detailed history. The practitioner evaluates biomechanical relationships, identifying dysfunctional patterns. Treatment uses sustained pressure on trigger points (which may be quite tender), myofascial release, and corrective techniques. Expect detailed explanations of findings and home care recommendations. The work is therapeutic rather than relaxing, though pain relief brings its own satisfaction.</p>`,
+    
+    comparisonTitle: "NMT vs. Deep Tissue and Trigger Point Therapy",
+    comparisonText: "NMT incorporates trigger point work but within comprehensive biomechanical framework. Unlike standalone trigger point therapy, NMT addresses why triggers developed—postural issues, movement dysfunction, nerve compression. Compared to general deep tissue, NMT is more analytical and specific, addressing causes not just symptoms. The assessment component is more extensive. NMT practitioners function more like pain specialists than relaxation therapists.",
+    
+    contraindications: "Similar to other deep work—avoid during acute inflammation, infections, or recent injuries without assessment. Certain neurological conditions, severe osteoporosis, and blood clotting disorders need medical clearance. NMT practitioners are trained to identify contraindications through assessment.",
+    
+    faqs: [
+      {
+        question: "How is NMT different from regular massage?",
+        answer: "NMT is specialized pain treatment, not relaxation massage. It requires extensive additional training in pain science, biomechanics, and systematic assessment. Sessions include detailed evaluation identifying pain causes. Treatment is specific and analytical rather than full-body relaxation. NMT practitioners function more as pain specialists solving musculoskeletal puzzles. The techniques are more focused and may be intense. Results tend to be more lasting because root causes are addressed."
+      },
+      {
+        question: "How many NMT sessions will I need?",
+        answer: "This varies widely by condition complexity and chronicity. Acute issues may resolve in 3-6 sessions. Chronic, complex pain patterns might require 8-12 sessions initially. Many people continue with monthly maintenance after initial intensive treatment. Your practitioner provides estimates after initial assessment. NMT aims for lasting resolution, not ongoing dependency—successful treatment includes self-care education preventing recurrence."
+      }
+    ],
+    
+    ctaText: "Find certified Neuromuscular Therapy practitioners for specialized assessment and treatment of chronic pain and dysfunction.",
+    
+    competitors: []
   }
   
 ];
