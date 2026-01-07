@@ -4,7 +4,6 @@ import { Footer } from "@/components/layout/Footer";
 import { CATEGORIES } from "@/lib/mockData";
 import { Activity, Flower2, Heart, Flame, Footprints, Droplets, Sparkles, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 
 // Map icons to Lucide components
 const IconMap = {
@@ -195,7 +194,9 @@ export default function MassageTypes() {
         </div>
       </section>
 
-          {/* Benefits Section */}
+      {/* Benefits Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
           <div className="bg-gradient-to-br from-teal-50 to-purple-50 rounded-3xl p-8 md:p-12 border border-teal-100">
             <h2 className="text-3xl font-bold text-center text-teal-900 mb-12">
               Benefits of Regular Massage
