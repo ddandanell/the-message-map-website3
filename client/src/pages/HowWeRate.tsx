@@ -25,7 +25,7 @@ export default function HowWeRate() {
           <div className="flex-1 space-y-6">
             <h2 className="text-3xl font-bold text-teal-900">The 10-Point Inspection</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Every "Verified" place on The Massage Map has undergone an anonymous inspection by our local team. We evaluate based on strict criteria designed to ensure safety, quality, and transparency.
+              Every "Verified" place on Massage Bali has undergone an anonymous inspection by our local team. We evaluate based on strict criteria designed to ensure safety, quality, and transparency.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[

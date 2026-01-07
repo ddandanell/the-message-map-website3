@@ -49,8 +49,8 @@ export function Header() {
         {/* Logo */}
         <Link href="/">
           <a className="flex items-center gap-3 font-bold text-2xl tracking-tight hover:opacity-90 transition-opacity">
-            <img src={logoImage} alt="The Massage Map Logo" className="w-8 h-8 object-contain" />
-            <span className={cn("text-primary", !isScrolled && !mobileMenuOpen && !needsSolidHeader && "text-white")}>The Massage Map</span>
+            <img src={logoImage} alt="Massage Bali Logo" className="w-8 h-8 object-contain" />
+            <span className={cn("text-primary", !isScrolled && !mobileMenuOpen && !needsSolidHeader && "text-white")}>Massage Bali</span>
           </a>
         </Link>
 

@@ -159,7 +159,7 @@ export default function PlaceDetail() {
                 <p className="text-lg text-foreground/80 leading-relaxed font-serif">
                   "{place.editor_note}"
                 </p>
-                <div className="mt-2 text-xs text-muted-foreground">— The Massage Map Team</div>
+                <div className="mt-2 text-xs text-muted-foreground">— Massage Bali Team</div>
               </div>
 
               {/* Description */}

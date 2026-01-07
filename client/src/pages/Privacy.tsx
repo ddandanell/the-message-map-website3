@@ -57,7 +57,7 @@ export default function Privacy() {
               <div className="bg-white p-6 rounded-xl border border-border">
                 <h3 className="text-xl font-bold text-foreground mt-0">Information You Provide</h3>
                 <p className="text-muted-foreground">
-                  When you use The Massage Map, we may collect information you voluntarily provide, such as:
+                  When you use Massage Bali, we may collect information you voluntarily provide, such as:
                 </p>
                 <ul className="text-muted-foreground">
                   <li>Name and email address when contacting us or subscribing to our newsletter</li>

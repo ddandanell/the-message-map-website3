@@ -495,14 +495,14 @@ export default function BestMassageCanggu2026() {
               <div>
                 <h4 className="font-bold text-lg text-foreground mb-1">Sarah Williams</h4>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Founder & Chief Relaxation Officer at The Massage Map. Based in Canggu since 2019,
+                  Founder & Chief Relaxation Officer at Massage Bali. Based in Canggu since 2019,
                   Sarah has personally tested over 200 spas across Bali in her mission to help travelers
                   find authentic, quality wellness experiences.
                 </p>
                 <div className="flex gap-3 text-sm">
                   <a href="#" className="text-primary hover:underline">More articles by Sarah</a>
                   <span className="text-muted-foreground">•</span>
-                  <a href="/about" className="text-primary hover:underline">About The Massage Map</a>
+                  <a href="/about" className="text-primary hover:underline">About Massage Bali</a>
                 </div>
               </div>
             </div>

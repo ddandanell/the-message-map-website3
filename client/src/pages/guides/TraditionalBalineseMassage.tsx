@@ -561,7 +561,7 @@ export default function TraditionalBalineseMassage() {
               <div>
                 <h4 className="font-bold text-lg text-foreground mb-1">Jessica Lim</h4>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Content Editor at The Massage Map. Jessica is a certified massage therapist and wellness researcher who
+                  Content Editor at Massage Bali. Jessica is a certified massage therapist and wellness researcher who
                   has studied traditional healing practices across Southeast Asia.
                 </p>
                 <div className="flex gap-3 text-sm">

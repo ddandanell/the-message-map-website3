@@ -191,7 +191,7 @@ export default function Contact() {
 
             <details className="bg-white p-6 rounded-xl border border-border shadow-sm group">
               <summary className="font-bold text-lg cursor-pointer list-none flex items-center justify-between">
-                Can I advertise on The Massage Map?
+                Can I advertise on Massage Bali?
                 <span className="text-muted-foreground group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="text-muted-foreground mt-4 leading-relaxed">

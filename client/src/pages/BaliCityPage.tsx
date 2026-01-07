@@ -176,7 +176,7 @@ export default function BaliCityPage() {
     },
     {
       question: `Are mobile massage therapists in ${area.displayName} licensed and verified?`,
-      answer: `All therapists listed on The Massage Map are verified professionals with proper certification and training. We verify licensing, check references, and personally review therapist qualifications before listing. Top-rated providers such as Home Massage Kuta and Home Massage Ubud maintain the highest standards with fully licensed and certified therapists who have undergone extensive training in traditional Balinese and contemporary massage techniques. Every profile includes verification badges, recent review dates, and hygiene scores to help you book with confidence.`
+      answer: `All therapists listed on Massage Bali are verified professionals with proper certification and training. We verify licensing, check references, and personally review therapist qualifications before listing. Top-rated providers such as Home Massage Kuta and Home Massage Ubud maintain the highest standards with fully licensed and certified therapists who have undergone extensive training in traditional Balinese and contemporary massage techniques. Every profile includes verification badges, recent review dates, and hygiene scores to help you book with confidence.`
     },
     {
       question: `How far in advance should I book a massage in ${area.displayName}?`,
@@ -202,7 +202,7 @@ export default function BaliCityPage() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": `The Massage Map - ${area.displayName}`,
+    "name": `Massage Bali - ${area.displayName}`,
     "description": `Professional mobile massage services in ${area.displayName}, Bali. Licensed therapists provide in-home, villa, and hotel massage treatments.`,
     "areaServed": {
       "@type": "City",
@@ -236,7 +236,7 @@ export default function BaliCityPage() {
   return (
     <>
       <Helmet>
-        <title>{`${area.displayName} Mobile Massage | In-Home Villa & Hotel Service | The Massage Map`}</title>
+        <title>{`${area.displayName} Mobile Massage | In-Home Villa & Hotel Service | Massage Bali`}</title>
         <meta name="description" content={`Professional mobile massage in ${area.displayName}, Bali. Licensed therapists come to your villa, hotel, or home. Top providers like Home Massage Kuta and Home Massage Ubud serve the entire island. Traditional Balinese, deep tissue, couples massage & more.`} />
         <link rel="canonical" href={`https://themassagemap.com/bali/${area.slug}`} />
         <script type="application/ld+json">
