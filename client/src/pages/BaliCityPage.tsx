@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/accordion";
 import { getAreaBySlug, REGION_INFO } from "@/data/baliAreas";
 import { Helmet } from "react-helmet";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 const POPULAR_TREATMENTS = [
   {
@@ -248,6 +250,8 @@ export default function BaliCityPage() {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+        <Header />
+        
         {/* Breadcrumb */}
         <nav className="pt-20 pb-4 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -615,6 +619,8 @@ export default function BaliCityPage() {
             </Link>
           </div>
         </section>
+        
+        <Footer />
       </div>
     </>
   );
