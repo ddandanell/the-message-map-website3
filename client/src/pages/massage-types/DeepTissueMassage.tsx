@@ -5,7 +5,7 @@ const deepTissueMassageData: MassageTypeData = {
   id: "deep-tissue-massage",
   slug: "deep-tissue-massage",
   name: "Deep Tissue Massage",
-  metaTitle: "Deep Tissue Massage Bali: Chronic Pain Relief & Muscle Therapy 2026",
+  metaTitle: "Deep Tissue Massage Bali: Chronic Pain Relief & Muscle Therapy",
   metaDescription: "Expert deep tissue massage in Bali for chronic pain, muscle knots, and injury recovery. Learn techniques, benefits, pricing (250k-600k IDR), and find certified therapists.",
   heroTitle: "Deep Tissue Massage: Targeted Relief for Chronic Muscle Tension",
   heroSubtitle: "Therapeutic massage using firm pressure and slow strokes to access deeper muscle layers, release chronic tension, and restore mobility.",

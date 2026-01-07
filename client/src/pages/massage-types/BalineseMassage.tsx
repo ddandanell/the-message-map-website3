@@ -5,7 +5,7 @@ const balineseMassageData: MassageTypeData = {
   id: "balinese-massage",
   slug: "balinese-massage",
   name: "Balinese Massage",
-  metaTitle: "Traditional Balinese Massage: Techniques, Benefits & Best Spas Bali 2026",
+  metaTitle: "Traditional Balinese Massage: Techniques, Benefits & Best Spas Bali",
   metaDescription: "Authentic Balinese massage combining acupressure, aromatherapy, and gentle stretching. Pricing 150k-500k IDR. Discover traditional healing techniques and top-rated spas in Bali.",
   heroTitle: "Balinese Massage: Ancient Indonesian Healing Tradition",
   heroSubtitle: "Experience Bali's signature healing art combining gentle acupressure, aromatherapy oils, reflexology, and flowing strokes for holistic wellbeing.",

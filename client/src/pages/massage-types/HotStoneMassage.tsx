@@ -5,7 +5,7 @@ const hotStoneMassageData: MassageTypeData = {
   id: "hot-stone-massage",
   slug: "hot-stone-massage",
   name: "Hot Stone Massage",
-  metaTitle: "Hot Stone Massage Bali: Deep Relaxation & Healing Warmth 2026",
+  metaTitle: "Hot Stone Massage Bali: Deep Relaxation & Healing Warmth",
   metaDescription: "Luxurious hot stone massage in Bali using heated volcanic stones for deep muscle relaxation. Learn benefits, techniques, pricing (300k-700k IDR), and top spas.",
   heroTitle: "Hot Stone Massage: Healing Warmth Meets Therapeutic Touch",
   heroSubtitle: "Experience the profound relaxation of smooth, heated stones combined with expert massage techniques for deep muscle tension release and stress relief.",

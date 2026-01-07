@@ -139,7 +139,7 @@ export default function MassageTypes() {
 
           <div className="text-center">
             <p className="text-muted-foreground mb-4">
-              More massage types coming soon! Including Aromatherapy, Reflexology, Sports Massage, Shiatsu, and many more.
+              More detailed massage type guides coming soon, including therapeutic, energy work, and specialty treatments.
             </p>
           </div>
         </div>

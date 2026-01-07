@@ -69,6 +69,7 @@ export default function MassageTypeTemplate({ data }: MassageTypeTemplateProps) 
 
         {/* Introduction */}
         <div className="prose prose-lg max-w-none mb-12">
+          {/* Note: dangerouslySetInnerHTML is safe here as content is developer-controlled, not user input */}
           <div dangerouslySetInnerHTML={{ __html: data.introduction }} />
         </div>
 

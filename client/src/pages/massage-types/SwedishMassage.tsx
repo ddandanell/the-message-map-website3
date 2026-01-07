@@ -5,7 +5,7 @@ const swedishMassageData: MassageTypeData = {
   id: "swedish-massage",
   slug: "swedish-massage",
   name: "Swedish Massage",
-  metaTitle: "Swedish Massage in Bali: Benefits, Techniques & Best Spas 2026",
+  metaTitle: "Swedish Massage in Bali: Benefits, Techniques & Best Spas",
   metaDescription: "Discover the benefits of Swedish massage in Bali. Learn about techniques, pricing (200k-500k IDR), duration, and find the best spas for authentic Swedish massage therapy.",
   heroTitle: "Swedish Massage: The Classic Relaxation Therapy",
   heroSubtitle: "Experience the world's most popular massage technique featuring long, flowing strokes that promote deep relaxation and stress relief.",

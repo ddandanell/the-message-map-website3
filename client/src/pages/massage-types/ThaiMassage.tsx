@@ -5,7 +5,7 @@ const thaiMassageData: MassageTypeData = {
   id: "thai-massage",
   slug: "thai-massage",
   name: "Thai Massage",
-  metaTitle: "Traditional Thai Massage Bali: Ancient Healing & Flexibility 2026",
+  metaTitle: "Traditional Thai Massage Bali: Ancient Healing & Flexibility",
   metaDescription: "Authentic Thai massage in Bali combining acupressure, yoga stretches, and energy work. Pricing 200k-550k IDR. Learn techniques, benefits, and find certified practitioners.",
   heroTitle: "Thai Massage: Ancient Healing Through Movement and Energy",
   heroSubtitle: "Experience traditional Thai bodywork combining acupressure, assisted yoga postures, and rhythmic compression for enhanced flexibility and energy flow.",
