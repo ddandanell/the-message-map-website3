@@ -25,6 +25,13 @@ import BaliCityPage from "@/pages/BaliCityPage";
 import BestMassageCanggu2026 from "@/pages/guides/BestMassageCanggu2026";
 import TraditionalBalineseMassage from "@/pages/guides/TraditionalBalineseMassage";
 
+// Massage Type Pages
+import SwedishMassage from "@/pages/massage-types/SwedishMassage";
+import DeepTissueMassage from "@/pages/massage-types/DeepTissueMassage";
+import ThaiMassage from "@/pages/massage-types/ThaiMassage";
+import HotStoneMassage from "@/pages/massage-types/HotStoneMassage";
+import BalineseMassage from "@/pages/massage-types/BalineseMassage";
+
 function Router() {
   return (
     <Switch>
@@ -36,6 +43,13 @@ function Router() {
       {/* Guide Detail Pages */}
       <Route path="/guides/best-massage-canggu-2026" component={BestMassageCanggu2026} />
       <Route path="/guides/traditional-balinese-massage-guide" component={TraditionalBalineseMassage} />
+
+      {/* Massage Type Detail Pages */}
+      <Route path="/massage-types/swedish-massage" component={SwedishMassage} />
+      <Route path="/massage-types/deep-tissue-massage" component={DeepTissueMassage} />
+      <Route path="/massage-types/thai-massage" component={ThaiMassage} />
+      <Route path="/massage-types/hot-stone-massage" component={HotStoneMassage} />
+      <Route path="/massage-types/balinese-massage" component={BalineseMassage} />
 
       <Route path="/list-business" component={ListBusiness} />
       <Route path="/how-we-rate" component={HowWeRate} />
