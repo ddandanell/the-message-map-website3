@@ -18,7 +18,7 @@ export default function ListBusiness() {
           
           <div className="flex-1 space-y-8">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-teal-950 mb-4">Grow your spa business with The Massage Map</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-teal-950 mb-4">Grow your spa business with Massage Bali</h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Join Bali's most trusted wellness directory. Connect with thousands of customers looking for quality relaxation every month.
               </p>
@@ -45,7 +45,7 @@ export default function ListBusiness() {
             <div className="relative rounded-2xl overflow-hidden aspect-video shadow-xl">
               <img src={teamImage} alt="Wellness Team" className="object-cover w-full h-full" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                <p className="text-white font-medium italic">"Since listing on The Massage Map, our bookings from international guests have doubled." — Sarah, Owner of Lotus Spa</p>
+                <p className="text-white font-medium italic">"Since listing on Massage Bali, our bookings from international guests have doubled." — Sarah, Owner of Lotus Spa</p>
               </div>
             </div>
           </div>

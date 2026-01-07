@@ -29,7 +29,7 @@ export default function BaliIndex() {
   return (
     <>
       <Helmet>
-        <title>Bali Massage Service Areas (Villa & Hotel) | The Massage Map</title>
+        <title>Bali Massage Service Areas (Villa & Hotel) | Massage Bali</title>
         <meta name="description" content="Professional in-home, villa, and hotel massage services across all areas of Bali. From Seminyak to Ubud, Canggu to Uluwatu - find verified massage therapists in your area." />
         <link rel="canonical" href="https://themassagemap.com/bali/" />
       </Helmet>

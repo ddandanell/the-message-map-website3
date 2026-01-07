@@ -18,7 +18,7 @@ export default function About() {
          <div className="container mx-auto px-4 relative z-10 text-center max-w-3xl">
            <h1 className="text-4xl md:text-6xl font-bold mb-6">Relaxation, Verified.</h1>
            <p className="text-xl text-teal-100 leading-relaxed">
-             The Massage Map is Bali's first curated directory dedicated to quality, safe, and transparent wellness experiences.
+             Massage Bali is the island's first curated directory dedicated to quality, safe, and transparent wellness experiences.
            </p>
          </div>
       </div>
@@ -30,7 +30,7 @@ export default function About() {
            <h2 className="text-3xl font-bold text-teal-950 mb-6">Our Mission</h2>
            <div className="prose prose-lg text-muted-foreground">
              <p className="mb-4">
-               Finding a good massage in Bali used to be a gamble. You rely on outdated reviews, haggle over prices, or wander into places that don't match the photos. We built The Massage Map to change that.
+               Finding a good massage in Bali used to be a gamble. You rely on outdated reviews, haggle over prices, or wander into places that don't match the photos. We built Massage Bali to change that.
              </p>
              <p className="mb-4">
                Our team of locals and expats personally visits every "Verified" partner. We check the linens, test the pressure, and verify the prices so you don't have to.

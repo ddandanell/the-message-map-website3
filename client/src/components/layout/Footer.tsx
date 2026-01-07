@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="font-bold text-xl text-primary">The Massage Map</h3>
+            <h3 className="font-bold text-xl text-primary">Massage Bali</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Your trusted guide to finding the best relaxation spots in Bali. Verified reviews, accurate pricing, and direct booking.
             </p>
@@ -59,7 +59,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <div>&copy; {new Date().getFullYear()} The Massage Map. All rights reserved.</div>
+          <div>&copy; {new Date().getFullYear()} Massage Bali. All rights reserved.</div>
           
           <div className="flex items-center gap-4">
              <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md border border-border shadow-sm cursor-pointer hover:bg-slate-50 transition-colors">

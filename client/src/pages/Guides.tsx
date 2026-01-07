@@ -23,6 +23,17 @@ interface Guide {
 
 const GUIDES: Guide[] = [
   {
+    id: '9',
+    title: 'Massage Bali Freelancer Platform Proposal',
+    slug: 'massage-bali-freelancer-platform',
+    category: 'Product',
+    readTime: '6 min',
+    publishDate: '2026-01-07',
+    image: heroImage,
+    excerpt: 'Branding, structure, search, verification, and rollout plan for the new freelancer-first “Massage Bali” platform.',
+    featured: true
+  },
+  {
     id: '1',
     title: 'The Ultimate Guide to Massage in Canggu (2026 Edition)',
     slug: 'best-massage-canggu-2026',

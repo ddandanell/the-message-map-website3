@@ -24,6 +24,7 @@ import BaliCityPage from "@/pages/BaliCityPage";
 // Guide Detail Pages
 import BestMassageCanggu2026 from "@/pages/guides/BestMassageCanggu2026";
 import TraditionalBalineseMassage from "@/pages/guides/TraditionalBalineseMassage";
+import MassageBaliProposal from "@/pages/guides/MassageBaliProposal";
 
 // Massage Type Pages
 import SwedishMassage from "@/pages/massage-types/SwedishMassage";
@@ -71,6 +72,7 @@ function Router() {
       {/* Guide Detail Pages */}
       <Route path="/guides/best-massage-canggu-2026" component={BestMassageCanggu2026} />
       <Route path="/guides/traditional-balinese-massage-guide" component={TraditionalBalineseMassage} />
+      <Route path="/guides/massage-bali-freelancer-platform" component={MassageBaliProposal} />
 
       {/* Massage Type Detail Pages */}
       <Route path="/massage-types/swedish-massage" component={SwedishMassage} />
