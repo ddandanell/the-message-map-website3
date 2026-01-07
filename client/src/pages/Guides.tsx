@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import guideImage from '@assets/generated_images/guide:_best_massage_in_canggu.png';
 import spaInterior from '@assets/generated_images/professional_massage_therapy_room.png';
 import detailImage from '@assets/generated_images/spa_oils_and_flowers_detail.png';
-import heroImage from '@assets/generated_images/luxury_tropical_spa_in_bali.png';
+import { HERO_IMAGES } from "@/lib/constants";
 
 interface Guide {
   id: string;
@@ -51,7 +51,7 @@ const GUIDES: Guide[] = [
     category: 'Area Guide',
     readTime: '6 min',
     publishDate: '2025-12-28',
-    image: heroImage,
+    image: HERO_IMAGES.LUXURY_SPA,
     excerpt: 'You don\'t need to spend a fortune for a great massage. Here are our favorite affordable spots in Ubud that don\'t compromise on quality.'
   },
   {
@@ -126,7 +126,7 @@ export default function Guides() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={heroImage} 
+            src={HERO_IMAGES.LUXURY_SPA} 
             alt="Wellness Guides Background" 
             className="w-full h-full object-cover"
           />

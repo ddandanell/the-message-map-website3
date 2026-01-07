@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { AreaCard } from "@/components/shared/AreaCard";
 import { AREAS } from "@/lib/mockData";
 import { MapPin, Users, TrendingUp } from "lucide-react";
-import heroImage from '@assets/generated_images/luxury_tropical_spa_in_bali.png';
+import { HERO_IMAGES } from "@/lib/constants";
 
 export default function Areas() {
   const totalPlaces = AREAS.reduce((sum, area) => sum + area.placeCount, 0);
@@ -18,7 +18,7 @@ export default function Areas() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={heroImage} 
+            src={HERO_IMAGES.LUXURY_SPA} 
             alt="Bali Areas Background" 
             className="w-full h-full object-cover"
           />

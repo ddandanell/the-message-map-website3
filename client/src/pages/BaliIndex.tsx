@@ -8,7 +8,7 @@ import { BALI_AREAS, getAllRegions, getAreasByRegion, REGION_INFO, type Region }
 import { Helmet } from "react-helmet";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import heroImage from '@assets/generated_images/luxury_tropical_spa_in_bali.png';
+import { HERO_IMAGES } from "@/lib/constants";
 
 export default function BaliIndex() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -45,7 +45,7 @@ export default function BaliIndex() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img 
-              src={heroImage} 
+              src={HERO_IMAGES.LUXURY_SPA} 
               alt="Bali Spa Background" 
               className="w-full h-full object-cover"
             />

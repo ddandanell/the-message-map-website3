@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import logoImage from '@assets/generated_images/minimalist_lotus_spa_logo.png';
+import { TRANSPARENT_HEADER_PAGES } from "@/lib/constants";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -11,8 +12,7 @@ export function Header() {
   const [location] = useLocation();
 
   // Pages with hero images that need transparent header initially
-  const transparentHeaderPages = ['/', '/areas', '/massage-types', '/guides'];
-  const needsTransparentHeader = transparentHeaderPages.includes(location);
+  const needsTransparentHeader = TRANSPARENT_HEADER_PAGES.includes(location);
 
   useEffect(() => {
     const handleScroll = () => {

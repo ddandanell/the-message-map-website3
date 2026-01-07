@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { CATEGORIES } from "@/lib/mockData";
 import { Activity, Flower2, Heart, Flame, Footprints, Droplets, Sparkles, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import spaInterior from '@assets/generated_images/professional_massage_therapy_room.png';
+import { HERO_IMAGES } from "@/lib/constants";
 
 // Map icons to Lucide components
 const IconMap = {
@@ -112,7 +112,7 @@ export default function MassageTypes() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={spaInterior} 
+            src={HERO_IMAGES.SPA_INTERIOR} 
             alt="Massage Types Background" 
             className="w-full h-full object-cover"
           />
