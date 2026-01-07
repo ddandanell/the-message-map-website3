@@ -56,6 +56,38 @@ const FEATURED_MASSAGE_TYPES = [
     description: "Heated stones warm and loosen tight muscles, promoting deep relaxation and improved circulation.",
     icon: Flame,
     category: "Specialty"
+  },
+  {
+    id: "lomi-lomi-massage",
+    slug: "lomi-lomi-massage",
+    name: "Lomi Lomi Massage",
+    description: "Hawaiian healing art using flowing forearm movements for spiritual and physical healing.",
+    icon: Droplets,
+    category: "Traditional"
+  },
+  {
+    id: "cupping-therapy",
+    slug: "cupping-therapy",
+    name: "Cupping Therapy",
+    description: "Suction cups increase blood flow, reduce inflammation, and release muscle tension effectively.",
+    icon: Activity,
+    category: "Therapeutic"
+  },
+  {
+    id: "ayurvedic-massage",
+    slug: "ayurvedic-massage",
+    name: "Ayurvedic Massage",
+    description: "Ancient Indian practice using warm oils tailored to your dosha for holistic balance and detoxification.",
+    icon: Flower2,
+    category: "Traditional"
+  },
+  {
+    id: "chair-massage",
+    slug: "chair-massage",
+    name: "Chair Massage",
+    description: "Convenient seated massage focusing on neck, shoulders, and back—perfect for workplace wellness.",
+    icon: Activity,
+    category: "Wellness"
   }
 ];
 
