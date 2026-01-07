@@ -31,6 +31,10 @@ import DeepTissueMassage from "@/pages/massage-types/DeepTissueMassage";
 import ThaiMassage from "@/pages/massage-types/ThaiMassage";
 import HotStoneMassage from "@/pages/massage-types/HotStoneMassage";
 import BalineseMassage from "@/pages/massage-types/BalineseMassage";
+import ColdStoneMassage from "@/pages/massage-types/ColdStoneMassage";
+import ColumbianMassage from "@/pages/massage-types/ColumbianMassage";
+import CompassionateTouch from "@/pages/massage-types/CompassionateTouch";
+import ConnectiveTissueMassage from "@/pages/massage-types/ConnectiveTissueMassage";
 
 function Router() {
   return (
@@ -50,6 +54,10 @@ function Router() {
       <Route path="/massage-types/thai-massage" component={ThaiMassage} />
       <Route path="/massage-types/hot-stone-massage" component={HotStoneMassage} />
       <Route path="/massage-types/balinese-massage" component={BalineseMassage} />
+      <Route path="/massage-types/cold-stone-massage" component={ColdStoneMassage} />
+      <Route path="/massage-types/columbian-massage" component={ColumbianMassage} />
+      <Route path="/massage-types/compassionate-touch" component={CompassionateTouch} />
+      <Route path="/massage-types/connective-tissue-massage" component={ConnectiveTissueMassage} />
 
       <Route path="/list-business" component={ListBusiness} />
       <Route path="/how-we-rate" component={HowWeRate} />
