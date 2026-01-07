@@ -1,10 +1,14 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { SearchX, Home, MapPin } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 p-4 text-center">
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <div className="flex-1 flex flex-col items-center justify-center bg-slate-50 p-4 text-center">
       <div className="w-24 h-24 bg-teal-100 rounded-full flex items-center justify-center mb-6 animate-in zoom-in-50 duration-500">
         <SearchX className="w-12 h-12 text-teal-600" />
       </div>
@@ -30,6 +34,8 @@ export default function NotFound() {
       <div className="mt-12 text-sm text-slate-400">
         Error 404
       </div>
+    </div>
+    <Footer />
     </div>
   );
 }

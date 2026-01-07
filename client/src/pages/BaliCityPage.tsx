@@ -3,6 +3,8 @@ import { MapPin, Clock, Star, CheckCircle2, Phone, ArrowRight, Search, Award, Ex
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import {
   Accordion,
   AccordionContent,
@@ -247,6 +249,7 @@ export default function BaliCityPage() {
         </script>
       </Helmet>
 
+      <Header />
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
         {/* Breadcrumb */}
         <nav className="pt-20 pb-4 px-4">
@@ -616,6 +619,7 @@ export default function BaliCityPage() {
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 }
