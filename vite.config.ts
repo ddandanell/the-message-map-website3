@@ -57,13 +57,7 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 600,
     sourcemap: false,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
+    minify: 'esbuild',
   },
   server: {
     host: "0.0.0.0",
