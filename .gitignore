@@ -9,6 +9,7 @@ vite.config.ts.*
 .env
 .env.local
 .env.*.local
+.env.production
 
 # Logs
 logs
@@ -27,3 +28,20 @@ build
 
 # Vercel
 .vercel
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+coverage
+.nyc_output
