@@ -60,6 +60,35 @@ import ChavuttiThirumal from "@/pages/massage-types/ChavuttiThirumal";
 import GuaShaMassage from "@/pages/massage-types/GuaShaMassage";
 import KinesioTapingMassage from "@/pages/massage-types/KinesioTapingMassage";
 import MarmaPointMassage from "@/pages/massage-types/MarmaPointMassage";
+// Additional New Massage Types
+import SportsMassage from "@/pages/massage-types/SportsMassage";
+import AromatherapyMassage from "@/pages/massage-types/AromatherapyMassage";
+import PrenatalMassage from "@/pages/massage-types/PrenatalMassage";
+import Reflexology from "@/pages/massage-types/Reflexology";
+import ShiatsuMassage from "@/pages/massage-types/ShiatsuMassage";
+import MyofascialRelease from "@/pages/massage-types/MyofascialRelease";
+import LymphaticMassage from "@/pages/massage-types/LymphaticMassage";
+import TriggerPointTherapy from "@/pages/massage-types/TriggerPointTherapy";
+import StoneTherapy from "@/pages/massage-types/StoneTherapy";
+import CuppingMassageCombined from "@/pages/massage-types/CuppingMassageCombined";
+import OncologyMassage from "@/pages/massage-types/OncologyMassage";
+import GeriatricMassage from "@/pages/massage-types/GeriatricMassage";
+import PediatricMassage from "@/pages/massage-types/PediatricMassage";
+import MedicalMassage from "@/pages/massage-types/MedicalMassage";
+import LomilomiHawaiian from "@/pages/massage-types/LomilomiHawaiian";
+import RussianSportsMassage from "@/pages/massage-types/RussianSportsMassage";
+import Hilot from "@/pages/massage-types/Hilot";
+import TantricMassageTherapeutic from "@/pages/massage-types/TantricMassageTherapeutic";
+import ChiNeiTsang from "@/pages/massage-types/ChiNeiTsang";
+import Breema from "@/pages/massage-types/Breema";
+import PolarityTherapy from "@/pages/massage-types/PolarityTherapy";
+import BiodynamicMassage from "@/pages/massage-types/BiodynamicMassage";
+import SargaBodywork from "@/pages/massage-types/SargaBodywork";
+import FeldenkraisFunctionalIntegration from "@/pages/massage-types/FeldenkraisFunctionalIntegration";
+import OrthopedicMassage from "@/pages/massage-types/OrthopedicMassage";
+import BambooFusion from "@/pages/massage-types/BambooFusion";
+import LastoneTherapy from "@/pages/massage-types/LastoneTherapy";
+import BarefootLomi from "@/pages/massage-types/BarefootLomi";
 
 function Router() {
   return (
@@ -108,6 +137,35 @@ function Router() {
       <Route path="/massage-types/gua-sha-massage" component={GuaShaMassage} />
       <Route path="/massage-types/kinesio-taping-massage" component={KinesioTapingMassage} />
       <Route path="/massage-types/marma-point-massage" component={MarmaPointMassage} />
+      {/* Additional New Massage Type Routes */}
+      <Route path="/massage-types/sports-massage" component={SportsMassage} />
+      <Route path="/massage-types/aromatherapy-massage" component={AromatherapyMassage} />
+      <Route path="/massage-types/prenatal-massage" component={PrenatalMassage} />
+      <Route path="/massage-types/reflexology" component={Reflexology} />
+      <Route path="/massage-types/shiatsu-massage" component={ShiatsuMassage} />
+      <Route path="/massage-types/myofascial-release" component={MyofascialRelease} />
+      <Route path="/massage-types/lymphatic-massage" component={LymphaticMassage} />
+      <Route path="/massage-types/trigger-point-therapy" component={TriggerPointTherapy} />
+      <Route path="/massage-types/stone-therapy" component={StoneTherapy} />
+      <Route path="/massage-types/cupping-massage-combined" component={CuppingMassageCombined} />
+      <Route path="/massage-types/oncology-massage" component={OncologyMassage} />
+      <Route path="/massage-types/geriatric-massage" component={GeriatricMassage} />
+      <Route path="/massage-types/pediatric-massage" component={PediatricMassage} />
+      <Route path="/massage-types/medical-massage" component={MedicalMassage} />
+      <Route path="/massage-types/lomilomi-hawaiian" component={LomilomiHawaiian} />
+      <Route path="/massage-types/russian-sports-massage" component={RussianSportsMassage} />
+      <Route path="/massage-types/hilot" component={Hilot} />
+      <Route path="/massage-types/tantric-massage-therapeutic" component={TantricMassageTherapeutic} />
+      <Route path="/massage-types/chi-nei-tsang" component={ChiNeiTsang} />
+      <Route path="/massage-types/breema" component={Breema} />
+      <Route path="/massage-types/polarity-therapy" component={PolarityTherapy} />
+      <Route path="/massage-types/biodynamic-massage" component={BiodynamicMassage} />
+      <Route path="/massage-types/sarga-bodywork" component={SargaBodywork} />
+      <Route path="/massage-types/feldenkrais-functional-integration" component={FeldenkraisFunctionalIntegration} />
+      <Route path="/massage-types/orthopedic-massage" component={OrthopedicMassage} />
+      <Route path="/massage-types/bamboo-fusion" component={BambooFusion} />
+      <Route path="/massage-types/lastone-therapy" component={LastoneTherapy} />
+      <Route path="/massage-types/barefoot-lomi" component={BarefootLomi} />
 
       <Route path="/list-business" component={ListBusiness} />
       <Route path="/how-we-rate" component={HowWeRate} />
