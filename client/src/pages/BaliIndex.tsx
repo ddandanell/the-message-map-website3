@@ -6,6 +6,8 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BALI_AREAS, getAllRegions, getAreasByRegion, REGION_INFO, type Region } from "@/data/baliAreas";
 import { Helmet } from "react-helmet";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 export default function BaliIndex() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -27,14 +29,15 @@ export default function BaliIndex() {
   })).filter(group => group.areas.length > 0);
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Helmet>
         <title>Bali Massage Service Areas (Villa & Hotel) | Massage Bali</title>
         <meta name="description" content="Professional in-home, villa, and hotel massage services across all areas of Bali. From Seminyak to Ubud, Canggu to Uluwatu - find verified massage therapists in your area." />
         <link rel="canonical" href="https://themassagemap.com/bali/" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+      <Header />
+      <div className="flex-1 bg-gradient-to-b from-background to-muted/20">
         {/* Hero Section */}
         <section className="pt-32 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
@@ -138,6 +141,7 @@ export default function BaliIndex() {
           </div>
         </section>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }

@@ -4,10 +4,10 @@ import { Footer } from "@/components/layout/Footer";
 import { AreaCard } from "@/components/shared/AreaCard";
 import { PlaceCard } from "@/components/shared/PlaceCard";
 import { AREAS, CATEGORIES, PLACES } from "@/lib/mockData";
-import { Search, MapPin, Sparkles, Calendar, CheckCircle, ChevronRight, Activity, Flower2, Heart, Flame, Footprints, Droplets } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Search, CheckCircle, ChevronRight, Activity, Flower2, Heart, Flame, Footprints, Droplets, Sparkles } from "lucide-react";
+import { Input } from "@/components/ui/input";
 import { useLocation } from "wouter";
+import { BALI_AREAS, REGION_INFO } from "@/data/baliAreas";
 
 // Map icons to Lucide components
 const IconMap = {
@@ -21,16 +21,25 @@ const IconMap = {
 
 export default function Home() {
   const [location, setLocation] = useLocation();
-  const [selectedArea, setSelectedArea] = useState<string>("");
-  const [selectedType, setSelectedType] = useState<string>("");
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   const handleSearch = () => {
-    if (selectedArea) {
-      setLocation(`/bali/${selectedArea}`);
-    } else if (selectedType) {
-      setLocation(`/bali/${selectedType}`);
-    } else {
-      setLocation('/bali/canggu'); // Default
+    if (searchQuery.trim()) {
+      // Find matching area by slug or display name
+      const area = BALI_AREAS.find(
+        a => a.slug.toLowerCase() === searchQuery.toLowerCase().trim() ||
+             a.displayName.toLowerCase() === searchQuery.toLowerCase().trim() ||
+             a.displayName.toLowerCase().includes(searchQuery.toLowerCase().trim())
+      );
+      if (area) {
+        setLocation(`/bali/${area.slug}`);
+      }
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleSearch();
     }
   };
 
@@ -41,73 +50,90 @@ export default function Home() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={AREAS[2].image} 
-            alt="Bali Spa Background" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-background" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="animate-in slide-in-from-bottom-10 fade-in duration-700">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight drop-shadow-lg">
-              Find Your <span className="text-secondary italic">Perfect</span> <br/> Massage in Bali
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light">
-              Discover verified spas, hidden gems, and authentic healers across the island. Book directly with confidence.
-            </p>
-
-            {/* Search Box */}
-            <div className="bg-white p-3 rounded-2xl shadow-2xl max-w-3xl mx-auto flex flex-col md:flex-row gap-3">
-              <div className="flex-1">
-                <Select value={selectedArea} onValueChange={setSelectedArea}>
-                  <SelectTrigger className="h-12 border-0 bg-slate-50 focus:ring-0 text-base">
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <MapPin className="w-5 h-5 text-primary" />
-                      <SelectValue placeholder="Where in Bali?" />
-                    </div>
-                  </SelectTrigger>
-                  <SelectContent>
-                    {AREAS.map(area => (
-                      <SelectItem key={area.id} value={area.slug}>{area.name}</SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="w-[1px] bg-slate-200 hidden md:block" />
-              <div className="flex-1">
-                 <Select value={selectedType} onValueChange={setSelectedType}>
-                  <SelectTrigger className="h-12 border-0 bg-slate-50 focus:ring-0 text-base">
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Sparkles className="w-5 h-5 text-primary" />
-                      <SelectValue placeholder="Massage Type" />
-                    </div>
-                  </SelectTrigger>
-                  <SelectContent>
-                    {CATEGORIES.map(cat => (
-                      <SelectItem key={cat.id} value={cat.slug}>{cat.name}</SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <Button size="lg" className="h-12 px-8 text-base font-semibold" onClick={handleSearch}>
-                Search
-              </Button>
+      <section className="relative py-20 md:py-32 bg-gradient-to-b from-slate-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            <div className="inline-flex items-center justify-center mb-6">
+              <span className="px-4 py-1.5 bg-orange-500 text-white text-sm font-semibold rounded-full">
+                100+ Areas Covered
+              </span>
             </div>
 
-            {/* Quick Chips */}
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              {['Open Now', 'Budget Friendly', 'Luxury', 'Couples', 'Home Service'].map(chip => (
-                <button key={chip} className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm backdrop-blur-sm border border-white/20 transition-all">
-                  {chip}
+            {/* Main Heading */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-teal-600 tracking-tight">
+              Massage Services Across All of Bali
+            </h1>
+
+            {/* Description */}
+            <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Whether you're staying in a villa in Seminyak, a hotel in Ubud, or beachfront in Canggu, find verified massage therapists who come to you. Professional in-home massage services available island-wide.
+            </p>
+
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <Input
+                  type="text"
+                  placeholder="Search areas (e.g., Ubud, Canggu...)"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  className="pl-12 pr-4 h-14 text-base rounded-xl border-gray-300 focus:border-teal-500 focus:ring-teal-500"
+                />
+              </div>
+            </div>
+
+            {/* Quick Filter Buttons */}
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              {['Open Now', 'Budget Friendly', 'Luxury', 'Couples', 'Home Service'].map((filter) => (
+                <button
+                  key={filter}
+                  className="px-5 py-2.5 rounded-full bg-white/90 backdrop-blur-sm border border-gray-300 text-black text-sm font-medium hover:bg-white hover:border-teal-500 transition-all shadow-sm"
+                >
+                  {filter}
                 </button>
               ))}
+            </div>
+
+            {/* Massage Types - Always Visible */}
+            <div className="max-w-4xl mx-auto mb-16">
+              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <Sparkles className="w-5 h-5 text-teal-600" />
+                  <h3 className="text-lg font-semibold text-gray-900">Massage Types</h3>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+                  {CATEGORIES.map(cat => {
+                    const Icon = IconMap[cat.icon as keyof typeof IconMap] || Sparkles;
+                    return (
+                      <button
+                        key={cat.id}
+                        onClick={() => setLocation(`/massage-types/${cat.slug}`)}
+                        className="flex flex-col items-center p-4 rounded-xl border border-gray-200 hover:border-teal-500 hover:bg-teal-50 transition-all group"
+                      >
+                        <div className="w-10 h-10 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center mb-2 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                          <Icon className="w-5 h-5" />
+                        </div>
+                        <span className="text-sm font-medium text-gray-700 group-hover:text-teal-600 transition-colors text-center">
+                          {cat.name}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Region Section */}
+            <div className="text-left max-w-4xl mx-auto">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                {REGION_INFO.south.name}
+              </h2>
+              <p className="text-gray-600 mb-6">
+                {REGION_INFO.south.description}
+              </p>
             </div>
           </div>
         </div>

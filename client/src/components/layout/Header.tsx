@@ -1,66 +1,26 @@
-import { Link, useLocation } from "wouter";
-import { Search, MapPin, Menu, X } from "lucide-react";
+import { Link } from "wouter";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
-import { cn } from "@/lib/utils";
-import logoImage from '@assets/generated_images/minimalist_lotus_spa_logo.png';
+import { useState } from "react";
+import { Logo } from "@/components/shared/Logo";
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [location] = useLocation();
-
-  // Pages that should have solid white header from start (no hero image)
-  const solidHeaderPages = [
-    '/guides/best-massage-canggu-2026',
-    '/guides/traditional-balinese-massage-guide',
-    '/guides/budget-massage-ubud',
-    '/guides/couples-massage-romantic-spas',
-    '/guides/deep-tissue-vs-swedish-massage',
-    '/guides/spa-etiquette-bali',
-    '/guides/luxury-spas-seminyak',
-    '/guides/prenatal-massage-safety-bali',
-    '/how-we-rate',
-    '/about',
-    '/list-business',
-    '/contact',
-    '/privacy',
-    '/bali'
-  ];
-
-  const needsSolidHeader = solidHeaderPages.some(path => location.startsWith(path));
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-        isScrolled || mobileMenuOpen || needsSolidHeader ? "bg-white/95 backdrop-blur-sm shadow-sm border-border" : "bg-transparent text-white"
-      )}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-border bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/">
-          <a className="flex items-center gap-3 font-bold text-2xl tracking-tight hover:opacity-90 transition-opacity">
-            <img src={logoImage} alt="Massage Bali Logo" className="w-8 h-8 object-contain" />
-            <span className={cn("text-primary", !isScrolled && !mobileMenuOpen && !needsSolidHeader && "text-white")}>Massage Bali</span>
-          </a>
-        </Link>
+        <Logo />
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="/bali"><a className={cn("font-medium hover:text-primary transition-colors", !isScrolled && !needsSolidHeader && "text-white hover:text-white/80")}>Bali Areas</a></Link>
-          <Link href="/massage-types"><a className={cn("font-medium hover:text-primary transition-colors", !isScrolled && !needsSolidHeader && "text-white hover:text-white/80")}>Massage Types</a></Link>
-          <Link href="/guides"><a className={cn("font-medium hover:text-primary transition-colors", !isScrolled && !needsSolidHeader && "text-white hover:text-white/80")}>Guides</a></Link>
+          <Link href="/bali"><a className="font-medium text-foreground hover:text-primary transition-colors">Cities in Bali</a></Link>
+          <Link href="/massage-types"><a className="font-medium text-foreground hover:text-primary transition-colors">Massage Treatments</a></Link>
+          <Link href="/freelancers"><a className="font-medium text-foreground hover:text-primary transition-colors">Freelancers</a></Link>
+          <Link href="/guides"><a className="font-medium text-foreground hover:text-primary transition-colors">Guides</a></Link>
           <Link href="/list-business"><a>
-            <Button variant={isScrolled || needsSolidHeader ? "default" : "secondary"} size="sm" className="font-semibold">
+            <Button variant="default" size="sm" className="font-semibold">
               Add Place
             </Button>
           </a></Link>
@@ -72,9 +32,9 @@ export function Header() {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
-            <X className={cn("w-6 h-6", isScrolled || mobileMenuOpen || needsSolidHeader ? "text-foreground" : "text-white")} />
+            <X className="w-6 h-6 text-foreground" />
           ) : (
-            <Menu className={cn("w-6 h-6", isScrolled || needsSolidHeader ? "text-foreground" : "text-white")} />
+            <Menu className="w-6 h-6 text-foreground" />
           )}
         </button>
       </div>
@@ -82,8 +42,9 @@ export function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-border shadow-lg p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
-          <Link href="/bali"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-foreground hover:text-primary">Bali Areas</a></Link>
-          <Link href="/massage-types"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-foreground hover:text-primary">Massage Types</a></Link>
+          <Link href="/bali"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-foreground hover:text-primary">Cities in Bali</a></Link>
+          <Link href="/massage-types"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-foreground hover:text-primary">Massage Treatments</a></Link>
+          <Link href="/freelancers"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-foreground hover:text-primary">Freelancers</a></Link>
           <Link href="/guides"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-foreground hover:text-primary">Guides</a></Link>
           <Link href="/list-business"><a onClick={() => setMobileMenuOpen(false)}>
             <Button className="w-full mt-2">Add Place</Button>

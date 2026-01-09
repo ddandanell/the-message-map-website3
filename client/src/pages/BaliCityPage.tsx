@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/accordion";
 import { getAreaBySlug, REGION_INFO } from "@/data/baliAreas";
 import { Helmet } from "react-helmet";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 const POPULAR_TREATMENTS = [
   {
@@ -133,18 +135,22 @@ export default function BaliCityPage() {
 
   if (!area) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">Area Not Found</h1>
-          <p className="text-muted-foreground mb-6">
-            We couldn't find the area you're looking for.
-          </p>
-          <Link href="/bali">
-            <a>
-              <Button>View All Areas</Button>
-            </a>
-          </Link>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <div className="flex-1 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold mb-4">Area Not Found</h1>
+            <p className="text-muted-foreground mb-6">
+              We couldn't find the area you're looking for.
+            </p>
+            <Link href="/bali">
+              <a>
+                <Button>View All Areas</Button>
+              </a>
+            </Link>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -234,7 +240,7 @@ export default function BaliCityPage() {
   };
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Helmet>
         <title>{`${area.displayName} Mobile Massage | In-Home Villa & Hotel Service | Massage Bali`}</title>
         <meta name="description" content={`Professional mobile massage in ${area.displayName}, Bali. Licensed therapists come to your villa, hotel, or home. Top providers like Home Massage Kuta and Home Massage Ubud serve the entire island. Traditional Balinese, deep tissue, couples massage & more.`} />
@@ -247,7 +253,8 @@ export default function BaliCityPage() {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+      <Header />
+      <div className="flex-1 bg-gradient-to-b from-background to-muted/20">
         {/* Breadcrumb */}
         <nav className="pt-20 pb-4 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -616,6 +623,7 @@ export default function BaliCityPage() {
           </div>
         </section>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }
