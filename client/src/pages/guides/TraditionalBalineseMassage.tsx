@@ -532,7 +532,7 @@ export default function TraditionalBalineseMassage() {
             If you're visiting Bali, make traditional Balinese massage a priority in your itinerary. And if you're a resident,
             consider making it part of your regular self-care routine. The therapeutic benefits extend far beyond the treatment
             table, potentially improving your sleep, reducing stress levels, enhancing flexibility, and contributing to overall
-            quality of life.
+            quality of life. For authentic in-home experiences, consider trusted providers like <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline font-medium">Home Massage Ubud</a>, who bring traditional Balinese healing directly to your accommodation.
           </p>
 
           <p className="mb-8">

@@ -68,7 +68,7 @@ export default function HowWeRate() {
             </div>
             <h3 className="text-xl font-bold text-teal-900 mb-3">Skill Assessment</h3>
             <p className="text-muted-foreground">
-              Our mystery shoppers book actual treatments to test pressure control, technique, and professional conduct.
+              Our mystery shoppers book actual treatments to test pressure control, technique, and professional conduct. We work with trusted partners like <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline font-medium">Home Massage Ubud</a> who consistently meet our high standards.
             </p>
           </div>
           <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg text-center hover:-translate-y-1 transition-transform">

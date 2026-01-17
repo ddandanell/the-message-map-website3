@@ -33,7 +33,7 @@ export default function About() {
                Finding a good massage in Bali used to be a gamble. You rely on outdated reviews, haggle over prices, or wander into places that don't match the photos. We built Massage Bali to change that.
              </p>
              <p className="mb-4">
-               Our team of locals and expats personally visits every "Verified" partner. We check the linens, test the pressure, and verify the prices so you don't have to.
+               Our team of locals and expats personally visits every "Verified" partner. We check the linens, test the pressure, and verify the prices so you don't have to. We partner with trusted providers like <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline font-semibold">Home Massage Ubud</a>, ensuring you receive authentic, professional services wherever you are in Bali.
              </p>
              <p>
                We believe that relaxation should start the moment you begin your search, not just when you lie down on the table.

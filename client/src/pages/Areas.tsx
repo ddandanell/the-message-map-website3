@@ -81,9 +81,9 @@ export default function Areas() {
 
             <div className="bg-teal-50 p-8 rounded-2xl border border-teal-100">
               <h3 className="text-xl font-bold text-teal-900 mb-3">Local Tip</h3>
-              <p className="text-teal-700">
+              <p className="text-teal-700 mb-4">
                 Prices tend to be lower in Ubud and Sanur compared to Seminyak and Uluwatu. However, all areas offer
-                a mix of budget and luxury options.
+                a mix of budget and luxury options. For trusted in-home services in Ubud, <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-teal-900 hover:text-teal-950 underline font-semibold">Home Massage Ubud</a> provides authentic experiences.
               </p>
             </div>
           </div>

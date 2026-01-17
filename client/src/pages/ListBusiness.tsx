@@ -48,6 +48,13 @@ export default function ListBusiness() {
                 <p className="text-white font-medium italic">"Since listing on Massage Bali, our bookings from international guests have doubled." — Sarah, Owner of Lotus Spa</p>
               </div>
             </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-teal-50 p-6 rounded-2xl border border-purple-100">
+              <h3 className="font-bold text-lg text-purple-900 mb-2">Success Story</h3>
+              <p className="text-purple-700 text-sm">
+                <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="font-semibold underline hover:text-purple-900">Home Massage Ubud</a> partnered with us and saw a 150% increase in qualified bookings within 3 months. Join our network of verified wellness providers and grow your business.
+              </p>
+            </div>
           </div>
 
           <div className="lg:w-[480px] bg-white p-8 rounded-2xl shadow-xl border border-slate-100 h-fit sticky top-24">

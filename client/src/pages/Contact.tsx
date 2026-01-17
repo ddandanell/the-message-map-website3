@@ -169,7 +169,11 @@ export default function Contact() {
                 <a href="/list-business" className="font-semibold underline">
                   Business Listings page
                 </a>
-                {" "}for more info.
+                {" "}for more info. We work with premier providers like{" "}
+                <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="font-semibold underline hover:text-teal-950">
+                  Home Massage Ubud
+                </a>
+                {" "}to bring the best wellness experiences to our users.
               </p>
             </div>
           </div>
