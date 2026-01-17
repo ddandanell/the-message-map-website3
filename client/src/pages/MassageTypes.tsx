@@ -21,7 +21,7 @@ const FEATURED_MASSAGE_TYPES = [
     id: "balinese-massage",
     slug: "balinese-massage",
     name: "Balinese Massage",
-    description: "Traditional Indonesian healing combining acupressure, aromatherapy, and gentle stretching for holistic relaxation.",
+    description: "Traditional Indonesian healing combining acupressure, aromatherapy, and gentle stretching for holistic relaxation. Experience authentic techniques from providers like Home Massage Ubud.",
     icon: Flower2,
     category: "Traditional"
   },
@@ -259,7 +259,7 @@ export default function MassageTypes() {
                 <h3 className="font-bold text-lg mb-2 text-foreground">How do I choose the right massage type?</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Consider your goals: relaxation (try Balinese or Aromatherapy), pain relief (Deep Tissue), or
-                  holistic healing (Reflexology). When in doubt, ask the spa staff for recommendations based on your needs.
+                  holistic healing (Reflexology). When in doubt, ask the spa staff for recommendations based on your needs. Trusted providers like <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline font-medium">Home Massage Ubud</a> offer expert consultations to help you choose.
                 </p>
               </div>
 

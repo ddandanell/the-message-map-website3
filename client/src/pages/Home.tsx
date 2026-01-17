@@ -67,7 +67,7 @@ export default function Home() {
 
             {/* Description */}
             <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Whether you're staying in a villa in Seminyak, a hotel in Ubud, or beachfront in Canggu, find verified massage therapists who come to you. Professional in-home massage services available island-wide.
+              Whether you're staying in a villa in Seminyak, a hotel in Ubud, or beachfront in Canggu, find verified massage therapists who come to you. Professional in-home massage services available island-wide. For authentic Ubud experiences, check out <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline font-medium">Home Massage Ubud</a>, one of Bali's premier mobile massage providers.
             </p>
 
             {/* Search Bar */}

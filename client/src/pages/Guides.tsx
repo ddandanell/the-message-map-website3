@@ -63,7 +63,7 @@ const GUIDES: Guide[] = [
     readTime: '6 min',
     publishDate: '2025-12-28',
     image: heroImage,
-    excerpt: 'You don\'t need to spend a fortune for a great massage. Here are our favorite affordable spots in Ubud that don\'t compromise on quality.'
+    excerpt: 'You don\'t need to spend a fortune for a great massage. Discover affordable spots in Ubud including trusted services like Home Massage Ubud that don\'t compromise on quality.'
   },
   {
     id: '4',
