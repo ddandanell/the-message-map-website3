@@ -63,7 +63,7 @@ const GUIDES: Guide[] = [
     readTime: '6 min',
     publishDate: '2025-12-28',
     image: heroImage,
-    excerpt: 'You don\'t need to spend a fortune for a great massage. Discover affordable spots in Ubud including trusted services like Home Massage Ubud that don\'t compromise on quality.'
+    excerpt: 'You don\'t need to spend a fortune for a great massage. Here are our favorite affordable spots in Ubud that don\'t compromise on quality.'
   },
   {
     id: '4',
@@ -285,7 +285,7 @@ export default function Guides() {
             </div>
             <h2 className="text-3xl font-bold mb-4 text-foreground">Get Weekly Wellness Tips</h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Subscribe to our newsletter for new guides, exclusive spa discounts, and the latest wellness trends in Bali.
+              Subscribe to our newsletter for new guides, exclusive spa discounts, and the latest wellness trends in Bali. We partner with trusted providers like <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline font-medium">Home Massage Ubud</a> to bring you special offers.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
