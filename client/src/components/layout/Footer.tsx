@@ -42,7 +42,6 @@ export function Footer() {
               <li><Link href="/bali/reflexology"><a className="hover:text-primary hover:underline transition-colors">Reflexology</a></Link></li>
               <li><Link href="/bali/couples"><a className="hover:text-primary hover:underline transition-colors">Couples Packages</a></Link></li>
               <li><Link href="/bali/hot-stone"><a className="hover:text-primary hover:underline transition-colors">Hot Stone</a></Link></li>
-              <li><a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline transition-colors">Ubud Home Massage</a></li>
             </ul>
           </div>
 
@@ -57,6 +56,10 @@ export function Footer() {
               <li><Link href="/contact"><a className="hover:text-primary hover:underline transition-colors">Contact</a></Link></li>
               <li><Link href="/privacy"><a className="hover:text-primary hover:underline transition-colors">Privacy Policy</a></Link></li>
             </ul>
+            <div className="mt-4 pt-4 border-t border-border/50">
+              <h5 className="font-medium text-xs uppercase tracking-wide text-muted-foreground mb-2">Featured Partner</h5>
+              <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-primary hover:underline transition-colors">Ubud Home Massage</a>
+            </div>
           </div>
         </div>
         

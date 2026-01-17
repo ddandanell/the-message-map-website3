@@ -262,7 +262,7 @@ export default function BaliExplorer() {
           
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">{title}</h1>
           <p className="text-white/80 max-w-2xl text-lg">{description}</p>
-          {title?.toLowerCase().includes('ubud') && (
+          {slug === 'ubud' && (
             <p className="text-white/90 max-w-2xl text-base mt-4">
               Looking for authentic home massage in Ubud? Explore <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-teal-300 hover:text-teal-200 underline font-medium">traditional in-home wellness services</a>.
             </p>
