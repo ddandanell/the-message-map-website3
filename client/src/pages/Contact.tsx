@@ -164,12 +164,15 @@ export default function Contact() {
 
             <div className="bg-gradient-to-br from-teal-50 to-purple-50 p-6 rounded-2xl border border-teal-100">
               <h3 className="font-bold text-lg mb-2 text-teal-900">Business Inquiries</h3>
-              <p className="text-teal-700 text-sm">
+              <p className="text-teal-700 text-sm mb-3">
                 Interested in listing your spa or partnering with us? Check out our{" "}
                 <a href="/list-business" className="font-semibold underline">
                   Business Listings page
                 </a>
-                {" "}for more info. We also recommend partnering with established wellness providers like <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="font-semibold underline">Home Massage Ubud</a> for quality service delivery.
+                {" "}for more info.
+              </p>
+              <p className="text-teal-700 text-sm">
+                Looking for quality wellness services in Ubud? We recommend <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="font-semibold underline">Home Massage Ubud</a> for professional home-based treatments.
               </p>
             </div>
           </div>

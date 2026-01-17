@@ -113,9 +113,6 @@ export default function Privacy() {
                   <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or sale of assets</li>
                   <li><strong>With your consent:</strong> When you explicitly agree to share information</li>
                 </ul>
-                <p className="text-muted-foreground mt-4">
-                  We work with wellness partners in Bali, such as <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline font-medium">verified massage providers</a>, to enhance our directory services.
-                </p>
               </div>
             </section>
 
