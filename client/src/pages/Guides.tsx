@@ -145,7 +145,7 @@ export default function Guides() {
             Wellness Guides
           </h1>
           <p className="text-xl text-amber-100 max-w-2xl mx-auto leading-relaxed">
-            Expert advice, area rankings, and insider tips to help you make the most of Bali's incredible spa scene.
+            Expert advice, area rankings, and insider tips to help you make the most of Bali's incredible spa scene. Discover wellness recommendations from Canggu to Seminyak, and explore authentic <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-amber-50 hover:text-white underline font-medium">home massage experiences in Ubud</a>.
           </p>
         </div>
       </div>

@@ -21,7 +21,7 @@ const FEATURED_MASSAGE_TYPES = [
     id: "balinese-massage",
     slug: "balinese-massage",
     name: "Balinese Massage",
-    description: "Traditional Indonesian healing combining acupressure, aromatherapy, and gentle stretching for holistic relaxation.",
+    description: "Traditional Indonesian healing combining acupressure, aromatherapy, and gentle stretching for holistic relaxation. Experience authentic Balinese massage in Ubud with professional home massage services.",
     icon: Flower2,
     category: "Traditional"
   },
@@ -171,7 +171,7 @@ export default function MassageTypes() {
 
           <div className="text-center">
             <p className="text-muted-foreground mb-4">
-              More detailed massage type guides coming soon, including therapeutic, energy work, and specialty treatments.
+              More detailed massage type guides coming soon, including therapeutic, energy work, and specialty treatments. For traditional Balinese wellness in Ubud, explore <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline font-medium">professional home massage services</a>.
             </p>
           </div>
         </div>

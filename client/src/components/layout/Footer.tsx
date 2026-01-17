@@ -42,6 +42,7 @@ export function Footer() {
               <li><Link href="/bali/reflexology"><a className="hover:text-primary hover:underline transition-colors">Reflexology</a></Link></li>
               <li><Link href="/bali/couples"><a className="hover:text-primary hover:underline transition-colors">Couples Packages</a></Link></li>
               <li><Link href="/bali/hot-stone"><a className="hover:text-primary hover:underline transition-colors">Hot Stone</a></Link></li>
+              <li><a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline transition-colors">Ubud Home Massage</a></li>
             </ul>
           </div>
 

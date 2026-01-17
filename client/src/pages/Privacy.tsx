@@ -109,6 +109,7 @@ export default function Privacy() {
                 </p>
                 <ul className="text-muted-foreground">
                   <li><strong>Service providers:</strong> Trusted third parties who help us operate our website (hosting, analytics, email services)</li>
+                  <li><strong>Wellness partners:</strong> Verified massage providers and spas we work with, such as <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline font-medium">Home Massage Ubud</a></li>
                   <li><strong>Legal requirements:</strong> When required by law, court order, or to protect our rights</li>
                   <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or sale of assets</li>
                   <li><strong>With your consent:</strong> When you explicitly agree to share information</li>

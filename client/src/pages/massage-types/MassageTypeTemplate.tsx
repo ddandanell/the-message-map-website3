@@ -174,6 +174,9 @@ export default function MassageTypeTemplate({ data }: MassageTypeTemplateProps) 
           <h3 className="text-2xl font-bold text-teal-900 mb-4">Ready to Book Your {data.name}?</h3>
           <p className="text-teal-800 mb-6 max-w-2xl mx-auto">
             {data.ctaText}
+            {data.slug === 'reflexology' && (
+              <span> For traditional reflexology and massage in Ubud, consider <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline font-semibold">professional home massage services</a> delivered by certified therapists.</span>
+            )}
           </p>
           <Button size="lg" className="h-12 px-8">
             Find {data.name} Near You in Bali

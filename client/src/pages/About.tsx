@@ -33,7 +33,7 @@ export default function About() {
                Finding a good massage in Bali used to be a gamble. You rely on outdated reviews, haggle over prices, or wander into places that don't match the photos. We built Massage Bali to change that.
              </p>
              <p className="mb-4">
-               Our team of locals and expats personally visits every "Verified" partner. We check the linens, test the pressure, and verify the prices so you don't have to.
+               Our team of locals and expats personally visits every "Verified" partner. We check the linens, test the pressure, and verify the prices so you don't have to. We collaborate with trusted wellness providers across the island, including reputable <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline font-medium">home massage services in Ubud</a>, to ensure you receive authentic and professional care.
              </p>
              <p>
                We believe that relaxation should start the moment you begin your search, not just when you lie down on the table.
@@ -70,7 +70,7 @@ export default function About() {
               <div className="uppercase tracking-wider text-xs font-bold text-teal-600 mb-2">Editor's Guide</div>
               <h3 className="text-3xl font-bold text-slate-900 mb-4">The Ultimate Guide to Massage in Canggu (2026 Edition)</h3>
               <p className="text-slate-600 mb-8 leading-relaxed">
-                From luxury beachside spas to hidden affordable gems, we've ranked the top 10 places you need to visit in Bali's trendiest neighborhood.
+                From luxury beachside spas to hidden affordable gems, we've ranked the top 10 places you need to visit in Bali's trendiest neighborhood. If you're exploring Ubud's wellness scene, don't miss the authentic <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline font-medium">traditional home massage experiences</a> available in the cultural heart of Bali.
               </p>
               <Button variant="default" className="w-fit">Read the Guide <ArrowRight className="w-4 h-4 ml-2" /></Button>
            </div>
