@@ -1,10 +1,16 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { Shield, Eye, Lock, UserCheck, Database, Globe } from "lucide-react";
 
 export default function Privacy() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEOHead
+        title="Privacy Policy - Massage Bali | Your Data Protection"
+        description="Read our privacy policy to understand how Massage Bali collects, uses, and protects your personal information. We prioritize your data security and privacy."
+        canonicalUrl="/privacy"
+      />
       <Header />
 
       {/* Hero Section */}

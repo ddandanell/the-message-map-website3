@@ -1,6 +1,7 @@
 import { useLocation } from "wouter";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { CATEGORIES } from "@/lib/mockData";
 import { Activity, Flower2, Heart, Flame, Footprints, Droplets, Sparkles, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -104,6 +105,11 @@ export default function MassageTypes() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEOHead
+        title="Massage Types & Treatments in Bali | Complete Guide | Massage Bali"
+        description="Explore 200+ massage types available in Bali. From traditional Balinese to Swedish, deep tissue, Thai, and specialty treatments. Find the perfect massage for your needs."
+        canonicalUrl="/massage-types"
+      />
       <Header />
 
       {/* Hero Section */}

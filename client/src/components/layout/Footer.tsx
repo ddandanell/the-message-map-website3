@@ -54,6 +54,7 @@ export function Footer() {
               <li><Link href="/about"><a className="hover:text-primary hover:underline transition-colors">About Us</a></Link></li>
               <li><Link href="/list-business"><a className="hover:text-primary hover:underline transition-colors">List Your Business</a></Link></li>
               <li><Link href="/contact"><a className="hover:text-primary hover:underline transition-colors">Contact</a></Link></li>
+              <li><Link href="/terms"><a className="hover:text-primary hover:underline transition-colors">Terms & Conditions</a></Link></li>
               <li><Link href="/privacy"><a className="hover:text-primary hover:underline transition-colors">Privacy Policy</a></Link></li>
               <li><a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline transition-colors">Partner: Home Massage Ubud</a></li>
             </ul>

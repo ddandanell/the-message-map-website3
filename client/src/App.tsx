@@ -17,6 +17,7 @@ import MassageTypes from "@/pages/MassageTypes";
 import Guides from "@/pages/Guides";
 import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
+import Terms from "@/pages/Terms";
 import Freelancers from "@/pages/Freelancers";
 import FreelancerDetail from "@/pages/FreelancerDetail";
 
@@ -414,6 +415,7 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
       <Route path="/freelancers" component={Freelancers} />
       <Route path="/freelancers/:slug" component={FreelancerDetail} />
 

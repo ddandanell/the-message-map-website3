@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { AreaCard } from "@/components/shared/AreaCard";
 import { PlaceCard } from "@/components/shared/PlaceCard";
 import { AREAS, CATEGORIES, PLACES } from "@/lib/mockData";
+import { getOrganizationSchema, getLocalBusinessSchema, getWebSiteSchema } from "@/lib/schema";
 import { Search, CheckCircle, ChevronRight, Activity, Flower2, Heart, Flame, Footprints, Droplets, Sparkles } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useLocation } from "wouter";
@@ -45,8 +47,20 @@ export default function Home() {
 
   const featuredPlaces = PLACES.filter(p => p.verified).slice(0, 3);
 
+  const structuredData = [
+    getOrganizationSchema(),
+    getLocalBusinessSchema(),
+    getWebSiteSchema()
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead
+        title="Massage Bali - Find Professional Massage Services Across All of Bali"
+        description="Discover verified massage therapists, spas, and wellness services across 100+ areas in Bali. From Canggu to Ubud, find professional in-home massage services with real reviews and accurate pricing."
+        canonicalUrl="/"
+        structuredData={structuredData}
+      />
       <Header />
       
       {/* Hero Section */}
