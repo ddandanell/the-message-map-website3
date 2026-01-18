@@ -1,6 +1,7 @@
 import { useLocation } from "wouter";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { BookOpen, TrendingUp, MapPin, Heart, Calendar, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -130,6 +131,11 @@ export default function Guides() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEOHead
+        title="Massage Guides & Tips for Bali | Expert Advice | Massage Bali"
+        description="Expert guides on finding the best massage services in Bali. Area guides, treatment comparisons, tips for booking, and insider knowledge from local experts."
+        canonicalUrl="/guides"
+      />
       <Header />
 
       {/* Hero Section */}
