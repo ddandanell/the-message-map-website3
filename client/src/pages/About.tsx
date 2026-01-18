@@ -1,6 +1,8 @@
 import { Link } from "wouter";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SEOHead } from "@/components/seo/SEOHead";
+import { getOrganizationSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, MapPin, Clock, ArrowRight } from "lucide-react";
 import { PLACES } from "@/lib/mockData";
@@ -10,6 +12,12 @@ import guideImage from '@assets/generated_images/guide:_best_massage_in_canggu.p
 export default function About() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEOHead
+        title="About Us - Massage Bali | Verified Wellness Directory"
+        description="Learn about Massage Bali, the island's first curated directory for quality, safe, and transparent wellness experiences. Meet our team and discover our mission."
+        canonicalUrl="/about"
+        structuredData={getOrganizationSchema()}
+      />
       <Header />
       
       {/* Hero */}
