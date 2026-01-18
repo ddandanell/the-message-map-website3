@@ -1,6 +1,7 @@
 import { useLocation } from "wouter";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { BookOpen, TrendingUp, MapPin, Heart, Calendar, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -130,6 +131,11 @@ export default function Guides() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEOHead
+        title="Massage Guides & Tips for Bali | Expert Advice | Massage Bali"
+        description="Expert guides on finding the best massage services in Bali. Area guides, treatment comparisons, tips for booking, and insider knowledge from local experts."
+        canonicalUrl="/guides"
+      />
       <Header />
 
       {/* Hero Section */}
@@ -285,7 +291,7 @@ export default function Guides() {
             </div>
             <h2 className="text-3xl font-bold mb-4 text-foreground">Get Weekly Wellness Tips</h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Subscribe to our newsletter for new guides, exclusive spa discounts, and the latest wellness trends in Bali.
+              Subscribe to our newsletter for new guides, exclusive spa discounts, and the latest wellness trends in Bali. We partner with trusted providers like <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline font-medium">Home Massage Ubud</a> to bring you special offers.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input

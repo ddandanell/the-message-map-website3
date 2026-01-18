@@ -114,3 +114,143 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 }
+
+/* Logo Animations */
+.logo-icon {
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+.petal-1, .petal-3, .petal-5, .petal-7 {
+  animation: petalPulse1 2.5s ease-in-out infinite;
+}
+
+.petal-2, .petal-4, .petal-6, .petal-8 {
+  animation: petalPulse2 2.7s ease-in-out infinite;
+}
+
+.petal-inner-1 {
+  animation: innerPulse1 2.2s ease-in-out infinite;
+  transform-origin: 20px 14px;
+}
+
+.petal-inner-2 {
+  animation: innerPulse2 2.2s ease-in-out infinite;
+  transform-origin: 12px 14px;
+}
+
+.petal-inner-3 {
+  animation: innerPulse3 2.4s ease-in-out infinite;
+  transform-origin: 16px 10px;
+}
+
+.petal-inner-4 {
+  animation: innerPulse4 2.4s ease-in-out infinite;
+  transform-origin: 16px 20px;
+}
+
+.center-circle {
+  animation: centerPulse 2s ease-in-out infinite;
+  transform-origin: 16px 16px;
+}
+
+.inner-glow {
+  animation: innerGlow 1.5s ease-in-out infinite;
+  transform-origin: 16px 16px;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.02);
+  }
+}
+
+@keyframes petalPulse1 {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes petalPulse2 {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.95;
+  }
+}
+
+@keyframes innerPulse1 {
+  0%, 100% {
+    transform: scale(1) rotate(-30deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.12) rotate(-28deg);
+    opacity: 0.95;
+  }
+}
+
+@keyframes innerPulse2 {
+  0%, 100% {
+    transform: scale(1) rotate(30deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.12) rotate(32deg);
+    opacity: 0.95;
+  }
+}
+
+@keyframes innerPulse3 {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.95;
+  }
+}
+
+@keyframes innerPulse4 {
+  0%, 100% {
+    transform: scale(1) rotate(180deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.12) rotate(180deg);
+    opacity: 0.95;
+  }
+}
+
+@keyframes centerPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.9;
+  }
+}
+
+@keyframes innerGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}

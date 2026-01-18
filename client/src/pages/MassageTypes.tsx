@@ -1,6 +1,7 @@
 import { useLocation } from "wouter";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { CATEGORIES } from "@/lib/mockData";
 import { Activity, Flower2, Heart, Flame, Footprints, Droplets, Sparkles, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -104,6 +105,11 @@ export default function MassageTypes() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEOHead
+        title="Massage Types & Treatments in Bali | Complete Guide | Massage Bali"
+        description="Explore 200+ massage types available in Bali. From traditional Balinese to Swedish, deep tissue, Thai, and specialty treatments. Find the perfect massage for your needs."
+        canonicalUrl="/massage-types"
+      />
       <Header />
 
       {/* Hero Section */}
@@ -259,7 +265,7 @@ export default function MassageTypes() {
                 <h3 className="font-bold text-lg mb-2 text-foreground">How do I choose the right massage type?</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Consider your goals: relaxation (try Balinese or Aromatherapy), pain relief (Deep Tissue), or
-                  holistic healing (Reflexology). When in doubt, ask the spa staff for recommendations based on your needs.
+                  holistic healing (Reflexology). When in doubt, ask the spa staff for recommendations based on your needs. Trusted providers like <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline font-medium">Home Massage Ubud</a> offer expert consultations to help you choose.
                 </p>
               </div>
 

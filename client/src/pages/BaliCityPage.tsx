@@ -3,6 +3,9 @@ import { MapPin, Clock, Star, CheckCircle2, Phone, ArrowRight, Search, Award, Ex
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { SEOHead } from "@/components/seo/SEOHead";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { getBreadcrumbSchema } from "@/lib/schema";
 import {
   Accordion,
   AccordionContent,
@@ -10,7 +13,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { getAreaBySlug, REGION_INFO } from "@/data/baliAreas";
-import { Helmet } from "react-helmet";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 const POPULAR_TREATMENTS = [
   {
@@ -133,18 +137,22 @@ export default function BaliCityPage() {
 
   if (!area) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">Area Not Found</h1>
-          <p className="text-muted-foreground mb-6">
-            We couldn't find the area you're looking for.
-          </p>
-          <Link href="/bali">
-            <a>
-              <Button>View All Areas</Button>
-            </a>
-          </Link>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <div className="flex-1 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold mb-4">Area Not Found</h1>
+            <p className="text-muted-foreground mb-6">
+              We couldn't find the area you're looking for.
+            </p>
+            <Link href="/bali">
+              <a>
+                <Button>View All Areas</Button>
+              </a>
+            </Link>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -233,33 +241,38 @@ export default function BaliCityPage() {
     }))
   };
 
-  return (
-    <>
-      <Helmet>
-        <title>{`${area.displayName} Mobile Massage | In-Home Villa & Hotel Service | Massage Bali`}</title>
-        <meta name="description" content={`Professional mobile massage in ${area.displayName}, Bali. Licensed therapists come to your villa, hotel, or home. Top providers like Home Massage Kuta and Home Massage Ubud serve the entire island. Traditional Balinese, deep tissue, couples massage & more.`} />
-        <link rel="canonical" href={`https://themassagemap.com/bali/${area.slug}`} />
-        <script type="application/ld+json">
-          {JSON.stringify(localBusinessSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-      </Helmet>
+  const breadcrumbItems = [
+    { name: "Bali Areas", href: "/bali" },
+    { name: area.displayName, href: `/bali/${area.slug}` }
+  ];
 
-      <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+  const allStructuredData = [
+    getBreadcrumbSchema([
+      { name: "Home", url: "/" },
+      { name: "Bali Areas", url: "/bali" },
+      { name: area.displayName, url: `/bali/${area.slug}` }
+    ]),
+    localBusinessSchema,
+    faqSchema
+  ];
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <SEOHead
+        title={`${area.displayName} Mobile Massage | In-Home Villa & Hotel Service | Massage Bali`}
+        description={`Professional mobile massage in ${area.displayName}, Bali. Licensed therapists come to your villa, hotel, or home. Top providers like Home Massage Kuta and Home Massage Ubud serve the entire island. Traditional Balinese, deep tissue, couples massage & more.`}
+        canonicalUrl={`/bali/${area.slug}`}
+        structuredData={allStructuredData}
+      />
+
+      <Header />
+      <div className="flex-1 bg-gradient-to-b from-background to-muted/20">
         {/* Breadcrumb */}
-        <nav className="pt-20 pb-4 px-4">
+        <div className="pt-20 pb-4 px-4">
           <div className="container mx-auto max-w-6xl">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Link href="/"><a className="hover:text-primary">Home</a></Link>
-              <span>/</span>
-              <Link href="/bali"><a className="hover:text-primary">Bali Areas</a></Link>
-              <span>/</span>
-              <span className="text-foreground">{area.displayName}</span>
-            </div>
+            <Breadcrumbs items={breadcrumbItems} />
           </div>
-        </nav>
+        </div>
 
         {/* Hero */}
         <section className="pb-12 px-4">
@@ -616,6 +629,7 @@ export default function BaliCityPage() {
           </div>
         </section>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }

@@ -1,35 +1,53 @@
 import { Link } from "wouter";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SEOHead } from "@/components/seo/SEOHead";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { getServiceSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Clock, DollarSign, Heart, AlertCircle, Users } from "lucide-react";
 import { MassageTypeData } from "@/data/massageTypes";
-import { Helmet } from "react-helmet";
 
 interface MassageTypeTemplateProps {
   data: MassageTypeData;
 }
 
 export default function MassageTypeTemplate({ data }: MassageTypeTemplateProps) {
+  const canonicalUrl = `/massage-types/${data.slug}`;
+  
+  const breadcrumbItems = [
+    { name: "Massage Types", href: "/massage-types" },
+    { name: data.name, href: canonicalUrl }
+  ];
+
+  const structuredData = [
+    getBreadcrumbSchema([
+      { name: "Home", url: "/" },
+      { name: "Massage Types", url: "/massage-types" },
+      { name: data.name, url: canonicalUrl }
+    ]),
+    getServiceSchema(
+      data.name,
+      data.metaDescription,
+      canonicalUrl
+    )
+  ];
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <Helmet>
-        <title>{data.metaTitle}</title>
-        <meta name="description" content={data.metaDescription} />
-      </Helmet>
+      <SEOHead
+        title={data.metaTitle}
+        description={data.metaDescription}
+        canonicalUrl={canonicalUrl}
+        structuredData={structuredData}
+      />
       
       <Header />
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         {/* Breadcrumbs */}
-        <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
-          <Link href="/"><a className="hover:text-primary">Home</a></Link>
-          <span>/</span>
-          <Link href="/massage-types"><a className="hover:text-primary">Massage Types</a></Link>
-          <span>/</span>
-          <span className="text-foreground">{data.name}</span>
-        </nav>
+        <Breadcrumbs items={breadcrumbItems} />
 
         {/* Header */}
         <header className="mb-8">

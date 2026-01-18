@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SEOHead } from "@/components/seo/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -28,8 +29,32 @@ export default function Contact() {
     });
   };
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Massage Bali",
+      "url": "https://themassagemap.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62 123 456 7890",
+        "contactType": "customer service",
+        "email": "info@themassagemap.com",
+        "areaServed": "ID",
+        "availableLanguage": ["en", "id"]
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEOHead
+        title="Contact Us - Massage Bali | Get In Touch"
+        description="Have questions about massage services in Bali? Contact our team for assistance with finding the perfect massage therapist or spa. We're here to help!"
+        canonicalUrl="/contact"
+        structuredData={contactSchema}
+      />
       <Header />
 
       {/* Hero Section */}
@@ -169,7 +194,11 @@ export default function Contact() {
                 <a href="/list-business" className="font-semibold underline">
                   Business Listings page
                 </a>
-                {" "}for more info.
+                {" "}for more info. We work with premier providers like{" "}
+                <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="font-semibold underline hover:text-teal-950">
+                  Home Massage Ubud
+                </a>
+                {" "}to bring the best wellness experiences to our users.
               </p>
             </div>
           </div>
