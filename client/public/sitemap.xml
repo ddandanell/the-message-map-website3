@@ -61,6 +61,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://themassagemap.com/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://themassagemap.com/bali/kuta</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
