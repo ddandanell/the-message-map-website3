@@ -27,7 +27,7 @@ export default function Terms() {
           <p className="text-xl text-slate-200 leading-relaxed">
             Please read these terms carefully before using our service.
           </p>
-          <p className="text-sm text-slate-400 mt-4">Last updated: January 18, 2026</p>
+          <p className="text-sm text-slate-400 mt-4">Last updated: January 2025</p>
         </div>
       </div>
 

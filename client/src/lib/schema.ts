@@ -1,7 +1,7 @@
 const SITE_URL = "https://themassagemap.com";
 const BUSINESS_NAME = "Massage Bali";
-const BUSINESS_PHONE = "+62 123 456 7890"; // Update with actual phone
-const BUSINESS_EMAIL = "info@themassagemap.com"; // Update with actual email
+const BUSINESS_PHONE = "+62 361 234 567"; // Update with actual phone
+const BUSINESS_EMAIL = "info@themassagemap.com";
 
 // Organization Schema
 export const getOrganizationSchema = () => ({
