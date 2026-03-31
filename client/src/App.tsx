@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ScrollToTop } from "@/components/shared/ScrollToTop";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
+import AIProduct from "@/pages/AIProduct";
 import BaliExplorer from "@/pages/BaliExplorer";
 import PlaceDetail from "@/pages/PlaceDetail";
 
@@ -217,6 +218,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/ai-customer-system" component={AIProduct} />
       <Route path="/areas" component={Areas} />
       <Route path="/massage-types" component={MassageTypes} />
       <Route path="/guides" component={Guides} />
