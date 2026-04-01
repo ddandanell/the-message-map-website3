@@ -19,6 +19,7 @@ export function Header() {
           <Link href="/massage-types"><a className="font-medium text-foreground hover:text-primary transition-colors">Massage Treatments</a></Link>
           <Link href="/freelancers"><a className="font-medium text-foreground hover:text-primary transition-colors">Freelancers</a></Link>
           <Link href="/guides"><a className="font-medium text-foreground hover:text-primary transition-colors">Guides</a></Link>
+          <Link href="/ai-customer-system"><a className="font-medium text-teal-600 hover:text-teal-500 transition-colors">AI System</a></Link>
           <Link href="/list-business"><a>
             <Button variant="default" size="sm" className="font-semibold">
               Add Place
@@ -46,6 +47,7 @@ export function Header() {
           <Link href="/massage-types"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-foreground hover:text-primary">Massage Treatments</a></Link>
           <Link href="/freelancers"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-foreground hover:text-primary">Freelancers</a></Link>
           <Link href="/guides"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-foreground hover:text-primary">Guides</a></Link>
+          <Link href="/ai-customer-system"><a onClick={() => setMobileMenuOpen(false)} className="block py-2 text-lg font-medium text-teal-600 hover:text-teal-500">AI System</a></Link>
           <Link href="/list-business"><a onClick={() => setMobileMenuOpen(false)}>
             <Button className="w-full mt-2">Add Place</Button>
           </a></Link>
