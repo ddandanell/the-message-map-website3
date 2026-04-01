@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/seo/SEOHead";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 import {
   Bot,
   BrainCircuit,
@@ -14,12 +19,36 @@ import {
   MessageSquare,
   RefreshCw,
   Repeat2,
+  Send,
   ShieldCheck,
   Sparkles,
   TrendingUp,
   Users,
   Zap,
 } from "lucide-react";
+
+const faqs = [
+  {
+    q: "How long does it take to get up and running?",
+    a: "Most businesses are live within a few days. We configure your knowledge center, connect your channels, and run a validation round before going live — no technical team required on your end.",
+  },
+  {
+    q: "Does it work with WhatsApp, email, and website chat?",
+    a: "Yes. The system connects to the channels your customers already use, so there's no friction for them and no change needed on your side.",
+  },
+  {
+    q: "What if the AI gives a wrong answer?",
+    a: "The system is grounded in your structured knowledge center — it only responds based on what you've approved. And because every interaction feeds back in, accuracy improves continuously. You're always in control.",
+  },
+  {
+    q: "Can I still handle conversations manually if I want to?",
+    a: "Absolutely. You can monitor all conversations, step in at any point, and set rules for which types of inquiries always get escalated to a human.",
+  },
+  {
+    q: "Is this just a chatbot?",
+    a: "No. A chatbot follows a fixed script. This system understands context, follows up proactively, runs remarketing sequences, and learns from every conversation via RAG architecture. It's an autonomous communication engine.",
+  },
+];
 
 const stats = [
   { value: "90%", label: "Reduction in manual workload" },
@@ -121,6 +150,19 @@ const outcomes = [
 ];
 
 export default function AIProduct() {
+  const [form, setForm] = useState({ name: "", email: "", business: "", message: "" });
+  const [submitted, setSubmitted] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
@@ -166,16 +208,16 @@ export default function AIProduct() {
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#how-it-works"
+                href="#demo"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-teal-500 hover:bg-teal-400 text-white font-semibold rounded-xl transition-all shadow-lg shadow-teal-500/30 hover:shadow-teal-400/40 hover:-translate-y-0.5"
               >
-                See How It Works <ChevronRight className="w-5 h-5" />
+                Book a Free Demo <ChevronRight className="w-5 h-5" />
               </a>
               <a
-                href="#features"
+                href="#how-it-works"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all hover:-translate-y-0.5"
               >
-                Explore Features
+                See How It Works
               </a>
             </div>
           </div>
@@ -459,23 +501,179 @@ export default function AIProduct() {
         </div>
       </section>
 
-      {/* ── CTA ───────────────────────────────────────────── */}
-      <section className="py-24 bg-teal-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
-            Ready to put your customer journey on autopilot?
-          </h2>
-          <p className="text-teal-100 text-lg mb-10 max-w-xl mx-auto">
-            Stop losing leads to slow responses and forgotten follow-ups. Let
-            the system handle it — every message, every time.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-white text-teal-700 font-bold rounded-xl hover:bg-teal-50 transition-all shadow-lg hover:-translate-y-0.5"
-            >
-              Get In Touch <ChevronRight className="w-5 h-5" />
-            </a>
+      {/* ── FAQ ───────────────────────────────────────────── */}
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Common questions
+            </h2>
+            <p className="text-gray-500 text-lg">
+              Everything you need to know before getting started.
+            </p>
+          </div>
+
+          <div className="max-w-2xl mx-auto space-y-3">
+            {faqs.map((faq, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-xl border border-gray-200 overflow-hidden"
+              >
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+                >
+                  <span className="font-semibold text-gray-900">{faq.q}</span>
+                  <ChevronRight
+                    className={`w-5 h-5 text-teal-500 flex-shrink-0 transition-transform duration-200 ${
+                      openFaq === i ? "rotate-90" : ""
+                    }`}
+                  />
+                </button>
+                {openFaq === i && (
+                  <div className="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-100 pt-4">
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── DEMO FORM ─────────────────────────────────────── */}
+      <section id="demo" className="py-24 bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-teal-500/10 rounded-full blur-3xl" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+
+            {/* Left — pitch */}
+            <div className="text-white">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal-500/20 border border-teal-500/30 rounded-full mb-6">
+                <CalendarCheck className="w-4 h-4 text-teal-400" />
+                <span className="text-teal-300 text-xs font-medium uppercase tracking-wider">
+                  Book a Free Demo
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-5 leading-tight">
+                See it handle a real conversation — live
+              </h2>
+              <p className="text-slate-300 leading-relaxed mb-8">
+                Tell us a bit about your business and we'll walk you through a
+                live demo tailored to your customer journey. No slides. No
+                fluff. Just the system doing its thing.
+              </p>
+
+              <ul className="space-y-3">
+                {[
+                  "30-minute live walkthrough",
+                  "Configured for your industry",
+                  "No commitment required",
+                  "See RAG learning in real time",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-slate-300 text-sm">
+                    <CircleCheck className="w-5 h-5 text-teal-400 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Right — form */}
+            <div className="bg-white rounded-2xl p-8 shadow-2xl">
+              {submitted ? (
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CircleCheck className="w-8 h-8 text-teal-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    You're on the list!
+                  </h3>
+                  <p className="text-gray-500">
+                    We'll reach out within one business day to confirm your
+                    demo slot.
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <h3 className="text-xl font-bold text-gray-900 mb-6">
+                    Request your demo
+                  </h3>
+                  <form onSubmit={handleSubmit} className="space-y-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-1.5">
+                        <Label htmlFor="name">Your name *</Label>
+                        <Input
+                          id="name"
+                          name="name"
+                          placeholder="Jane Smith"
+                          value={form.name}
+                          onChange={handleChange}
+                          required
+                          className="h-11"
+                        />
+                      </div>
+                      <div className="space-y-1.5">
+                        <Label htmlFor="email">Email *</Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          placeholder="jane@company.com"
+                          value={form.email}
+                          onChange={handleChange}
+                          required
+                          className="h-11"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <Label htmlFor="business">Business name *</Label>
+                      <Input
+                        id="business"
+                        name="business"
+                        placeholder="Acme Co."
+                        value={form.business}
+                        onChange={handleChange}
+                        required
+                        className="h-11"
+                      />
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <Label htmlFor="message">
+                        Biggest challenge with customer communication?
+                      </Label>
+                      <Textarea
+                        id="message"
+                        name="message"
+                        placeholder="e.g. We miss too many leads after hours..."
+                        value={form.message}
+                        onChange={handleChange}
+                        rows={3}
+                        className="resize-none"
+                      />
+                    </div>
+
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full h-12 bg-teal-600 hover:bg-teal-500 text-white font-bold"
+                    >
+                      Book My Free Demo <Send className="w-4 h-4 ml-2" />
+                    </Button>
+
+                    <p className="text-xs text-gray-400 text-center">
+                      No credit card. No obligation. Cancel anytime.
+                    </p>
+                  </form>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </section>
