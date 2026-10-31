@@ -10,7 +10,7 @@ interface SEOHeadProps {
   structuredData?: object | object[];
 }
 
-const SITE_URL = "https://themassagemap.com";
+const SITE_URL = "https://www.themassagemap.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/attached_assets/generated_images/spa-hero.png`;
 
 export function SEOHead({
@@ -55,7 +55,7 @@ export function SEOHead({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={fullOgImage} />
-      <meta property="og:site_name" content="Massage Bali" />
+      <meta property="og:site_name" content="The Massage Map" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter */}

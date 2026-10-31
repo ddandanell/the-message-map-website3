@@ -44,4 +44,5 @@ build
 
 # Testing
 coverage
-.nyc_output
+.nyc_outputseo-gate-report.json
+seo-prerender-report.json

@@ -4,86 +4,88 @@ import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/seo/SEOHead";
 import { getOrganizationSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, MapPin, Clock, ArrowRight } from "lucide-react";
-import { PLACES } from "@/lib/mockData";
-import { PlaceCard } from "@/components/shared/PlaceCard";
-import guideImage from '@assets/generated_images/guide:_best_massage_in_canggu.png';
+import { PLACES, AREAS } from "@/lib/mockData";
+import { MapPin, Clock, ArrowRight } from "lucide-react";
 
 export default function About() {
+  const checkedAreas = AREAS.filter(a => a.placeCount > 0).length;
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEOHead
-        title="About Us - Massage Bali | Verified Wellness Directory"
-        description="Learn about Massage Bali, the island's first curated directory for quality, safe, and transparent wellness experiences. Meet our team and discover our mission."
+        title="About The Massage Map: a checked Bali massage directory"
+        description="The Massage Map lists massage and spa providers in Bali with published prices, hours and sources, and shows the date each listing was last checked."
         canonicalUrl="/about"
         structuredData={getOrganizationSchema()}
       />
       <Header />
-      
-      {/* Hero */}
-      <div className="relative py-24 bg-teal-900 text-white overflow-hidden">
-         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-         <div className="container mx-auto px-4 relative z-10 text-center max-w-3xl">
-           <h1 className="text-4xl md:text-6xl font-bold mb-6">Relaxation, Verified.</h1>
-           <p className="text-xl text-teal-100 leading-relaxed">
-             Massage Bali is the island's first curated directory dedicated to quality, safe, and transparent wellness experiences.
-           </p>
-         </div>
+
+      <div className="bg-teal-900 text-white py-20">
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-5">A directory that shows its work</h1>
+          <p className="text-lg text-teal-100 leading-relaxed">
+            The Massage Map exists to answer one practical question: which massage or spa in Bali fits what I want, what
+            does it cost, and how do I reach it. Every listing answers that with facts taken from the provider's own
+            published information, dated, and linked to the source.
+          </p>
+        </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16">
-        
-        {/* Story Section */}
-        <div className="max-w-3xl mx-auto mb-20">
-           <h2 className="text-3xl font-bold text-teal-950 mb-6">Our Mission</h2>
-           <div className="prose prose-lg text-muted-foreground">
-             <p className="mb-4">
-               Finding a good massage in Bali used to be a gamble. You rely on outdated reviews, haggle over prices, or wander into places that don't match the photos. We built Massage Bali to change that.
-             </p>
-             <p className="mb-4">
-               Our team of locals and expats personally visits every "Verified" partner. We check the linens, test the pressure, and verify the prices so you don't have to. We partner with trusted providers like <a href="https://homemassageubud.com/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline font-semibold">Home Massage Ubud</a>, ensuring you receive authentic, professional services wherever you are in Bali.
-             </p>
-             <p>
-               We believe that relaxation should start the moment you begin your search, not just when you lie down on the table.
-             </p>
-           </div>
-        </div>
+      <div className="container mx-auto px-4 py-14 max-w-3xl space-y-12">
+        <section>
+          <h2 className="text-2xl font-bold mb-4">What we publish</h2>
+          <p className="text-muted-foreground leading-relaxed mb-3">
+            {PLACES.length} providers across {checkedAreas} areas of Bali are listed at the time of writing, and the
+            number grows as listings are checked. Each one carries its address, opening hours, contact details, the
+            treatments the provider lists, any prices it publishes, and the sources those facts came from.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We deliberately do not publish invented reviews, editorial star ratings, hygiene scores or claims about
+            treatments we have never had. There is no "verified" badge here, because a badge that means nothing is worse
+            than no badge. Instead, every listing says what was checked and when.
+          </p>
+        </section>
 
-        {/* Team Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center text-teal-950 mb-12">Meet the Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-             {[
-               { name: "Sarah W.", role: "Founder & Chief Relaxation Officer", img: "https://randomuser.me/api/portraits/women/44.jpg" },
-               { name: "Budi Santoso", role: "Head of Partnerships", img: "https://randomuser.me/api/portraits/men/32.jpg" },
-               { name: "Jessica Lim", role: "Content Editor", img: "https://randomuser.me/api/portraits/women/68.jpg" }
-             ].map((member, i) => (
-               <div key={i} className="group">
-                  <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white shadow-lg group-hover:scale-105 transition-transform">
-                    <img src={member.img} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
-                  </div>
-                  <h3 className="font-bold text-lg text-foreground">{member.name}</h3>
-                  <p className="text-teal-600 font-medium">{member.role}</p>
-               </div>
-             ))}
+        <section className="grid sm:grid-cols-2 gap-6">
+          <div className="rounded-2xl border border-border/60 bg-white p-6">
+            <MapPin className="w-5 h-5 text-teal-700 mb-3" />
+            <h3 className="font-bold mb-2">Coverage, area by area</h3>
+            <p className="text-sm text-muted-foreground">
+              Canggu, Seminyak, Ubud, Sanur, Uluwatu, Kuta, Legian, Jimbaran, Nusa Dua and Denpasar. Areas are worked
+              through in order, and empty areas stay marked as in progress rather than filled with placeholder entries.
+            </p>
           </div>
-        </div>
+          <div className="rounded-2xl border border-border/60 bg-white p-6">
+            <Clock className="w-5 h-5 text-teal-700 mb-3" />
+            <h3 className="font-bold mb-2">Dating and corrections</h3>
+            <p className="text-sm text-muted-foreground">
+              Every listing shows when it was last checked. Prices and hours change; if you find something out of date,
+              report it and the listing is re-checked against the source rather than patched from memory.
+            </p>
+          </div>
+        </section>
 
-        {/* Featured Guide Preview */}
-        <div className="bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 flex flex-col md:flex-row">
-           <div className="md:w-1/2 relative min-h-[300px]">
-             <img src={guideImage} alt="Best Massage Canggu" className="absolute inset-0 w-full h-full object-cover" />
-           </div>
-           <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-              <div className="uppercase tracking-wider text-xs font-bold text-teal-600 mb-2">Editor's Guide</div>
-              <h3 className="text-3xl font-bold text-slate-900 mb-4">The Ultimate Guide to Massage in Canggu (2026 Edition)</h3>
-              <p className="text-slate-600 mb-8 leading-relaxed">
-                From luxury beachside spas to hidden affordable gems, we've ranked the top 10 places you need to visit in Bali's trendiest neighborhood.
-              </p>
-              <Button variant="default" className="w-fit">Read the Guide <ArrowRight className="w-4 h-4 ml-2" /></Button>
-           </div>
-        </div>
+        <section className="bg-slate-50 border border-border/60 rounded-2xl p-6 md:p-8">
+          <h2 className="text-2xl font-bold mb-3">How to use it</h2>
+          <ol className="list-decimal pl-5 space-y-2 text-muted-foreground">
+            <li>Start from the area you are staying in.</li>
+            <li>Compare published prices and opening hours on the listing itself.</li>
+            <li>Contact the provider directly through its own website or phone number.</li>
+          </ol>
+          <div className="flex flex-wrap gap-3 mt-6">
+            <Link href="/bali"><Button className="gap-2">Browse by area <ArrowRight className="w-4 h-4" /></Button></Link>
+            <Link href="/how-we-rate"><Button variant="outline">How we check listings</Button></Link>
+          </div>
+        </section>
 
+        <section>
+          <h2 className="text-2xl font-bold mb-3">Are you a provider?</h2>
+          <p className="text-muted-foreground leading-relaxed">
+            If your business is missing, or a detail is wrong, send the correct information with a link to your own
+            published menu and we will check it. Listing is based on verifiable information, not payment; we do not sell
+            placements or star ratings.
+          </p>
+        </section>
       </div>
 
       <Footer />

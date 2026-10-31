@@ -5,144 +5,98 @@ import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/seo/SEOHead";
-import { getLocalBusinessSchema } from "@/lib/schema";
-import { BALI_AREAS, getAllRegions, getAreasByRegion, REGION_INFO, type Region } from "@/data/baliAreas";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { AREAS, PLACES } from "@/lib/mockData";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
+/** Bali index: the areas we actually operate in, with real listing counts. */
 export default function BaliIndex() {
   const [searchTerm, setSearchTerm] = useState("");
-  const regions = getAllRegions();
 
-  const filteredAreas = searchTerm.trim()
-    ? BALI_AREAS.filter(area =>
-        area.displayName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        area.description.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    : BALI_AREAS;
-
-  const groupedByRegion = regions.map(region => ({
-    region,
-    info: REGION_INFO[region],
-    areas: searchTerm.trim()
-      ? filteredAreas.filter(area => area.region === region)
-      : getAreasByRegion(region)
-  })).filter(group => group.areas.length > 0);
+  const filtered = AREAS.filter(a =>
+    searchTerm.trim() ? a.name.toLowerCase().includes(searchTerm.trim().toLowerCase()) : true
+  );
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background">
       <SEOHead
-        title="Bali Massage Service Areas (Villa & Hotel) | Massage Bali"
-        description="Professional in-home, villa, and hotel massage services across all areas of Bali. From Seminyak to Ubud, Canggu to Uluwatu - find verified massage therapists in your area."
+        title="Bali massage and spa areas: checked local listings"
+        description={`Massage and spa providers in ${AREAS.filter(a => a.placeCount > 0).length} Bali areas, each listing checked against the provider's own published prices, hours and menu.`}
         canonicalUrl="/bali"
-        structuredData={getLocalBusinessSchema()}
       />
 
       <Header />
-      <div className="flex-1 bg-gradient-to-b from-background to-muted/20">
-        {/* Hero Section */}
-        <section className="pt-32 pb-16 px-4">
-          <div className="container mx-auto max-w-4xl text-center">
-            <Badge variant="secondary" className="mb-4">
-              100+ Areas Covered
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Massage Services Across All of Bali
-            </h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Whether you're staying in a villa in Seminyak, a hotel in Ubud, or beachfront in Canggu,
-              find verified massage therapists who come to you. Professional in-home massage services
-              available island-wide.
-            </p>
-
-            {/* Search */}
-            <div className="relative max-w-md mx-auto">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
-              <Input
-                type="text"
-                placeholder="Search areas (e.g., Ubud, Canggu...)"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 py-6 text-lg"
-              />
-            </div>
-
-            {searchTerm && (
-              <p className="mt-4 text-sm text-muted-foreground">
-                Found {filteredAreas.length} area{filteredAreas.length !== 1 ? 's' : ''}
-              </p>
-            )}
+      <div className="bg-gradient-to-br from-teal-900 via-teal-800 to-emerald-800 text-white">
+        <div className="container mx-auto px-4 py-14 max-w-4xl">
+          <Breadcrumbs items={[{ name: "Bali", href: "/bali" }]} />
+          <h1 className="text-4xl md:text-5xl font-bold mt-4 mb-4">Bali area by area</h1>
+          <p className="text-lg text-teal-50 leading-relaxed max-w-2xl">
+            {PLACES.length} checked {PLACES.length === 1 ? "listing" : "listings"} across {AREAS.filter(a => a.placeCount > 0).length} areas.
+            Pick the area you are staying in, or the one you are willing to travel to, and compare published prices and
+            hours on the listings themselves.
+          </p>
+          <div className="relative max-w-md mt-8">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground w-5 h-5" />
+            <Input
+              type="text"
+              placeholder="Filter areas (e.g. Ubud, Canggu)"
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+              className="pl-10 py-6 text-base bg-white text-foreground"
+            />
           </div>
-        </section>
+        </div>
+      </div>
 
-        {/* Regions & Areas */}
-        <section className="pb-20 px-4">
-          <div className="container mx-auto max-w-6xl">
-            {groupedByRegion.map(({ region, info, areas }) => (
-              <div key={region} className="mb-12">
-                <div className="mb-6">
-                  <h2 className="text-3xl font-bold mb-2">{info.name}</h2>
-                  <p className="text-muted-foreground">{info.description}</p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {areas.map(area => (
-                    <Link key={area.id} href={`/bali/${area.slug}`}>
-                      <a>
-                        <Card className="p-4 hover:shadow-lg transition-all hover:border-primary group cursor-pointer">
-                          <div className="flex items-start gap-3">
-                            <div className="mt-1 p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                              <MapPin className="w-5 h-5 text-primary" />
-                            </div>
-                            <div className="flex-1">
-                              <h3 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors">
-                                {area.displayName}
-                              </h3>
-                              <p className="text-sm text-muted-foreground line-clamp-2">
-                                {area.description}
-                              </p>
-                            </div>
-                          </div>
-                        </Card>
-                      </a>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
-
-            {filteredAreas.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-muted-foreground text-lg">
-                  No areas found matching "{searchTerm}"
-                </p>
-                <button
-                  onClick={() => setSearchTerm("")}
-                  className="mt-4 text-primary hover:underline"
-                >
-                  Clear search
-                </button>
-              </div>
-            )}
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 bg-primary/5">
-          <div className="container mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold mb-4">Can't Find Your Area?</h2>
-            <p className="text-muted-foreground mb-8">
-              We're constantly expanding our coverage across Bali. If your area isn't listed,
-              we may still have therapists available nearby.
-            </p>
-            <Link href="/contact">
-              <a className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-                Contact Us for Your Area
+      <div className="container mx-auto px-4 py-12 max-w-5xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {filtered.map(area => (
+            <Link key={area.slug} href={`/bali/${area.slug}`}>
+              <a className="block h-full">
+                <Card className="p-5 h-full hover:shadow-lg transition-all hover:border-teal-200 group">
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 p-2 bg-teal-50 rounded-lg group-hover:bg-teal-100 transition-colors">
+                        <MapPin className="w-5 h-5 text-teal-700" />
+                      </div>
+                      <div>
+                        <h2 className="font-semibold text-lg group-hover:text-teal-700 transition-colors">{area.name}</h2>
+                        <p className="text-sm text-muted-foreground line-clamp-2">{area.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex items-center justify-between text-xs">
+                    <Badge variant="secondary" className="bg-slate-100 text-slate-700 border-transparent">
+                      {area.placeCount} {area.placeCount === 1 ? "listing" : "listings"}
+                    </Badge>
+                    <span className="text-muted-foreground">
+                      {area.minPrice !== null ? `from IDR ${Math.round(area.minPrice / 1000)}k` : "prices not published yet"}
+                    </span>
+                  </div>
+                </Card>
               </a>
             </Link>
+          ))}
+        </div>
+
+        {filtered.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-muted-foreground">No area matches "{searchTerm}".</p>
+            <button onClick={() => setSearchTerm("")} className="text-teal-700 underline mt-2">Clear filter</button>
           </div>
-        </section>
+        )}
+
+        <div className="mt-10 bg-slate-50 border border-border/60 rounded-2xl p-6 text-sm text-muted-foreground">
+          <p className="font-medium text-foreground mb-2">Why only these areas?</p>
+          <p>
+            Bali has dozens of neighbourhoods. A page is published here once at least one provider in that area has been
+            checked and listed, so an area with no page means we have not verified anyone there yet, not that there are no
+            massage businesses. Areas are added in order as the directory grows.
+          </p>
+        </div>
       </div>
+
       <Footer />
     </div>
   );
