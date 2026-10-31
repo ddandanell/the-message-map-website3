@@ -219,11 +219,12 @@ for (const [name, slug] of AREAS) {
     <h1>Massage and spas in ${esc(name)}, Bali</h1>
     <p>${inArea.length
       ? `${inArea.length} checked ${inArea.length === 1 ? "listing" : "listings"} in ${esc(name)}${cheapest !== null ? `, with published prices from ${esc(idr(cheapest))}` : ""}. Prices, hours and contact details are copied from each provider's own website and dated with the day we read them.`
-      : `We have not published a checked listing in ${esc(name)} yet.`}</p>
+      : `We have not published a checked listing in ${esc(name)} yet. That is a deliberate choice: a listing appears only once we can confirm the business is operating in the area and publishes its own menu or business details, and we would rather show nothing than show something unchecked. The area is on the worklist, and it will get listings as providers there are verified.`}</p>
     <ul>${list}</ul>
     <h2>How these listings are built</h2>
     <p>A provider is listed once we can confirm it is operating in the area and publishes its own menu or business details. We do not rate businesses, we do not sell placements, and any figure shown is taken from the provider's own source on the date stated. If a provider's details change, the listing is corrected or withdrawn.</p>
-    <p><a href="/bali">All Bali areas</a> · <a href="/how-we-rate">How we check listings</a></p>`;
+    <p>Prices shown on this page are the figures providers publish themselves on the date each listing records. Where a price is marked as a from-price, or the provider adds tax and service at payment, the amount at the desk is higher than the figure shown. Durations matter as much as prices: a 60-minute massage and a 90-minute massage at a similar price are not the same offer, so compare like with like before booking.</p>
+    <p><a href="/bali">All Bali areas</a> · <a href="/how-we-rate">How we check listings</a> · <a href="/bali/${slug === "canggu" ? "seminyak" : "canggu"}">Compare with another area</a> · <a href="/guides">Guides</a></p>`;
 
   add({
     path: path_,
@@ -389,7 +390,8 @@ for (const item of simple) {
     canonical: item.path,
     indexable: true,
     html: `<h1>${esc(item.title.split(":")[0])}</h1>${item.body}
-      <p>This directory publishes what each provider states about itself, dated and sourced. We do not visit every business, we do not score treatments we have not had, and we do not invent reviews. Start from the <a href="/bali">Bali area index</a> or read <a href="/how-we-rate">how we check listings</a>.</p>`,
+      <p>This directory publishes what each provider states about itself, dated and sourced. We do not visit every business, we do not score treatments we have not had, and we do not invent reviews.</p>
+      <p>Start from the <a href="/bali">Bali area index</a>, browse the areas we cover in most detail — <a href="/bali/canggu">Canggu</a>, <a href="/bali/ubud">Ubud</a> and <a href="/bali/seminyak">Seminyak</a> — or read <a href="/how-we-rate">how we check listings</a> and <a href="/about">what this directory is</a>.</p>`,
     jsonld: ORG_LD,
   });
 }
