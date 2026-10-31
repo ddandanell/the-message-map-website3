@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T06:22:09Z",
+ "generated_at": "2026-10-31T06:25:03Z",
  "run_id": "r-20261031b",
  "site_id": "site-005",
  "count": 12,
@@ -416,7 +416,38 @@
     "Facials",
     "Waxing"
    ],
-   "prices": [],
+   "prices": [
+    {
+     "note": "Per person, verified 2026-10-31",
+     "duration": "60 min",
+     "price_idr": 159000,
+     "treatment": "Balinese Massage"
+    },
+    {
+     "note": "From price, per person",
+     "duration": "30 min",
+     "price_idr": 90000,
+     "treatment": "Traditional / Back Massage"
+    },
+    {
+     "note": "From price for two people",
+     "duration": "60 min",
+     "price_idr": 319000,
+     "treatment": "Couples Massage"
+    },
+    {
+     "note": "From price, per person",
+     "duration": "Varies",
+     "price_idr": 375000,
+     "treatment": "Spa packages"
+    },
+    {
+     "note": "Per person",
+     "duration": "60 min + 60 min",
+     "price_idr": 379000,
+     "treatment": "Balinese massage with manicure and pedicure"
+    }
+   ],
    "price_notes": "Prices checked on 31 October 2026: one-hour Balinese massage IDR 159,000 per person, 30-minute traditional or back massage from IDR 90,000, couples massage from IDR 319,000, packages from IDR 375,000. Prices are in Indonesian rupiah, quoted per person.",
    "description": "Spa Bali Moon is a day spa at Jl. Pangkung Sari No. 30 in Petitenget, Seminyak, and its own site states it has served guests since 2009. It is a neighbourhood spa rather than a resort spa: rooms are private, the menu is long, and a single visit can combine a massage with a facial, a scrub or a cream bath. Massage covers Balinese, traditional, deep tissue, lymphatic drainage, sports, shiatsu, Thai, hot stone, warm candle, coconut oil, couple, foot and head treatments, with waxing and beauty work listed alongside. On the pages checked on 31 October 2026 a one-hour Balinese massage was IDR 159,000 per person, a 30-minute traditional or back massage started at IDR 90,000, and a couples massage started at IDR 319,000 for two. Spa packages started at IDR 375,000 per person, and a one-hour Balinese massage with a 30-minute manicure and pedicure was listed at IDR 379,000. Prices are in Indonesian rupiah and are the same whether you book at the desk or in advance. The spa is open daily from 09:00 to 23:00, has showers and Wi-Fi, and takes bookings on WhatsApp at +62 878-6317-5144. Because the menu is broad, name the treatment and the duration when booking rather than asking for 'a massage'. Its site also carries short guides on choosing between Thai and Balinese massage and on how slimming massage is marketed, which is more transparent than most competitors. Petitenget sits a short ride north of Seminyak's main shopping streets, so it works as a stop between the beach and dinner.",
    "description_words": 258,
