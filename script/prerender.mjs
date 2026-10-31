@@ -289,7 +289,10 @@ add({
       const c = PROVIDERS.filter((p) => p.area_slug === s).length;
       return `<li><a href="/bali/${s}">${esc(n)}</a> — ${c ? `${c} ${c === 1 ? "listing" : "listings"}` : "no checked listings yet"}</li>`;
     }).join("")}</ul>
-    <p>Areas without listings are still being checked. We publish a page for an area once at least one provider there meets the standard, rather than filling it with unchecked entries.</p>`,
+    <p>Areas without listings are still being checked. We publish a page for an area once at least one provider there meets the standard, rather than filling it with unchecked entries.</p>
+    <h2>How to compare providers in an area</h2>
+    <p>Start with the published price and the duration it covers, because a cheap 60-minute massage and a similar price for 90 minutes are not the same offer. Then check the opening hours against when you actually want to go, and whether the provider publishes a phone number, a WhatsApp line or an online booking page. If a listing shows a price marked as a from-price, or notes tax and service charges, the amount you pay at the desk will be higher than the figure on the menu.</p>
+    <p>Every listing also links to the sources it was built from, so you can open the provider's own menu and confirm a detail before you travel across the island for it. If something has changed, the listing shows the date we last read those sources, and a correction can be sent from the contact page.</p>`,
   jsonld: ORG_LD,
 });
 
