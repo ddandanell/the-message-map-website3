@@ -300,6 +300,7 @@ add({
 add({
   path: "/how-we-rate",
   title: "How The Massage Map checks Bali massage listings",
+  titleSuffixes: [" (2026)", " — Bali"],
   description: "Our method: what we verify, how we date it, and what we deliberately do not claim — no visits, no inspection scores, no invented reviews or star ratings.",
   metaExtras: ["Sources and check dates on every listing."],
   canonical: "/how-we-rate",
@@ -331,7 +332,8 @@ add({
     <h1>A directory that shows its work</h1>
     <p>The Massage Map answers a practical question: which massage or spa in Bali fits what I want, what does it cost, and how do I reach it. Every listing answers that with facts taken from the provider's own published information, dated and linked to the source.</p>
     <p>${totalProviders} providers across ${withListings} areas are listed, most recently checked on ${fmtDate(latestCheck)}. We do not publish invented reviews, editorial star ratings, hygiene scores or claims about treatments we have never had.</p>
-    <p>If your business is missing or a detail is wrong, send the correct information with a link to your published menu and we will check it. Listing is based on verifiable information, not payment. <a href="/contact">Contact us</a>.</p>`,
+    <p>If your business is missing or a detail is wrong, send the correct information with a link to your published menu and we will check it. Listing is based on verifiable information, not payment. <a href="/contact">Contact us</a>.</p>
+    <p>Where to start: the <a href="/bali">Bali area index</a>, the areas we have worked through most — <a href="/bali/canggu">Canggu</a> and <a href="/bali/ubud">Ubud</a> — or <a href="/how-we-rate">how we check a listing</a>, which explains what a listing does and does not mean.</p>`,
   jsonld: ORG_LD,
 });
 
