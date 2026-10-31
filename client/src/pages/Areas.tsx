@@ -6,7 +6,8 @@ import { MapPin, Users, TrendingUp } from "lucide-react";
 
 export default function Areas() {
   const totalPlaces = AREAS.reduce((sum, area) => sum + area.placeCount, 0);
-  const avgMinPrice = Math.floor(AREAS.reduce((sum, area) => sum + area.minPrice, 0) / AREAS.length);
+  const cheapest = AREAS.map(a => a.minPrice).filter((n): n is number => typeof n === "number");
+  const lowestAreaPrice = cheapest.length ? Math.min(...cheapest) : null;
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -37,14 +38,14 @@ export default function Areas() {
                 <Users className="w-8 h-8 text-white" />
               </div>
               <div className="text-3xl font-bold text-white">{totalPlaces}+</div>
-              <div className="text-teal-200 text-sm font-medium">Verified Places</div>
+              <div className="text-teal-200 text-sm font-medium">Checked Listings</div>
             </div>
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-3 backdrop-blur-sm border border-white/20">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-white">{(avgMinPrice / 1000).toFixed(0)}k+</div>
-              <div className="text-teal-200 text-sm font-medium">From IDR</div>
+              <div className="text-3xl font-bold text-white">{lowestAreaPrice !== null ? `${Math.round(lowestAreaPrice / 1000)}k` : "n/a"}</div>
+              <div className="text-teal-200 text-sm font-medium">Lowest published price</div>
             </div>
           </div>
         </div>

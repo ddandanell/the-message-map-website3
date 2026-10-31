@@ -6,7 +6,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ScrollToTop } from "@/components/shared/ScrollToTop";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
-import BaliExplorer from "@/pages/BaliExplorer";
 import PlaceDetail from "@/pages/PlaceDetail";
 
 import ListBusiness from "@/pages/ListBusiness";
@@ -18,8 +17,6 @@ import Guides from "@/pages/Guides";
 import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
-import Freelancers from "@/pages/Freelancers";
-import FreelancerDetail from "@/pages/FreelancerDetail";
 
 // Bali Area Pages
 import BaliIndex from "@/pages/BaliIndex";
@@ -28,7 +25,6 @@ import BaliCityPage from "@/pages/BaliCityPage";
 // Guide Detail Pages
 import BestMassageCanggu2026 from "@/pages/guides/BestMassageCanggu2026";
 import TraditionalBalineseMassage from "@/pages/guides/TraditionalBalineseMassage";
-import MassageBaliProposal from "@/pages/guides/MassageBaliProposal";
 
 // Massage Type Pages
 import SwedishMassage from "@/pages/massage-types/SwedishMassage";
@@ -224,7 +220,6 @@ function Router() {
       {/* Guide Detail Pages */}
       <Route path="/guides/best-massage-canggu-2026" component={BestMassageCanggu2026} />
       <Route path="/guides/traditional-balinese-massage-guide" component={TraditionalBalineseMassage} />
-      <Route path="/guides/massage-bali-freelancer-platform" component={MassageBaliProposal} />
 
       {/* Massage Type Detail Pages */}
       <Route path="/massage-types/swedish-massage" component={SwedishMassage} />
@@ -416,8 +411,6 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
-      <Route path="/freelancers" component={Freelancers} />
-      <Route path="/freelancers/:slug" component={FreelancerDetail} />
 
       {/* Bali Area Pages - Must come before old routes */}
       <Route path="/bali" component={BaliIndex} />

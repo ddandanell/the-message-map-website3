@@ -45,7 +45,7 @@ export default function Home() {
     }
   };
 
-  const featuredPlaces = PLACES.filter(p => p.verified).slice(0, 3);
+  const featuredPlaces = PLACES.filter(p => p.lowestPrice !== null).slice(0, 3);
 
   const structuredData = [
     getOrganizationSchema(),
@@ -56,8 +56,8 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
-        title="Massage Bali - Find Professional Massage Services Across All of Bali"
-        description="Discover verified massage therapists, spas, and wellness services across 100+ areas in Bali. From Canggu to Ubud, find professional in-home massage services with real reviews and accurate pricing."
+        title="Massage in Bali: checked spa and massage listings"
+        description="Bali massage and spa directory. Every listing is checked against the provider's own website, with published prices, hours and contact details, and the date it was last checked."
         canonicalUrl="/"
         structuredData={structuredData}
       />
@@ -199,8 +199,8 @@ export default function Home() {
         <div className="container mx-auto px-4">
            <div className="flex justify-between items-end mb-10">
             <div>
-              <h2 className="text-3xl font-bold mb-2">Editor's Picks</h2>
-              <p className="text-muted-foreground">Hand-picked top rated spas this week</p>
+              <h2 className="text-3xl font-bold mb-2">Recently checked listings</h2>
+              <p className="text-muted-foreground">Prices, hours and sources checked against each provider's own website</p>
             </div>
           </div>
           

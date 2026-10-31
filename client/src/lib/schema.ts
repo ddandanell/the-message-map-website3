@@ -1,157 +1,72 @@
-const SITE_URL = "https://themassagemap.com";
-const BUSINESS_NAME = "Massage Bali";
-const BUSINESS_PHONE = "+62 361 234 567"; // Update with actual phone
-const BUSINESS_EMAIL = "info@themassagemap.com";
+/**
+ * Structured data for The Massage Map.
+ *
+ * Rules applied here:
+ *  - no aggregateRating or review markup unless real, attributable reviews exist
+ *    (there are none: Google treats invented review markup as spam)
+ *  - no phone number, postal address or social profile that is not real
+ *  - the Organisation describes the directory, not a spa
+ */
 
-// Organization Schema
+const SITE_URL = "https://www.themassagemap.com";
+const BRAND = "The Massage Map";
+
 export const getOrganizationSchema = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": BUSINESS_NAME,
-  "url": SITE_URL,
-  "logo": `${SITE_URL}/attached_assets/generated_images/spa-hero.png`,
-  "description": "Your trusted guide to finding the best massage services across all of Bali. Verified reviews, accurate pricing, and professional therapists.",
-  "sameAs": [
-    "https://www.instagram.com/massagebali",
-    "https://www.facebook.com/massagebali",
-    "https://twitter.com/massagebali"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": BUSINESS_PHONE,
-    "contactType": "customer service",
-    "email": BUSINESS_EMAIL,
-    "areaServed": "ID",
-    "availableLanguage": ["en", "id"]
-  }
+  name: BRAND,
+  url: SITE_URL,
+  description:
+    "A Bali massage and spa directory built from each provider's own published information, with prices, hours, contact details and the date every listing was checked.",
+  knowsAbout: ["Bali massage", "Bali spas", "Balinese massage"],
 });
 
-// Local Business Schema
-export const getLocalBusinessSchema = () => ({
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": BUSINESS_NAME,
-  "image": `${SITE_URL}/attached_assets/generated_images/spa-hero.png`,
-  "url": SITE_URL,
-  "telephone": BUSINESS_PHONE,
-  "email": BUSINESS_EMAIL,
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Bali",
-    "addressRegion": "Bali",
-    "addressCountry": "ID"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -8.3405,
-    "longitude": 115.0920
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-      ],
-      "opens": "08:00",
-      "closes": "22:00"
-    }
-  ],
-  "priceRange": "$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "250"
-  }
-});
-
-// Breadcrumb Schema
-export const getBreadcrumbSchema = (items: Array<{ name: string; url: string }>) => ({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": items.map((item, index) => ({
-    "@type": "ListItem",
-    "position": index + 1,
-    "name": item.name,
-    "item": item.url.startsWith('http') ? item.url : `${SITE_URL}${item.url}`
-  }))
-});
-
-// Service Schema
-export const getServiceSchema = (serviceName: string, description: string, url: string) => ({
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": serviceName,
-  "name": `${serviceName} in Bali`,
-  "description": description,
-  "provider": {
-    "@type": "Organization",
-    "name": BUSINESS_NAME,
-    "url": SITE_URL
-  },
-  "areaServed": {
-    "@type": "Place",
-    "name": "Bali, Indonesia"
-  },
-  "url": url.startsWith('http') ? url : `${SITE_URL}${url}`,
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "reviewCount": "150"
-  }
-});
-
-// WebSite Schema with Search Action
 export const getWebSiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": BUSINESS_NAME,
-  "url": SITE_URL,
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": `${SITE_URL}/bali/{search_term_string}`
-    },
-    "query-input": "required name=search_term_string"
-  }
+  name: BRAND,
+  url: SITE_URL,
+  inLanguage: "en",
+  publisher: { "@type": "Organization", name: BRAND, url: SITE_URL },
 });
 
-// Article Schema for Guide Pages
-export const getArticleSchema = (
-  title: string,
-  description: string,
-  url: string,
-  datePublished: string,
-  dateModified: string,
-  imageUrl?: string
-) => ({
+/** Kept for call sites that ask for a local-business schema: a directory is not one. */
+export const getLocalBusinessSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Bali massage and spa directory",
+  url: `${SITE_URL}/bali`,
+  isPartOf: { "@type": "WebSite", name: BRAND, url: SITE_URL },
+});
+
+export const getBreadcrumbSchema = (items: Array<{ name: string; url: string }>) => ({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    item: item.url.startsWith("http") ? item.url : `${SITE_URL}${item.url}`,
+  })),
+});
+
+export const getServiceSchema = (serviceName: string, description: string, url: string) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: serviceName,
+  description,
+  url: url.startsWith("http") ? url : `${SITE_URL}${url}`,
+  serviceType: "Massage",
+  areaServed: { "@type": "AdministrativeArea", name: "Bali, Indonesia" },
+});
+
+export const getArticleSchema = (title: string, description: string, url: string, datePublished?: string, dateModified?: string) => ({
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": title,
-  "description": description,
-  "image": imageUrl || `${SITE_URL}/attached_assets/generated_images/spa-hero.png`,
-  "author": {
-    "@type": "Organization",
-    "name": BUSINESS_NAME
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": BUSINESS_NAME,
-    "logo": {
-      "@type": "ImageObject",
-      "url": `${SITE_URL}/attached_assets/generated_images/spa-hero.png`
-    }
-  },
-  "datePublished": datePublished,
-  "dateModified": dateModified,
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": url.startsWith('http') ? url : `${SITE_URL}${url}`
-  }
+  headline: title,
+  description,
+  url: url.startsWith("http") ? url : `${SITE_URL}${url}`,
+  ...(datePublished ? { datePublished } : {}),
+  ...(dateModified ? { dateModified } : {}),
+  publisher: { "@type": "Organization", name: BRAND, url: SITE_URL },
 });
