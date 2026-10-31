@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-31T06:25:03Z",
+ "generated_at": "2026-10-31T06:26:57Z",
  "run_id": "r-20261031b",
  "site_id": "site-005",
- "count": 12,
+ "count": 15,
  "providers": [
   {
    "stable_id": "mm-0001",
@@ -224,6 +224,319 @@
    ],
    "verification_status": "checked_online",
    "verification_note": "Address, hours, treatment list and from-prices read from fajarbalispa.com on 2026-10-31. No phone number published on checked pages; no visit made.",
+   "last_checked": "2026-10-31",
+   "publication_status": "published"
+  },
+  {
+   "stable_id": "mm-0015",
+   "name": "Kupu Kupu Mas Spa",
+   "slug": "kupu-kupu-mas-spa",
+   "provider_type": "spa",
+   "area": "Jimbaran",
+   "area_slug": "jimbaran",
+   "address": null,
+   "service_area": "Jimbaran, about 1 km from Jimbaran Beach",
+   "website": "https://kupukupumasspa.com/en_index/",
+   "booking_url": "https://kupukupumasspa.com/en_index/contact/",
+   "phone": "+62 361 8471835",
+   "whatsapp": "+62 819 1627 5578",
+   "instagram": null,
+   "hours": null,
+   "treatments": [
+    "Balinese massage",
+    "Aromatherapy massage",
+    "Acupressure",
+    "Reflexology",
+    "Stone massage",
+    "Ayurveda treatment",
+    "Body scrub",
+    "Milk body polish",
+    "Cream bath",
+    "Facial",
+    "Flower bath",
+    "Spa packages"
+   ],
+   "prices": [
+    {
+     "note": "Menu price",
+     "duration": "60 min",
+     "price_idr": 500000,
+     "treatment": "Balinese Massage"
+    },
+    {
+     "note": "Menu price",
+     "duration": "60 min",
+     "price_idr": 500000,
+     "treatment": "Aromatherapy Massage"
+    },
+    {
+     "note": "Menu price",
+     "duration": "60 min",
+     "price_idr": 450000,
+     "treatment": "Reflexology"
+    },
+    {
+     "note": "Menu price",
+     "duration": "120 min",
+     "price_idr": 850000,
+     "treatment": "Stone Massage"
+    },
+    {
+     "note": "Menu price",
+     "duration": "60 min",
+     "price_idr": 450000,
+     "treatment": "Natural Indonesia Facial"
+    },
+    {
+     "note": "From price; 240-minute packages are IDR 1,500,000",
+     "duration": "120 min",
+     "price_idr": 900000,
+     "treatment": "Body rituals and packages"
+    }
+   ],
+   "price_notes": "Prices are quoted in the shorthand the spa uses on its own English menu (Rp.500K, Rp.900K, Rp.1,500K) and are per person. Tax treatment is not stated on the pages checked, so confirm the total when booking.",
+   "description": "Kupu Kupu Mas Spa is a day spa on Bali's southern coast in Jimbaran, about a kilometre from Jimbaran Beach and roughly five kilometres from the airport, in the stretch surrounded by the large Jimbaran resorts. It works as a stop on the way in or out rather than a destination spa: the menu is a long list of Balinese-style packages, most of them two to four hours, that string together foot bath, massage, scrub, milk polish, cream bath, flower bath and a drink. Massage on its own is simple and priced flat: Balinese, aromatherapy, acupressure and Ayurveda are all IDR 500,000 for 60 minutes, reflexology is IDR 450,000, stone massage is IDR 850,000 for two hours, and a natural Indonesian facial is IDR 450,000. The two-hour body rituals start at IDR 900,000, the three-hour packages are IDR 1,250,000, and the four-hour Shirodara, King, Queen and Bali Paradise packages are IDR 1,500,000 each. Because the packages carry the value, this is a spa to book as a half-day rather than for a single hour. The spa publishes its menu and prices in English and Japanese. One practical point: no street address or opening hours are published on the pages checked on 31 October 2026, so call the landline or WhatsApp number to confirm both, and ask what tax is added to the menu figure.",
+   "description_words": 224,
+   "answer_block": "Kupu Kupu Mas Spa is a day spa in Jimbaran, about a kilometre from Jimbaran Beach. A 60-minute Balinese, aromatherapy or Ayurveda massage is IDR 500,000, reflexology IDR 450,000, and two- to four-hour ritual packages run from IDR 900,000 to IDR 1,500,000.",
+   "answer_words": 42,
+   "features": [
+    "Jimbaran day spa near the beach",
+    "Multi-hour ritual packages",
+    "English and Japanese menu",
+    "Couple packages",
+    "Close to the airport"
+   ],
+   "rating": null,
+   "sources": [
+    {
+     "url": "https://kupukupumasspa.com/en_index/spamenu/",
+     "confirms": "Full menu with prices: massage 60 min Rp.500K (Balinese, aromatherapy, acupressure, Ayurveda), reflexology Rp.450K, stone massage 120 min Rp.850K, packages 120 min Rp.900K, 180 min Rp.1,250K, 240 min Rp.1,500K, facial Rp.450K",
+     "checked_date": "2026-10-31"
+    },
+    {
+     "url": "https://kupukupumasspa.com/en_index/",
+     "confirms": "Located on the southern coast about 5 km from the airport and 1 km from Jimbaran Beach; no street address published",
+     "checked_date": "2026-10-31"
+    },
+    {
+     "url": "https://kupukupumasspa.com/en_index/contact/",
+     "confirms": "Telephone 0361 8471835 and mobile 081 916 275 578",
+     "checked_date": "2026-10-31"
+    }
+   ],
+   "verification_status": "checked_online",
+   "verification_note": "Read from the provider's own pages on 2026-10-31; not visited.",
+   "last_checked": "2026-10-31",
+   "publication_status": "published"
+  },
+  {
+   "stable_id": "mm-0014",
+   "name": "Berkat SPA",
+   "slug": "berkat-spa",
+   "provider_type": "spa",
+   "area": "Kuta",
+   "area_slug": "kuta",
+   "address": "Jln. Benesari No. 8, Kuta, Badung, Bali",
+   "service_area": null,
+   "website": "https://berkatspa.com/",
+   "booking_url": "https://berkatspa.com/",
+   "phone": "+62 813-3061-1266",
+   "whatsapp": "+62 813-3061-1266",
+   "instagram": null,
+   "hours": "Daily 11:00-23:00",
+   "treatments": [
+    "Balinese massage",
+    "Aromatherapy massage",
+    "Warm stone massage",
+    "Shiatsu",
+    "Thai massage",
+    "Deep tissue massage",
+    "Four hand massage",
+    "Ear candle therapy",
+    "Aloe vera sunburn treatment",
+    "Facials",
+    "Hair spa",
+    "Manicure and pedicure"
+   ],
+   "prices": [
+    {
+     "note": "From price",
+     "duration": "60 min",
+     "price_idr": 130000,
+     "treatment": "Full Body Massage (Relaxing)"
+    },
+    {
+     "note": "From price",
+     "duration": "90 min",
+     "price_idr": 180000,
+     "treatment": "Full Body Massage (Relaxing)"
+    },
+    {
+     "note": "From price",
+     "duration": "120 min",
+     "price_idr": 240000,
+     "treatment": "Full Body Massage (Relaxing)"
+    },
+    {
+     "note": "From price",
+     "duration": "60 min",
+     "price_idr": 170000,
+     "treatment": "Body Massage with Aromatherapy"
+    },
+    {
+     "note": "From price",
+     "duration": "60 min",
+     "price_idr": 180000,
+     "treatment": "Warm Stone Body Massage"
+    },
+    {
+     "note": "From price",
+     "duration": "90 min",
+     "price_idr": 225000,
+     "treatment": "Warm Stone Body Massage"
+    },
+    {
+     "note": "From price",
+     "duration": "60 min",
+     "price_idr": 170000,
+     "treatment": "Shiatsu Japanese Acupressure"
+    },
+    {
+     "note": "From price",
+     "duration": "60 min",
+     "price_idr": 180000,
+     "treatment": "Thai Massage (Traditional)"
+    },
+    {
+     "note": "From price",
+     "duration": "60 min",
+     "price_idr": 260000,
+     "treatment": "Four Hand Massage"
+    },
+    {
+     "note": "From price",
+     "duration": "20 min",
+     "price_idr": 80000,
+     "treatment": "Ear Candle Therapy"
+    }
+   ],
+   "price_notes": "The spa lists each treatment as a from-price in IDR and prices rise with duration: relaxing full body massage IDR 130,000 for 60 minutes, IDR 180,000 for 90 and IDR 240,000 for 120. Tax treatment is not stated on the page checked, so confirm the total when booking.",
+   "description": "Berkat SPA is a day spa on Jalan Benesari in Kuta, a side street off the main beach strip, and it opens daily from 11:00 to 23:00. The building is a purpose-built spa rather than a hotel facility, with treatment rooms set back from the street, and the spa says it uses organic oils and fresh ingredients prepared on site. The menu covers the standard Bali range plus a few extras: Balinese and aromatherapy massage, warm stone, shiatsu, Thai, deep tissue and four-hand massage, ear candle therapy, an aloe vera treatment aimed at sunburn, and nail, hair and facial work. Prices are published as from-prices in Indonesian rupiah, and they rise with duration: a relaxing full body massage is IDR 130,000 for 60 minutes, IDR 180,000 for 90 and IDR 240,000 for two hours, aromatherapy and shiatsu are IDR 170,000, warm stone is IDR 180,000 for 60 minutes and IDR 225,000 for 90, Thai massage is IDR 180,000 for 60 minutes and IDR 250,000 for 90, four-hand massage is IDR 260,000, and ear candle therapy alone is IDR 80,000. The spa asks for at least two hours' notice for a booking and runs a shuttle within the Kuta and Seminyak boundary. Booking is by WhatsApp or email. It is a walk-in-friendly, mid-priced Kuta option rather than a resort spa, and the page checked on 31 October 2026 did not state whether tax is added, so ask for the total before you commit.",
+   "description_words": 242,
+   "answer_block": "Berkat SPA is a day spa on Jalan Benesari in Kuta, open daily from 11:00 to 23:00. Prices start at IDR 130,000 for a 60-minute full body massage and IDR 180,000 for warm stone, with Thai, shiatsu, four-hand massage and ear candle therapy also on the menu.",
+   "answer_words": 47,
+   "features": [
+    "Day spa in central Kuta",
+    "Massage 60-120 minutes",
+    "Nail and hair services",
+    "Shuttle within Kuta and Seminyak",
+    "Booking by WhatsApp"
+   ],
+   "rating": null,
+   "sources": [
+    {
+     "url": "https://berkatspa.com/",
+     "confirms": "Address Jln. Benesari No. 8 Kuta, open daily 11:00-23:00, WhatsApp number, two hours' notice requested, shuttle within Kuta and Seminyak, treatment list with from-prices: relaxing massage 60/90/120 min IDR 130,000/180,000/240,000, aromatherapy IDR 170,000, warm stone IDR 180,000/225,000, shiatsu IDR 170,000, Thai IDR 180,000/250,000, four hand IDR 260,000, ear candle IDR 80,000",
+     "checked_date": "2026-10-31"
+    }
+   ],
+   "verification_status": "checked_online",
+   "verification_note": "Read from the provider's own pages on 2026-10-31; not visited.",
+   "last_checked": "2026-10-31",
+   "publication_status": "published"
+  },
+  {
+   "stable_id": "mm-0013",
+   "name": "Taman Air Spa",
+   "slug": "taman-air-spa",
+   "provider_type": "spa",
+   "area": "Kuta",
+   "area_slug": "kuta",
+   "address": "Jalan Sunset Road No. 88, Kuta, Badung, Bali",
+   "service_area": null,
+   "website": "https://tamanairspa.com/",
+   "booking_url": "https://tamanairspa.com/contact/",
+   "phone": "+62 811 388 2224",
+   "whatsapp": "+62 811 388 2224",
+   "instagram": null,
+   "hours": "Daily 10:00-23:00",
+   "treatments": [
+    "Balinese massage",
+    "Hot stone massage",
+    "Herbal massage",
+    "Shirodara head and back massage",
+    "Facials",
+    "Body scrub",
+    "Body mask",
+    "Flower bath",
+    "Spa packages"
+   ],
+   "prices": [
+    {
+     "note": "Tax and service included",
+     "duration": "90 min",
+     "price_idr": 650000,
+     "treatment": "Balinese Massage"
+    },
+    {
+     "note": "Tax and service included",
+     "duration": "120 min",
+     "price_idr": 825000,
+     "treatment": "Hot Stone Massage"
+    },
+    {
+     "note": "Tax and service included",
+     "duration": "120 min",
+     "price_idr": 825000,
+     "treatment": "Herbal Massage"
+    },
+    {
+     "note": "Tax and service included",
+     "duration": "75 min",
+     "price_idr": 750000,
+     "treatment": "Shirodara Head and Back Massage"
+    },
+    {
+     "note": "Tax and service included",
+     "duration": "60 min",
+     "price_idr": 495000,
+     "treatment": "Hibiscus Glowing Facial"
+    },
+    {
+     "note": "Tax and service included",
+     "duration": "75 min",
+     "price_idr": 590000,
+     "treatment": "Radiant Lift Facial"
+    },
+    {
+     "note": "From price; tax and service included",
+     "duration": "120-240 min",
+     "price_idr": 850000,
+     "treatment": "Spa rituals and packages"
+    }
+   ],
+   "price_notes": "Prices are printed on the spa's own menu in Indonesian rupiah and include tax and service. Package prices run from IDR 850,000 to IDR 2,300,000.",
+   "description": "Taman Air Spa runs its treatments in a private spa villa on Jalan Sunset Road in Kuta, a short drive from the airport and from the beach strip, and it opens daily from 10:00 to 23:00. The menu is built around long rituals rather than quick massages: most entries run 120 to 240 minutes and combine massage, scrub, mask, bath and a drink, so a visit is closer to an afternoon than an appointment. Prices are printed on the spa's own menu in Indonesian rupiah and include tax and service, which is worth knowing in Kuta where many venues add tax at the desk. The a la carte side is short and clear: a 90-minute Balinese massage is IDR 650,000, hot stone and herbal massage are IDR 825,000 for 120 minutes, shirodara head and back massage is IDR 750,000 for 75 minutes, and facials start at IDR 495,000. Packages start at IDR 850,000 for a 120-minute ritual and reach IDR 2,300,000 for the couple's wine spa. The spa describes its therapists as certified Balinese therapists working in the villa, and it publishes the printed menu alongside the web list so the two can be compared. Booking goes through WhatsApp or the contact page, and the menu states that prices can change without notice, so confirm the figure when you book. If you want a 60-minute massage and nothing else, the a la carte list here is deliberately small.",
+   "description_words": 238,
+   "answer_block": "Taman Air Spa is a private spa villa on Jalan Sunset Road in Kuta, open daily from 10:00 to 23:00. Treatments run 75 to 240 minutes with tax and service included: a 90-minute Balinese massage is IDR 650,000 and ritual packages start at IDR 850,000.",
+   "answer_words": 45,
+   "features": [
+    "Private spa villa",
+    "Treatments 75-240 minutes",
+    "Prices include tax and service",
+    "Couple treatments",
+    "Open until 23:00"
+   ],
+   "rating": null,
+   "sources": [
+    {
+     "url": "https://tamanairspa.com/spa-menu/",
+     "confirms": "Address Jalan Sunset Road No. 88 Kuta, open daily 10:00-23:00, prices in IDR including tax and service, full 2026 menu: Balinese massage 90 min IDR 650,000, hot stone and herbal 120 min IDR 825,000, shirodara 75 min IDR 750,000, facials from IDR 495,000, packages from IDR 850,000, WhatsApp number",
+     "checked_date": "2026-10-31"
+    }
+   ],
+   "verification_status": "checked_online",
+   "verification_note": "Read from the provider's own pages on 2026-10-31; not visited.",
    "last_checked": "2026-10-31",
    "publication_status": "published"
   },
