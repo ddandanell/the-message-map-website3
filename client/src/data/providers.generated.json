@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-31T05:50:24Z",
- "run_id": "r-20261031",
+ "generated_at": "2026-10-31T06:19:38Z",
+ "run_id": "r-20261031b",
  "site_id": "site-005",
  "count": 12,
  "providers": [
@@ -64,7 +64,7 @@
    "verification_status": "checked_online",
    "verification_note": "Address, phone, hours, treatment list and couples rooms read from amospa.com on 2026-10-31. No visit made; hygiene and therapist skill not assessed.",
    "last_checked": "2026-10-31",
-   "publication_status": "research"
+   "publication_status": "published"
   },
   {
    "stable_id": "mm-0003",
@@ -128,7 +128,7 @@
    "verification_status": "checked_online",
    "verification_note": "Identity, address, hours, phone numbers, treatment list and 15% PPN note read from espacespabali.com on 2026-10-31. No visit made.",
    "last_checked": "2026-10-31",
-   "publication_status": "research"
+   "publication_status": "published"
   },
   {
    "stable_id": "mm-0002",
@@ -225,7 +225,7 @@
    "verification_status": "checked_online",
    "verification_note": "Address, hours, treatment list and from-prices read from fajarbalispa.com on 2026-10-31. No phone number published on checked pages; no visit made.",
    "last_checked": "2026-10-31",
-   "publication_status": "research"
+   "publication_status": "published"
   },
   {
    "stable_id": "mm-0012",
@@ -292,7 +292,7 @@
    "verification_status": "checked_online",
    "verification_note": "Menu, prices, branch structure and Nusa Dua address read from baliorchidspa.com on 2026-10-31. Branch-specific hours and phone numbers were ambiguous, so they are left blank. No visit made.",
    "last_checked": "2026-10-31",
-   "publication_status": "research"
+   "publication_status": "published"
   },
   {
    "stable_id": "mm-0009",
@@ -384,7 +384,7 @@
    "verification_status": "checked_online",
    "verification_note": "Treatments, prices, hours and product brand read from saridayspa.com on 2026-10-31. Exact street number and phone number not confirmed, so the address is given at street level only and the phone is blank. No visit made.",
    "last_checked": "2026-10-31",
-   "publication_status": "research"
+   "publication_status": "published"
   },
   {
    "stable_id": "mm-0004",
@@ -393,14 +393,14 @@
    "provider_type": "spa",
    "area": "Seminyak",
    "area_slug": "seminyak",
-   "address": null,
+   "address": "Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Badung, Bali 80361",
    "service_area": null,
    "website": "https://spabalimoon.com/",
-   "booking_url": null,
-   "phone": null,
-   "whatsapp": null,
+   "booking_url": "https://spabalimoon.com/",
+   "phone": "+62 878-6317-5144",
+   "whatsapp": "+62 878-6317-5144",
    "instagram": null,
-   "hours": null,
+   "hours": "Daily 09:00-23:00",
    "treatments": [
     "Balinese massage",
     "Deep tissue massage",
@@ -417,11 +417,11 @@
     "Outcall massage"
    ],
    "prices": [],
-   "price_notes": "The spa advertises 25 treatments priced from IDR 69,000. Individual treatment prices are published on its own site.",
-   "description": "Spa Bali Moon is a day spa in Seminyak that states it has been operating since 2009. It runs two ways of working: guests can visit the spa itself, or book an outcall treatment and have therapists come to a villa, hotel or home in the surrounding area. For visitors staying in a villa rather than a hotel with a spa, that second option is often the deciding factor. The menu is wide for a neighbourhood day spa. Massage covers Balinese, traditional, deep tissue, lymphatic drainage, sports, shiatsu, Thai, hot stone, warm candle, coconut oil, couple, foot and head treatments, plus cellulite work. Beauty services such as facials and waxing are listed alongside them, so one booking can cover massage and grooming. In total the spa advertises 25 massage and beauty treatments, priced from IDR 69,000, which places it at the affordable end of Seminyak rather than the resort-spa bracket. Because the menu is broad, it helps to name the treatment and the duration when booking rather than asking for 'a massage'. The spa's own site includes short guides on choosing between Thai and Balinese massage, what lymphatic drainage involves and how slimming massage is marketed, which is a more transparent approach than most. The website does not publish a full street address or opening hours on the pages checked on 31 October 2026, so confirm both, plus outcall coverage and any travel fee, directly with the spa before relying on a same-day booking. Prices are in Indonesian Rupiah.",
-   "description_words": 250,
-   "answer_block": "Spa Bali Moon is a day spa in Seminyak that has operated since 2009. It lists 25 massage and beauty treatments, including Balinese, deep tissue, hot stone, Thai and lymphatic massage, and also sends therapists to villas and hotels, which suits guests who prefer to be treated where they stay.",
-   "answer_words": 50,
+   "price_notes": "Prices checked on 31 October 2026: one-hour Balinese massage IDR 159,000 per person, 30-minute traditional or back massage from IDR 90,000, couples massage from IDR 319,000, packages from IDR 375,000. Prices are in Indonesian rupiah, quoted per person.",
+   "description": "Spa Bali Moon is a day spa at Jl. Pangkung Sari No. 30 in Petitenget, Seminyak, and its own site states it has served guests since 2009. It is a neighbourhood spa rather than a resort spa: rooms are private, the menu is long, and a single visit can combine a massage with a facial, a scrub or a cream bath. Massage covers Balinese, traditional, deep tissue, lymphatic drainage, sports, shiatsu, Thai, hot stone, warm candle, coconut oil, couple, foot and head treatments, with waxing and beauty work listed alongside. On the pages checked on 31 October 2026 a one-hour Balinese massage was IDR 159,000 per person, a 30-minute traditional or back massage started at IDR 90,000, and a couples massage started at IDR 319,000 for two. Spa packages started at IDR 375,000 per person, and a one-hour Balinese massage with a 30-minute manicure and pedicure was listed at IDR 379,000. Prices are in Indonesian rupiah and are the same whether you book at the desk or in advance. The spa is open daily from 09:00 to 23:00, has showers and Wi-Fi, and takes bookings on WhatsApp at +62 878-6317-5144. Because the menu is broad, name the treatment and the duration when booking rather than asking for 'a massage'. Its site also carries short guides on choosing between Thai and Balinese massage and on how slimming massage is marketed, which is more transparent than most competitors. Petitenget sits a short ride north of Seminyak's main shopping streets, so it works as a stop between the beach and dinner.",
+   "description_words": 258,
+   "answer_block": "Spa Bali Moon is a day spa on Jl. Pangkung Sari in Petitenget, Seminyak, open daily from 09:00 to 23:00 and serving guests since 2009. It offers Balinese, deep tissue, hot stone and lymphatic massage plus facials, scrubs and packages, with a one-hour Balinese massage at IDR 159,000.",
+   "answer_words": 48,
    "features": [
     "Day spa since 2009",
     "Outcall massage to villas and hotels",
@@ -433,19 +433,14 @@
    "sources": [
     {
      "url": "https://spabalimoon.com/",
-     "confirms": "Day spa in Seminyak since 2009, 25 treatments from IDR 69,000, outcall massage, treatment list",
-     "checked_date": "2026-10-31"
-    },
-    {
-     "url": "https://spabalimoon.com/contact/",
-     "confirms": "Contact page exists; no street address or hours retrieved at check time",
+     "confirms": "Day spa at Jl. Pangkung Sari No. 30, Petitenget, Seminyak; open daily 09:00-23:00; in Seminyak since 2009; one-hour Balinese massage IDR 159,000 per person; 30-minute traditional or back massage from IDR 90,000; couples massage from IDR 319,000; packages from IDR 375,000; WhatsApp booking number",
      "checked_date": "2026-10-31"
     }
    ],
    "verification_status": "checked_online",
-   "verification_note": "Positioning, year, treatment list, from-price and outcall service read from spabalimoon.com on 2026-10-31. Address, hours and phone not confirmed, so left blank.",
+   "verification_note": "Address, hours, booking number and prices read from the spa's own site on 2026-10-31. Not visited, so facilities are described only where the spa publishes them.",
    "last_checked": "2026-10-31",
-   "publication_status": "research"
+   "publication_status": "published"
   },
   {
    "stable_id": "mm-0007",
@@ -495,9 +490,9 @@
      "treatment": "Balinese massage"
     }
    ],
-   "price_notes": "Prices are as displayed on the spa's own menu. A taxi to Bangkiang Sidem is quoted by the spa at around IDR 100,000.",
-   "description": "Karsa Spa is a Balinese spa in Bangkiang Sidem, in the rice-field country north-west of central Ubud. It is not a hotel spa and does not pretend to be one: treatments happen in open pavilions surrounded by a lotus pond, plants and water, and the property is built with bio-septic tanks so waste does not run into the surrounding fields. The spa states it recycles through Eco Bali and cleans with natural soap nut liquid. The signature treatment is deep tissue, priced at IDR 260,000 for 60 minutes and IDR 380,000 for 90 minutes. The spa describes it as a thorough massage based on Chinese acupressure points to release tension, which is a different experience from the long, oiled strokes that most Ubud menus lead with. Classic Balinese massage is available at IDR 240,000 and IDR 350,000. There is also an Intuitive Heart Massage that begins with Reiki, plus stand-alone Reiki sessions and multi-treatment packages. Oils are Ayurvedic and organic, and the spa names Nadi's Herbal as its supplier because the products are made locally. Karsa Kafe is on the same site, so a massage can be combined with lunch or a juice; the spa notes that sunsets from the property are worth timing a visit around. Getting there is the main practical consideration. Bangkiang Sidem is a scooter or taxi ride from central Ubud, and the spa quotes roughly IDR 100,000 for a taxi. Opening hours and a phone number were not published on the pages checked on 31 October 2026, so confirm both before setting out.",
-   "description_words": 263,
+   "price_notes": "Prices are as displayed on the spa's own menu.",
+   "description": "Karsa Spa is a Balinese spa in Bangkiang Sidem, in the rice-field country north-west of central Ubud. It is not a hotel spa and does not pretend to be one: treatments happen in open pavilions surrounded by a lotus pond, plants and water, and the property is built with bio-septic tanks so waste does not run into the surrounding fields. The spa states it recycles through Eco Bali and cleans with natural soap nut liquid. The signature treatment is deep tissue, priced at IDR 260,000 for 60 minutes and IDR 380,000 for 90 minutes. The spa describes it as a thorough massage based on Chinese acupressure points to release tension, which is a different experience from the long, oiled strokes that most Ubud menus lead with. Classic Balinese massage is available at IDR 240,000 and IDR 350,000. There is also an Intuitive Heart Massage that begins with Reiki, plus stand-alone Reiki sessions and multi-treatment packages. Oils are Ayurvedic and organic, and the spa names Nadi's Herbal as its supplier because the products are made locally. Karsa Kafe is on the same site, so a massage can be combined with lunch or a juice; the spa notes that sunsets from the property are worth timing a visit around. Getting there is the main practical consideration. Bangkiang Sidem is a scooter or taxi ride from central Ubud rather than a walk, and the lane narrows as it climbs, so arrange the return trip when you book. Opening hours and a phone number were not published on the pages checked on 31 October 2026, so confirm both before setting out.",
+   "description_words": 267,
    "answer_block": "Karsa Spa is a Balinese spa in Bangkiang Sidem, Ubud, known for a deep tissue signature massage priced from IDR 260,000. It also offers Balinese massage, Reiki-based bodywork and spa packages, and sits next to Karsa Kafe, so lunch can follow the treatment.",
    "answer_words": 44,
    "features": [
@@ -519,7 +514,7 @@
    "verification_status": "checked_online",
    "verification_note": "Treatments, prices, setting and sustainability claims read from karsaspa.com on 2026-10-31. Hours, phone and street address are not published on the site, so they are left blank. No visit made.",
    "last_checked": "2026-10-31",
-   "publication_status": "research"
+   "publication_status": "published"
   },
   {
    "stable_id": "mm-0008",
@@ -606,7 +601,7 @@
    "verification_status": "checked_online",
    "verification_note": "Treatment names, prices, hours, phone and email read from mekarubud.com on 2026-10-31. Street address not published on the site, so left blank. No visit made.",
    "last_checked": "2026-10-31",
-   "publication_status": "research"
+   "publication_status": "published"
   },
   {
    "stable_id": "mm-0006",
@@ -663,7 +658,7 @@
    "verification_status": "checked_online",
    "verification_note": "Address, hours, phone, treatment list, happy hour and package price range read from sangspa.com on 2026-10-31. Single-treatment prices were not displayed, so none are listed. No visit made.",
    "last_checked": "2026-10-31",
-   "publication_status": "research"
+   "publication_status": "published"
   },
   {
    "stable_id": "mm-0005",
@@ -743,7 +738,7 @@
    "verification_status": "checked_online",
    "verification_note": "Hours, phone, couples policy, treatment names and prices read from ubudtraditionalspa.com on 2026-10-31. Street address not published on the site, so left blank. No visit made.",
    "last_checked": "2026-10-31",
-   "publication_status": "research"
+   "publication_status": "published"
   },
   {
    "stable_id": "mm-0010",
@@ -817,7 +812,7 @@
    "verification_status": "checked_online",
    "verification_note": "Treatments, prices, hours, location and booking method read from loaspabali.com on 2026-10-31. Full street number and phone number not published on checked pages, so they are left blank. No visit made.",
    "last_checked": "2026-10-31",
-   "publication_status": "research"
+   "publication_status": "published"
   },
   {
    "stable_id": "mm-0011",
@@ -877,8 +872,8 @@
     }
    ],
    "price_notes": "All prices are per person in IDR and exclude any tax the spa applies. Every treatment includes a choice of aromatherapy oil and tea afterwards.",
-   "description": "OAZA Uluwatu sits on Raya Uluwatu 88x in Ungasan, on the main road that runs across the Bukit peninsula, and is open every day from 10:00 to 23:00. It is a massage and facial spa rather than a resort spa: pricing is transparent, walk-ins are welcome, and there is no minimum spend or pool-day format. Massage starts at IDR 235,000 per person for the shortest session, with deep tissue, Lomi-Lomi, four-hand and hot stone options above that; hot stone is IDR 510,000 for the standard session. Foot reflexology with a scrub starts at IDR 210,000 and is a sensible choice after a day of walking the Uluwatu clifftop paths. The spa also runs a thermal therapy treatment from IDR 275,000, which combines heat with bodywork. The best-value option on the menu is the Uluwatu Signature, a 130-minute session combining a full-body massage, a signature facial and a footbath for IDR 600,000 per person. Facials start at IDR 320,000 when booked separately. Two details stand out. Every treatment includes a choice of aromatherapy oil and tea afterwards, and the spa states that prices are per person with no surprises on the bill. Phone and WhatsApp are +62 811 3940 4241. The spa publishes its full menu with prices on its own site, so compare before you commit to a package sold elsewhere on the island.",
-   "description_words": 232,
+   "description": "OAZA Uluwatu sits on Raya Uluwatu 88x in Ungasan, on the main road that runs across the Bukit peninsula, and is open every day from 10:00 to 23:00. It is a massage and facial spa rather than a resort spa: pricing is transparent, walk-ins are welcome, and there is no minimum spend or pool-day format. Massage starts at IDR 235,000 per person for the shortest session, with deep tissue, Lomi-Lomi, four-hand and hot stone options above that; hot stone is IDR 510,000 for 90 minutes. Foot reflexology with a scrub starts at IDR 210,000 and is a sensible choice after a day of walking the Uluwatu clifftop paths. The spa also runs a thermal therapy treatment from IDR 275,000, which combines heat with bodywork. The most complete option on the menu is the Uluwatu Signature, a 130-minute session combining a full-body massage, a signature facial and a footbath for IDR 600,000 per person. Facials appear on the same menu without a published price on the page checked on 31 October 2026, so ask when booking. Two details stand out. Every treatment includes a choice of aromatherapy oil and tea afterwards, and the spa states that prices are per person and any tax is added at payment. Phone and WhatsApp are +62 811 3940 4241. The spa publishes its full menu with prices on its own site, so compare before you commit to a package sold elsewhere on the island.",
+   "description_words": 239,
    "answer_block": "OAZA Uluwatu is a massage and facial spa on Raya Uluwatu 88x in Ungasan, open daily from 10:00 to 23:00. Massages start at IDR 235,000 per person and every treatment includes a choice of aromatherapy oil and tea.",
    "answer_words": 41,
    "features": [
@@ -905,7 +900,7 @@
    "verification_status": "checked_online",
    "verification_note": "Address, geo, phone, hours and prices read from oazabali.com on 2026-10-31, including the site's DaySpa structured data. No visit made.",
    "last_checked": "2026-10-31",
-   "publication_status": "research"
+   "publication_status": "published"
   }
  ]
 }

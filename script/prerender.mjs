@@ -353,7 +353,7 @@ const simple = [
     description: "Send your published menu, address and opening hours and we will check them against your own website before listing. No payment is involved.",
     body: `<p>Listing on The Massage Map is free and is based on verifiable information rather than payment. We add a business once we can confirm it is operating in Bali and publishes its own details.</p>
       <p>What helps us check a business quickly: the official website or public business profile; the treatment menu with prices and durations, if you publish one; the street address and the area it sits in; opening hours; and the phone number or booking link you want people to use.</p>
-      <p>What we cannot use: prices that only exist in a message, reviews you have written about yourself, or claims such as "best in Bali" that no source supports. We also do not publish invented ratings, and we do not accept payment to move a listing up a page or to add stars.</p>
+      <p>What we cannot use: prices that only exist in a message, reviews you have written about yourself, or unverifiable praise that no source supports. We also do not publish invented ratings, and we do not accept payment to move a listing up a page or to add stars.</p>
       <p>Every listing shows the date it was last checked and links to the source we read. If a price or an opening time changes, send the update and it will be corrected against your published menu.</p>`,
   },
   {
