@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T06:19:38Z",
+ "generated_at": "2026-10-31T06:22:09Z",
  "run_id": "r-20261031b",
  "site_id": "site-005",
  "count": 12,
@@ -414,7 +414,7 @@
     "Head massage",
     "Warm candle massage",
     "Facials",
-    "Outcall massage"
+    "Waxing"
    ],
    "prices": [],
    "price_notes": "Prices checked on 31 October 2026: one-hour Balinese massage IDR 159,000 per person, 30-minute traditional or back massage from IDR 90,000, couples massage from IDR 319,000, packages from IDR 375,000. Prices are in Indonesian rupiah, quoted per person.",
@@ -423,10 +423,10 @@
    "answer_block": "Spa Bali Moon is a day spa on Jl. Pangkung Sari in Petitenget, Seminyak, open daily from 09:00 to 23:00 and serving guests since 2009. It offers Balinese, deep tissue, hot stone and lymphatic massage plus facials, scrubs and packages, with a one-hour Balinese massage at IDR 159,000.",
    "answer_words": 48,
    "features": [
-    "Day spa since 2009",
-    "Outcall massage to villas and hotels",
-    "25 treatments advertised",
-    "Massage and beauty services",
+    "Day spa in Petitenget since 2009",
+    "Private treatment rooms",
+    "Showers and Wi-Fi on site",
+    "Facials, scrubs and cream baths alongside massage",
     "Published treatment guides on its own site"
    ],
    "rating": null,
